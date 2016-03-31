@@ -1,0 +1,938 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce BBVA\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-17 00:42+0100\n"
+"PO-Revision-Date: 2016-03-17 00:45+0100\n"
+"Last-Translator: José Conti <admin@wangguard.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:25
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:81
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:118
+msgid "Iupay"
+msgstr "Iupay"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:82
+msgid ""
+"Iupay works by sending the user to your bank TPV to enter their payment "
+"information."
+msgstr ""
+"Iupay funciona enviando al usuario al TPV de Iupay, donde solo deberían dar "
+"unos pocos datos aumentando el ratio de ventas."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:84
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:97
+msgid "Attention! WPML detected."
+msgstr "¡Atención! detectado WPML."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:85
+msgid ""
+"The Gateway will be shown in the customer language. The option \"Language "
+"Gateway\" is not taken into consideration"
+msgstr ""
+"La pasarela de pago se mostrará en el idioma del cliente. La opción \"Idioma "
+"de la pasarela\" no se tomará en cuenta."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:96
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:109
+msgid "Gateway Disabled"
+msgstr "Pasarela desactivada"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:96
+msgid "Servired/RedSys only support EUROS &euro; and BRL currency."
+msgstr ""
+"Servired/RedSys en estos momentos solo soporta la moneda EURO &euro; y BRL"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:109
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:122
+msgid "Enable/Disable"
+msgstr "Activar/Desactivar"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:111
+msgid "Enable Iupay"
+msgstr "Activar Iupay"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:115
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:128
+msgid "Title"
+msgstr "Título"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:117
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:130
+msgid "This controls the title which the user sees during checkout."
+msgstr "Título que sus clientes verán al finalizar la compra."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:122
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:135
+msgid "Description"
+msgstr "Descripción"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:124
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:137
+msgid "This controls the description which the user sees during checkout."
+msgstr "Descripción que sus clientes verán al finalizar la compra."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:125
+msgid "Pay via Iupay; you can pay with your credit card."
+msgstr "Paga mediante Iupay, puedes pagar fácilmente con tu cuenta Iupay."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:128
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:141
+msgid "Commerce number (FUC)"
+msgstr "Número de comercio (FUC)"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:130
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:143
+msgid "Commerce number (FUC) provided by your bank."
+msgstr "Número de comercio (FUC) provisto por su entidad bancaria."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:134
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:154
+msgid "Terminal number"
+msgstr "Número de terminal"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:136
+msgid "Terminal number provided by your bank."
+msgstr "Número de terminal provisto por su entidad bancaria."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:140
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:160
+msgid "Second Terminal"
+msgstr "Segundo terminal (Si tienes)"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:142
+msgid ""
+"If you use a second Terminal number, you need to add here the second "
+"terminal provided by your bank"
+msgstr ""
+"Si utilizas un segundo número de Terminal, debes añadir aquí el segundo "
+"terminal provisto por tu entidad bancaria."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:146
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:166
+msgid "Activate Second Terminal"
+msgstr "Activar segundo terminal"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:148
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:168
+msgid "Activate Second Terminal."
+msgstr "Activar segundo Terminal"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:150
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:170
+msgid ""
+"If you use a second terminal, you need to add it in the field above and "
+"activate it here. You will need to set when use the Second Terminal in the "
+"field below."
+msgstr ""
+"Si utilizas una segundo terminal, debes añadirlo en el campo anterior y "
+"activarlo aquí. Deberás configurar cuando usar el segundo terminal en el "
+"campo siguiente."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:153
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:173
+msgid "Use the Second Terminal from 0 to (Don't use Currency Symbol)"
+msgstr ""
+"Utilizar el segundo terminal desde 0 a... (No añadir el símbolo de moneda)"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:155
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:175
+msgid ""
+"When will the Second Terminal used? from 0 to...? Add the amount. Ex. Add "
+"100 and the Second Terminal will be used when the amount be from 0 to 100"
+msgstr ""
+"¿Cuando se deberá utilizar el segundo terminal? ¿Desde 0 a...? Añade la "
+"cantidad. Ej. Añade 100 y el segundo terminal se utilizará para los pagos "
+"cuando el precio vaya de 0 a 100."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:159
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:165
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:179
+msgid "Encryption secret passphrase SHA-256"
+msgstr "Frase de encriptación SHA-256"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:161
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:167
+msgid "Encryption secret passphrase SHA-256 provided by your bank."
+msgstr "Frase de encriptación facilitada por tu banco"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:171
+msgid "Language Gateway"
+msgstr "Idioma de la pasarela"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:173
+msgid "Choose the language for the Gateway. Not all Banks accept all languages"
+msgstr ""
+"Selecciona el idioma para la pasarela de pago. No todos los bancos aceptan "
+"todos los idiomas."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:176
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:190
+msgid "Spanish"
+msgstr "Español"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:177
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:191
+msgid "English"
+msgstr "Inglés"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:178
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:192
+msgid "Catalan"
+msgstr "Catalán"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:179
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:193
+msgid "French"
+msgstr "Frances"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:180
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:194
+msgid "German"
+msgstr "Alemán"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:181
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:195
+msgid "Dutch"
+msgstr "Holandes"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:182
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:196
+msgid "Italian"
+msgstr "Italiano"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:183
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:197
+msgid "Swedish"
+msgstr "Sueco"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:184
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:198
+msgid "Portuguese"
+msgstr "Portugués"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:185
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:199
+msgid "Valencian"
+msgstr "Valenciano"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:186
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:200
+msgid "Polish"
+msgstr "Polaco"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:187
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:201
+msgid "Galician"
+msgstr "Galllego"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:188
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:202
+msgid "Basque"
+msgstr "Euskera"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:189
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:203
+msgid "Danish"
+msgstr "Danés"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:193
+msgid "Return URL (Redsys Error button)"
+msgstr "URL de retorno (Botón de error en Redsys)"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:195
+msgid ""
+"When the user press the return button at Redsys Gateway (Ex: The user type "
+"an incorrect creadit cart), you can redirect the user to My Cart page "
+"canceling the order, or you can redirect the user to Checkput page without "
+"cancel the order."
+msgstr ""
+"Cuando un cliente aprieta el botón de retorno en la pasarela Redsys (Ej: El "
+"usuario introduce una tarjeta de crédito incorrecta), puedes redirigirlo "
+"mediante el botón a al carro de la compra cancelando el pedido, o puedes "
+"redirigirlo a la página de pago de tu tienda sin cancelar el pedido."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:198
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:212
+msgid "Cancel the order and return to My Cart page"
+msgstr "Cancelar el pedido y enviar al cliente al carro de compra"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:199
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:213
+msgid "Don't cancel the order and return to Checkout page"
+msgstr "No cancelar el pedido y enviar al cliente a la página de pago"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:203
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:205
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:217
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:219
+msgid "Running in test mode"
+msgstr "Ejecutando en entorno de pruebas"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:207
+msgid ""
+"Select this option for the initial testing required by your bank, deselect "
+"this option once you pass the required test phase and your production "
+"environment is active."
+msgstr ""
+"Seleccione esta opción para las pruebas requeridas por su entidad bancaria, "
+"deseleccione esta opción una vez que haya activado su entorno de producción."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:210
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:224
+msgid "Debug Log"
+msgstr "Registro"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:212
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:226
+msgid "Enable logging"
+msgstr "Habilitar registro"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:214
+msgid ""
+"Log Iupay events, such as notifications requests, inside <code>woocommerce/"
+"logs/iupay.txt</code>"
+msgstr ""
+"Guarda los logs de Iupay, como notificaciones o errores en <code>woocommerce/"
+"logs/iupay.txt</code>"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:291
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:298
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:325
+msgid "Order"
+msgstr "Orden"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:336
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:372
+msgid ""
+"Thank you for your order. We are now redirecting you to Iupay to make the "
+"payment."
+msgstr ""
+"Gracias por tu pedido. Ahora le estamos redirigiendo a Iupay para que pueda "
+"realizar su pedido."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:356
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:392
+msgid "Pay with Iupay account"
+msgstr "Paga con tu cuenta de Iupay"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:356
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:392
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:374
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:410
+msgid "Cancel order &amp; restore cart"
+msgstr "Cancelar orden &amp; volver al carro"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:418
+msgid ""
+"Thank you for your order, please click the button below to pay with Iupay."
+msgstr ""
+"Gracias por su pedido, por favor haga clic en el siguiente botón para poder "
+"pagar con Iupay."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:528
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:545
+#, php-format
+msgid ""
+"Validation error: Order vs. Notification amounts do not match (order: %s - "
+"received: %s)."
+msgstr ""
+"Error de validación: Totales de Orden vs. Notificación no coinciden (orden: "
+"%s - recibido: %s)."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:545
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:562
+msgid "HTTP Notification received - payment completed"
+msgstr "Notificación HTTP recibida - pago completado"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:546
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:563
+msgid "Authorisation code: "
+msgstr "Código autorización: "
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:555
+msgid "Cancelled by Iupay"
+msgstr "Cancelado por Iupay"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:556
+msgid "Pedido cancelado por Iupay: Tarjeta caducada"
+msgstr "Pedido cancelado por Iupay: Tarjeta caducada"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:645
+msgid ""
+"WARNING: You need to add Encryption secret passphrase SHA-256 to Iupay "
+"Gateway Settings."
+msgstr ""
+"ATENCIÓN: Necesitas añadir la clave de encriptación SHA-256 a la "
+"configuración de Iupay."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:658
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:679
+msgid "Payment Details"
+msgstr "Detalles del pago"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:659
+msgid "Iupay Date"
+msgstr "Fecha Iupay"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:660
+msgid "Iupay Hour"
+msgstr "Hora Iupay"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:661
+msgid "Iupay Authorisation Code"
+msgstr "Iupay Código de autorización"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:25
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:61
+msgid "Sequential Invoice Numbers"
+msgstr "Número secuencial factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:67
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:71
+msgid "Activate Sequential Invoice numbers"
+msgstr "Activar número secuenciales en facturas"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:69
+msgid "Activate Sequential Invoice numbers."
+msgstr "Activar número secuenciales en facturas"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:75
+msgid "First Invoice Number"
+msgstr "Primer número de factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:77
+msgid ""
+"Add here the first invoice number. By Default is number 1. Save this number "
+"before activate it. Example 345 "
+msgstr ""
+"Añade aquí el primer número para tus facturas. Por defecto se usará el "
+"número 1. Guarda este número antes activar esta funcionalidad. Ejemplo 345"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:81
+msgid "Invoice Number Length"
+msgstr "Longitud de la numeración"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:83
+msgid ""
+"The Invoice number length, this is not required. Example 10, the result will "
+"be 0000000345"
+msgstr ""
+"La longitud de la numeración de tus facturas, no es necesario. Si el número "
+"resultante en inferior al que se ponga aquí, se añadirán 0s. Ejemplo 10, el "
+"resultado sería 0000000345"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:87
+msgid "Prefix Invoice Number"
+msgstr "Prefijo número factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:89
+#, php-format
+msgid ""
+"Add here a prefix invoice number, this is not required. Example WC-, the "
+"result will be WC-0000000345. Pattern are allowed ex. {Y} this will add the "
+"current year. You will find all patterns %shere%s."
+msgstr ""
+"Añade aquí un prefijo para la numeración de tus facturas, esto no es "
+"requerido. Ejemplo: WC-, el resultado sería WC-0000000345. La utilización de "
+"plantillas está permitida, por ejemplo, si pusieras <code>{Y]/</code> el "
+"resultado en la numeración de la facturas sería 2015/0000000345. Encontrarás "
+"todas las plantillas posibles %saquí%s"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:93
+msgid "Postfix Invoice Number"
+msgstr "Sufijo número factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:95
+#, php-format
+msgid ""
+"Add here a postfix invoice number, this is not required. Example -2015 the "
+"result will be WC-0000000345-2015. Pattern are allowed ex. {Y} this will add "
+"the current year. You will find all patterns %shere%s."
+msgstr ""
+"Añade aquí un sufijo para la numeración de tus facturas, esto no es "
+"requerido. Ejemplo: -2015, el resultado sería WC-0000000345-2015. La "
+"utilización de plantillas está permitida, por ejemplo, si pusieras /{Y] el "
+"resultado en la numeración de la facturas sería 0000000345/2015. Encontrarás "
+"todas las plantillas posibles %saquí%s"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:99
+msgid "Pretfix Invoice Number"
+msgstr "Prefijo número de pedido"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:101
+#, php-format
+msgid ""
+"Add here a prefix order number, this is not required. Example 2015/ the "
+"result will be 2105/34345. Pattern are allowed ex. {Y} this will add the "
+"current year. You will find all patterns %shere%s."
+msgstr ""
+"Añade aquí un prefijo para el número de pedido, esto no es requerido. "
+"Ejemplo 2015/, el resultado será 2105/34345. Las plantillas están permitidas "
+"ejemplo {Y} que añadirá el año actual. Encontrarás todas las plantillas "
+"%saquí%s"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:105
+msgid "Postfix Order Number"
+msgstr "Sufijo de número de pedido."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:107
+#, php-format
+msgid ""
+"Add here a postfix order number, this is not required. If you don't add a "
+"postfix, a postfix will be automatically added for security reason. "
+"Example /2015 the result will be 34345/2015. Pattern are allowed ex. {Y} "
+"this will add the current year. You will find all patterns %shere%s."
+msgstr ""
+"Añade aquí un sufijo para el número de pedido. No es requerido. Si no añades "
+"un sufijo, nosotros añadiremos uno de forma automática por cuestiones de "
+"seguridad. Ejemplo /2015, el resultado sería 34345/2015. Las plantillas "
+"están permitidas Ejemplo /{Y} que añadiría el año actual al final de la "
+"factura de forma automática. Encontrarás todas las plantillas %saquí%s."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:111
+msgid "Reset Invoice Number"
+msgstr "Restablecer número factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:113
+msgid "Reset Invoice Number."
+msgstr "Restablecer número factura."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:115
+msgid ""
+"If you enable Reset Invoice Number, every January 1st the invoice number "
+"will be reset and will start again with number 1. Is very important that if "
+"you enable this option, you use a prefix or postfix year pattern {Y}."
+msgstr ""
+"Si activas el reseteo o reinicializacición del número de factura, cada 1 de "
+"enero se reinicializará la numeración comenzando de nuevo con 1. ATENCIÓN: "
+"Es muy importante que si activas esta funcionalidad, añadas un prefijo o un "
+"sufijo al número de pedido que incluya el año {Y}."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:151
+msgid "Invoice Number"
+msgstr "Número factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:163
+msgid "No invoice n&#176;"
+msgstr "Sin n&#176; factura"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:259
+#, php-format
+msgid "Order Number: %s"
+msgstr "Pedido número: %s"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:262
+#, php-format
+msgid "Invoice Number: %s"
+msgstr "Número factura: %s"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:315
+msgid "-ORDER"
+msgstr "-PEDIDO"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:26
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:94
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:131
+msgid "CaixaBank"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:62
+msgid ""
+"WARNING: The PHP mcrypt_encrypt module is not installed on your server. The "
+"CaixaBank API SHA-256 needs this module in order to work.  Please contact "
+"with your hosting provider and ask them to install it. Otherwise, CaixaBank "
+"Gateway will not work."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:95
+msgid ""
+"Caixabank works by sending the user to the TPV to enter their payment "
+"information."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:98
+msgid ""
+"CaixaBank gateway will be shown in the customer language. The option "
+"\"Language Gateway\" is not taken into consideration"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:109
+msgid "CaixaBank only support EUROS &euro; and BRL currency."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:124
+msgid "Enable CaixaBank gateway"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:138
+msgid "Pay via CaixaBank; you can pay with your credit card."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:148
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:150
+msgid "Commerce Name"
+msgstr "Nombre de Comercio"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:156
+msgid "Terminal number provided by CaixaBank."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:162
+msgid ""
+"If you use a second Terminal number, you need to add here the second "
+"terminal provided by CaixaBank"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:181
+msgid "Encryption secret passphrase SHA-256 provided by CaixaBank."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:185
+msgid "Language CaixaBank Gateway"
+msgstr "Idioma de la pasarela de pago CaixaBank"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:187
+msgid "Choose the language for the Gateway."
+msgstr "Selecciona el idioma de la pasarela de pago"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:207
+msgid "Return URL (CaixaBank Error button)"
+msgstr "URL de vuelta (botón de error en CaixBank)"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:209
+msgid ""
+"When the user press the return button at CaixaBank Gateway (Ex: The user "
+"type an incorrect creadit cart), you can redirect the user to My Cart page "
+"canceling the order, or you can redirect the user to Checkput page without "
+"cancel the order."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:221
+msgid ""
+"Select this option for the initial testing required by CaixaBank, deselect "
+"this option once you pass the required test phase and your production "
+"environment is active."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:228
+msgid ""
+"Log CaixaBank events, such as notifications requests, inside "
+"<code>WooCommerce > /code>"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:354
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:390
+msgid ""
+"Thank you for your order. We are now redirecting you to CaixaBank to make "
+"the payment."
+msgstr ""
+"Gracias por tu pedido. Te estamos transfiriendo a CaixaBank para realizar el "
+"pago."
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:374
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:410
+msgid "Pay with Credit Card via CaixaBank"
+msgstr "Paga mediante tarjeta de crédito a través de CaixaBank"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:435
+msgid ""
+"Thank you for your order, please click the button below to pay with Credit "
+"Card via CaixaBank."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:572
+msgid "Cancelled by CaixaBank"
+msgstr "Cancelado por CaixaBack"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:573
+msgid "Pedido cancelado por CaixaBank: Tarjeta caducada"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:662
+msgid ""
+"WARNING: You need to add Encryption secret passphrase SHA-256 to CaixaBank "
+"Gateway Settings."
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:680
+msgid "CaixaBank Date"
+msgstr "Fecha CaixaBank"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:681
+msgid "CaixaBank Hour"
+msgstr "Hora CaixaBank"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:682
+msgid "CaixaBank Authorisation Code"
+msgstr ""
+
+#~ msgid "Tax"
+#~ msgstr "Impuestos"
+
+#~ msgid "Invoice number"
+#~ msgstr "Número de factura"
+
+#~ msgid "Shipping Tax"
+#~ msgstr "Impuesto de envío"
+
+#~ msgid "Shipping Postcode"
+#~ msgstr "Código Postal de envío"
+
+#~ msgid "Shipping State"
+#~ msgstr "Estado/Región de envío"
+
+#~ msgid "Shipping City"
+#~ msgstr "Ciudad de envío"
+
+#~ msgid "Shipping Address 1"
+#~ msgstr "Dirección de envío 1"
+
+#~ msgid "Shipping Address 2"
+#~ msgstr "Dirección de envío 2"
+
+#~ msgid "Shipping Company"
+#~ msgstr "Empresa (Envío)"
+
+#~ msgid "Shipping Last Name"
+#~ msgstr "Apellido (Envío)"
+
+#~ msgid "Shipping First Name"
+#~ msgstr "Nombre (Envío)"
+
+#~ msgid "Shipping Country"
+#~ msgstr "Pais de envío"
+
+#~ msgid "Billing Phone"
+#~ msgstr "Teléfono (factura)"
+
+#~ msgid "Billing Email"
+#~ msgstr "Correo electrónico (factura)"
+
+#~ msgid "Billing Postcode"
+#~ msgstr "Código postal(factura)"
+
+#~ msgid "Billing State"
+#~ msgstr "Estado/provincia (factura)"
+
+#~ msgid "Billing City"
+#~ msgstr "Ciudad (factura)"
+
+#~ msgid "Billing Address 1"
+#~ msgstr "Dirección 1 (factura)"
+
+#~ msgid "Billing Address 2"
+#~ msgstr "Dirección 2 (factura)"
+
+#~ msgid "Billing Company"
+#~ msgstr "Empresa (factura)"
+
+#~ msgid "Billing Last Name"
+#~ msgstr "Apellido (factura)"
+
+#~ msgid "Billing First Name"
+#~ msgstr "Nombre (factura)"
+
+#~ msgid "Billing Country"
+#~ msgstr "Pais (factura)"
+
+#~ msgid "Order Currency"
+#~ msgstr "Moneda"
+
+#~ msgid "Payment Tax"
+#~ msgstr "Impuestos"
+
+#~ msgid "Order Export"
+#~ msgstr "Exportar pedido"
+
+#~ msgid "WooCommerce Order Export"
+#~ msgstr "Exportación de pedidos WooCommerce"
+
+#~ msgid ""
+#~ "You've not installed \"WooCommerce Order Export\". Please install the "
+#~ "%splugin%s. After install the free plugin, Redsys Gateway Extension will "
+#~ "add many featured to it. Thank you."
+#~ msgstr ""
+#~ "No tienes instalado \"WooCommerce Order Export”. Por favor, instala el "
+#~ "%splugin%s. Después de instalar este plugin gratuito, esta extensión "
+#~ "(Redsys Gateway Extension) añadirá muchas funcionalidad al plugin para "
+#~ "que sirva para España. Muchas gracias."
+
+#~ msgid "Servired/RedSys"
+#~ msgstr "Servired/RedSys"
+
+#~ msgid ""
+#~ "WARNING: The PHP mcrypt_encrypt module is not installed on your server. "
+#~ "The new API Redsys SHA-256 needs this module in order to work.  Please "
+#~ "contact your hosting provider and ask them to install it. Otherwise, your "
+#~ "shop will stop working."
+#~ msgstr ""
+#~ "ATENCIÓN: El módulo PHP mcrypt_encrypt no está instalado en el servidor. "
+#~ "La API de SHA-256 de Redsys necesita este módulo para funcionar. Por "
+#~ "favor, contacta con to proveedor de hosting para pedirle que lo instale. "
+#~ "De otro modo tu tienda no podrá utilizar Redsys."
+
+#~ msgid "Servired/RedSys Spain"
+#~ msgstr "Servired/RedSys España"
+
+#~ msgid ""
+#~ "Servired/RedSys works by sending the user to your bank TPV to enter their "
+#~ "payment information."
+#~ msgstr ""
+#~ "La pasarela Servired/RedSys envía a su cliente al TPV de su entidad "
+#~ "bancaria para ingresar su información para el pago."
+
+#~ msgid "Enable Servired/RedSys"
+#~ msgstr "Activar Servired/RedSys"
+
+#~ msgid "Pay via Servired/RedSys; you can pay with your credit card."
+#~ msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
+
+#~ msgid ""
+#~ "Log Servired/RedSys events, such as notifications requests, inside "
+#~ "<code>woocommerce/logs/redsys.txt</code>"
+#~ msgstr ""
+#~ "Guardar eventos generados por el plugin, como podrían ser notificaciones, "
+#~ "se guardarán en <code>woocommerce/logs/redsys.txt</code>"
+
+#~ msgid ""
+#~ "Thank you for your order. We are now redirecting you to Servired/RedSys "
+#~ "to make the payment."
+#~ msgstr ""
+#~ "Gracias por su compra, ahora está siendo redirigido a Servired/RedSys "
+#~ "para realizar el pago."
+
+#~ msgid "Pay with Credit Card via Servired/RedSys"
+#~ msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
+
+#~ msgid ""
+#~ "Thank you for your order, please click the button below to pay with "
+#~ "Credit Card via Servired/RedSys."
+#~ msgstr ""
+#~ "Gracias por su compra, haga click en el botón debajo para pagar con su "
+#~ "tarjeta de crédito vía Servired/RedSys."
+
+#~ msgid "Cancelled by Redsys"
+#~ msgstr "Cancelado por Redys"
+
+#~ msgid "Pedido cancelado por Redsys: Tarjeta caducada"
+#~ msgstr "Pedido cancelado por Redys: Tarjeta caducada."
+
+#~ msgid ""
+#~ "WARNING: You need to add Encryption secret passphrase SHA-256 to Redsys "
+#~ "Gateway Settings."
+#~ msgstr ""
+#~ "ATENCIÓN: Necesitas añadir la clave de encriptación SHA-256 a la "
+#~ "configuración de Redsys."
+
+#~ msgid "Redsys Date"
+#~ msgstr "Fecha Redsys"
+
+#~ msgid "Redsys Hour"
+#~ msgstr "Hora Redsys"
+
+#~ msgid "Redsys Authorisation Code"
+#~ msgstr "Código autorización Redsys"
+
+#~ msgid "Encription secret passphrase"
+#~ msgstr "Clave secreta de encriptación"
+
+#~ msgid "Encription secret passphrase provided by your bank."
+#~ msgstr "Clave secreta de encriptación provista por su entidad bancaria."
+
+#~ msgid "Key type"
+#~ msgstr "Tipo de clave"
+
+#~ msgid "Choose which key type your bank has setup for your account."
+#~ msgstr ""
+#~ "Elija el tipo de clave que su entidad bancaria ha configurado para su "
+#~ "cuenta"
+
+#~ msgid "SHA-1 Complete"
+#~ msgstr "SHA-1 Completo"
+
+#~ msgid "SHA-1 Complete Extended"
+#~ msgstr "SHA-1 Completo Ampliado"
+
+#~ msgid ""
+#~ "Validation error: Calculated signature vs. Notification signature do not "
+#~ "match (calculated: %s - received: %s)."
+#~ msgstr ""
+#~ "Error de validación: Firma calculada vs. Firma de notificación no "
+#~ "coinciden (calculada: %s - recibido: %s)."
+
+#~ msgid ""
+#~ "WARNING: You need to add the new SHA-256 to Iupay Gateway Settings before "
+#~ "November 23, 2015, Otherwise, your shop will stop working."
+#~ msgstr ""
+#~ "ATENCIÓN: Necesitas añadir la nueva clave de encriptación SHA-256 a la "
+#~ "configuración de Iupay antes del 23 de noviembre, si no lo hicieras tu "
+#~ "tienda dejará de funcionar."
+
+#~ msgid ""
+#~ "WARNING: The PHP mcrypt_encrypt module is not installed on your server. "
+#~ "The new API Redsys SHA-256 needs this module in order to work.  Please "
+#~ "contact your hosting provider and ask them to install it before November "
+#~ "23, 2015. Otherwise, your shop will stop working."
+#~ msgstr ""
+#~ "ATENCIÓN: El módulo PHP mcrypt_encrypt no está instalado en este "
+#~ "servidor. La nueva API de Redsys SHA-256 necesita este módulo para "
+#~ "funcionar. Por favor, contacta con tu proveedor de hosting o con tu "
+#~ "Sysadmin para que lo instale antes del 23 de noviembre de 2015. Si no lo "
+#~ "instala, tu comercio dejará de funcionar."
+
+#~ msgid ""
+#~ "WARNING: You need to add the new SHA-256 to Redsys Gateway Settings "
+#~ "before November 23, 2015, Otherwise, your shop will stop working."
+#~ msgstr ""
+#~ "ATENCIÓN: Debes añadir la nueva clave de encriptación SHA-256 a la "
+#~ "configuración de Redsys antes del 23 de noviembre de 2015, si no lo "
+#~ "haces, tu tienda dejará de funcionar."
+
+#~ msgid ""
+#~ "WARNING: The PHP mcrypt_encrypt module is not installed on your server. "
+#~ "The new Redsys SHA-256 needs this module in order to work.  Please "
+#~ "contact your hosting provider and ask them to install it. After November "
+#~ "23, 2015, Otherwise, your shop will stop working."
+#~ msgstr ""
+#~ "ATENCIÓN: El modulo mcrypt_encrypt no está instalado en este servidor. La "
+#~ "nueva API que utiliza SHA-256 necesita de este módulo para funcionar. Por "
+#~ "favor, contacta con tu proveedor de posting o con tu SysAdmin y diles que "
+#~ "lo instalen. Deben hacerlo antes del 23 de noviembre, o tu tienda dejará "
+#~ "de funcionar."
+
+#~ msgid "La Caixa"
+#~ msgstr "La Caixa"
+
+#~ msgid "La Caixa Spain"
+#~ msgstr "La Caixa España"
+
+#~ msgid "Enable La Caixa"
+#~ msgstr "Activa La Caixa"
+
+#~ msgid "BBVA"
+#~ msgstr "BBVA"
+
+#~ msgid "BBVA Spain"
+#~ msgstr "BBVA Espa&ntilde;a"
+
+#~ msgid "Enable BBVA"
+#~ msgstr "Activar BBVA"
+
+#~ msgid "Obfuscated secret phrase downloaded from BBVA."
+#~ msgstr "Palabra secreta ofuscada descargada desde BBVA."
+
+#~ msgid "8 characters password"
+#~ msgstr "Contraseña de 8 caracteres"
+
+#~ msgid "8 characters password you entered on BBVA."
+#~ msgstr "Contraseña de 8 caracteres, la misma ingresada en BBVA."

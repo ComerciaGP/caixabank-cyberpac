@@ -1,0 +1,3 @@
+<?php
+	//golden silence is
+?>

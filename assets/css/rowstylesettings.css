@@ -1,0 +1,102 @@
+table.form-table{
+	width: 60%!important;
+}
+.form-table tr{
+	background-color: #ffffff!important;
+	border: 2px solid #ECECEC;
+}
+.form-table th{
+	width: 80%;
+	padding-left: 15px;
+}
+.form-table td{
+	width: 20%;
+	margin-left: 15px;
+}
+a.tooltip{
+  position: relative;
+  display: inline;
+}
+a.tooltip:after{
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  opacity: 0;
+  content: attr(data-tool); /* might also use attr(title) */
+  height: auto;
+  min-width: 100px;
+  padding: 5px 8px;
+  z-index: 999;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(0,0,0,0.85);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a.tooltip:before {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  left: 50%;
+  bottom: 0px;
+  opacity: 0;
+  content: "";
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+}
+a.tooltip:hover:after{ visibility: visible; opacity: 1; bottom: 20px; }
+a.tooltip:hover:before{ visibility: visible; opacity: 1; bottom: 14px; }
+/* tips on bottom */
+a.tooltip.bottom:after { bottom: auto; top: 0; }
+a.tooltip.bottom:hover:after { top: 28px; }
+a.tooltip.bottom:before {
+  border-width: 0 5px 8.7px 5px;
+  border-color: transparent transparent rgba(0,0,0,0.85) transparent;
+  top: 0px
+}
+a.tooltip.bottom:hover:before { top: 20px; }
+
+
+/* tips on the right */
+a.tooltip.right:after { left: 100%; bottom: -45%; }
+a.tooltip.right:hover:after { left: 110%; bottom: -45%; }
+a.tooltip.right:before {
+  border-width: 5px 10px 5px 0;
+  border-color: transparent rgba(0,0,0,0.85) transparent transparent;
+  left: 90%;
+  bottom: 2%;
+}
+a.tooltip.right:hover:before { left: 100%; bottom: 2%; }
+
+
+/* tips on the left */
+a.tooltip.left:after { left: auto; right: 100%; bottom: -45%; }
+a.tooltip.left:hover:after { right: 110%; bottom: -45%; }
+a.tooltip.left:before {
+  border-width: 5px 0 5px 10px;
+  border-color: transparent transparent transparent rgba(0,0,0,0.85);
+  left: auto;
+  right: 90%;
+  bottom: 2%;
+}
+a.tooltip.left:hover:before { right: 100%; bottom: 2%; }
+/* tooltip colors (add your own!) */
+a.tooltip.blue:after { background:#5f87c2; }
+a.tooltip.blue:before { border-color: #5f87c2 transparent transparent transparent; }
+a.tooltip.bottom.blue:before{ border-color: transparent transparent #5f87c2 transparent; }
+a.tooltip.right.blue:before { border-color: transparent #5f87c2 transparent transparent; }
+a.tooltip.left.blue:before { border-color: transparent transparent transparent #5f87c2; }
+a.tooltip.animate:after, a.tooltip.animate:before {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
