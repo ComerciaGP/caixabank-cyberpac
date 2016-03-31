@@ -114,7 +114,7 @@ function caixabank_show_extra_profile_fields( $user ) {
 			<td>
 				<select name="caixabank_billing_country" id="caixabank_billing_country">
 					<option <?php if( $country == 'AF') echo 'selected="selected" '; ?>value="AF"><?php _e('Afghanistan', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $country == 'AX') echo 'selected="selected" '; ?>value="AX"><?php _e('Åland Islands', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $country == 'AX') echo 'selected="selected" '; ?>value="AX"><?php _e('&Aring;land Islands', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'AL') echo 'selected="selected" '; ?>value="AL"><?php _e('Albania', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'DZ') echo 'selected="selected" '; ?>value="DZ"><?php _e('Algeria', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'AS') echo 'selected="selected" '; ?>value="AS"><?php _e('American Samoa', 'caixabank_tools_official'); ?></option>
@@ -167,10 +167,10 @@ function caixabank_show_extra_profile_fields( $user ) {
 					<option <?php if( $country == 'CD') echo 'selected="selected" '; ?>value="CD"><?php _e('Congo, the Democratic Republic of the', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'CK') echo 'selected="selected" '; ?>value="CK"><?php _e('Cook Islands', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'CR') echo 'selected="selected" '; ?>value="CR"><?php _e('Costa Rica', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $country == 'CI') echo 'selected="selected" '; ?>value="CI"><?php _e('Côte d&quot;Ivoire', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $country == 'CI') echo 'selected="selected" '; ?>value="CI"><?php _e('C&ocirc;te d&quot;Ivoire', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'HR') echo 'selected="selected" '; ?>value="HR"><?php _e('Croatia', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'CU') echo 'selected="selected" '; ?>value="CU"><?php _e('Cuba', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $country == 'CW') echo 'selected="selected" '; ?>value="CW"><?php _e('Curaçao', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $country == 'CW') echo 'selected="selected" '; ?>value="CW"><?php _e('Cura&ccedil;ao', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'CY') echo 'selected="selected" '; ?>value="CY"><?php _e('Cyprus', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'CZ') echo 'selected="selected" '; ?>value="CZ"><?php _e('Czech Republic', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'DK') echo 'selected="selected" '; ?>value="DK"><?php _e('Denmark', 'caixabank_tools_official'); ?></option>
@@ -293,11 +293,11 @@ function caixabank_show_extra_profile_fields( $user ) {
 					<option <?php if( $country == 'PT') echo 'selected="selected" '; ?>value="PT"><?php _e('Portugal', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'PR') echo 'selected="selected" '; ?>value="PR"><?php _e('Puerto Rico', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'QA') echo 'selected="selected" '; ?>value="QA"><?php _e('Qatar', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $country == 'RE') echo 'selected="selected" '; ?>value="RE"><?php _e('Réunion', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $country == 'RE') echo 'selected="selected" '; ?>value="RE"><?php _e('R&eacute;union', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'RO') echo 'selected="selected" '; ?>value="RO"><?php _e('Romania', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'RU') echo 'selected="selected" '; ?>value="RU"><?php _e('Russian Federation', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'RW') echo 'selected="selected" '; ?>value="RW"><?php _e('Rwanda', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $country == 'BL') echo 'selected="selected" '; ?>value="BL"><?php _e('Saint Barthélemy', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $country == 'BL') echo 'selected="selected" '; ?>value="BL"><?php _e('Saint Barth&eacute;lemy', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'SH') echo 'selected="selected" '; ?>value="SH"><?php _e('Saint Helena, Ascension and Tristan da Cunha', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'KN') echo 'selected="selected" '; ?>value="KN"><?php _e('Saint Kitts and Nevis', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $country == 'LC') echo 'selected="selected" '; ?>value="LC"><?php _e('Saint Lucia', 'caixabank_tools_official'); ?></option>
@@ -373,39 +373,39 @@ function caixabank_show_extra_profile_fields( $user ) {
 				<td>
 					<select name="caixabank_billing_state" id="caixabank_billing_state">
 						 <option <?php if( $stateshipping == 'fueraespana')   echo 'selected="selected" '; ?> value='fueraespana'><?php _e('Outsite Spain','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'alava')    echo 'selected="selected" '; ?> value='alava'><?php _e('Álava','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'alava')    echo 'selected="selected" '; ?> value='alava'><?php _e('&Aacute;lava','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'albacete')   echo 'selected="selected" '; ?> value='albacete'><?php _e('Albacete','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'alicante')   echo 'selected="selected" '; ?> value='alicante'><?php _e('Alicante/Alacant','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'almeria')    echo 'selected="selected" '; ?> value='almeria'><?php _e('Almería','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'almeria')    echo 'selected="selected" '; ?> value='almeria'><?php _e('Almer&iacute;a','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'asturias')   echo 'selected="selected" '; ?> value='asturias'><?php _e('Asturias','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'avila')    echo 'selected="selected" '; ?> value='avila'><?php _e('Ávila','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'avila')    echo 'selected="selected" '; ?> value='avila'><?php _e('&Aacute;vila','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'badajoz')    echo 'selected="selected" '; ?> value='badajoz'><?php _e('Badajoz','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'barcelona')   echo 'selected="selected" '; ?> value='barcelona'><?php _e('Barcelona','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'burgos')    echo 'selected="selected" '; ?> value='burgos'><?php _e('Burgos','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'caceres')    echo 'selected="selected" '; ?> value='caceres'><?php _e('Cáceres','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'cadiz')    echo 'selected="selected" '; ?> value='cadiz'><?php _e('Cádiz','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'caceres')    echo 'selected="selected" '; ?> value='caceres'><?php _e('C&Aacute;ceres','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'cadiz')    echo 'selected="selected" '; ?> value='cadiz'><?php _e('C&Aacute;diz','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'cantabria')   echo 'selected="selected" '; ?> value='cantabria'><?php _e('Cantabria','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'castellon')   echo 'selected="selected" '; ?> value='castellon'><?php _e('Castellón/Castelló','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'castellon')   echo 'selected="selected" '; ?> value='castellon'><?php _e('Castell&oacute;n/Castell&oacute;','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'ceuta')    echo 'selected="selected" '; ?> value='ceuta'><?php _e('Ceuta','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'ciudadreal')   echo 'selected="selected" '; ?> value='ciudadreal'><?php _e('Ciudad Real','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'cordoba')    echo 'selected="selected" '; ?> value='cordoba'><?php _e('Córdoba','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'cordoba')    echo 'selected="selected" '; ?> value='cordoba'><?php _e('C&oacute;rdoba','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'cuenca')    echo 'selected="selected" '; ?> value='cuenca'><?php _e('Cuenca','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'girona')    echo 'selected="selected" '; ?> value='girona'><?php _e('Girona','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'laspalmas')   echo 'selected="selected" '; ?> value='laspalmas'><?php _e('Las Palmas','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'granada')    echo 'selected="selected" '; ?> value='granada'><?php _e('Granada','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'guadalajara')   echo 'selected="selected" '; ?> value='guadalajara'><?php _e('Guadalajara','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'guipuzcoa')   echo 'selected="selected" '; ?> value='guipuzcoa'><?php _e('Guipúzcoa','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'guipuzcoa')   echo 'selected="selected" '; ?> value='guipuzcoa'><?php _e('Guip&uacute;zcoa','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'huelva')    echo 'selected="selected" '; ?> value='huelva'><?php _e('Huelva','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'huesca')    echo 'selected="selected" '; ?> value='huesca'><?php _e('Huesca','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'illesbalears')  echo 'selected="selected" '; ?> value='illesbalears'><?php _e('Illes Balears','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'jaen')    echo 'selected="selected" '; ?> value='jaen'><?php _e('Jaén','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'acoruña')    echo 'selected="selected" '; ?> value='acoruña'><?php _e('A Coruña','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'jaen')    echo 'selected="selected" '; ?> value='jaen'><?php _e('Ja&eacute;n','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'acoruna')    echo 'selected="selected" '; ?> value='acoruna'><?php _e('A Coru&ntilde;a','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'larioja')    echo 'selected="selected" '; ?> value='larioja'><?php _e('La Rioja','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'leon')    echo 'selected="selected" '; ?> value='leon'><?php _e('León','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'leon')    echo 'selected="selected" '; ?> value='leon'><?php _e('Le&oacute;n','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'lleida')    echo 'selected="selected" '; ?> value='lleida'><?php _e('Lleida','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'lugo')    echo 'selected="selected" '; ?> value='lugo'><?php _e('Lugo','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'madrid')    echo 'selected="selected" '; ?> value='madrid'><?php _e('Madrid','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'malaga')    echo 'selected="selected" '; ?> value='malaga'><?php _e('Málaga','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'malaga')    echo 'selected="selected" '; ?> value='malaga'><?php _e('M&Aacute;laga','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'melilla')    echo 'selected="selected" '; ?> value='melilla'><?php _e('Melilla','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'murcia')    echo 'selected="selected" '; ?> value='murcia'><?php _e('Murcia','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'navarra')    echo 'selected="selected" '; ?> value='navarra'><?php _e('Navarra','caixabank-tools-official'); ?></option>
@@ -420,7 +420,7 @@ function caixabank_show_extra_profile_fields( $user ) {
 						 <option <?php if( $stateshipping == 'santacruztenerife') echo 'selected="selected" '; ?> value='santacruztenerife'><?php _e('Santa Cruz de Tenerife','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'teruel')    echo 'selected="selected" '; ?> value='teruel'><?php _e('Teruel','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'toledo')    echo 'selected="selected" '; ?> value='toledo'><?php _e('Toledo','caixabank-tools-official'); ?></option>
-						 <option <?php if( $stateshipping == 'valencia')   echo 'selected="selected" '; ?> value='valencia'><?php _e('Valencia/Valéncia','caixabank-tools-official'); ?></option>
+						 <option <?php if( $stateshipping == 'valencia')   echo 'selected="selected" '; ?> value='valencia'><?php _e('Valencia/Val&eacute;ncia','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'valladolid')   echo 'selected="selected" '; ?> value='valladolid'><?php _e('Valladolid','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'vizcaya')    echo 'selected="selected" '; ?> value='vizcaya'><?php _e('Vizcaya','caixabank-tools-official'); ?></option>
 						 <option <?php if( $stateshipping == 'zamora')    echo 'selected="selected" '; ?> value='zamora'><?php _e('Zamora','caixabank-tools-official'); ?></option>
@@ -609,7 +609,7 @@ function caixabank_show_extra_profile_fields( $user ) {
 			<td>
 				<select name="caixabank_shipping_country" id="caixabank_shipping_country">
 					<option <?php if( $countryshipping == 'AF') echo 'selected="selected" '; ?>value="AF"><?php _e('Afghanistan', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $countryshipping == 'AX') echo 'selected="selected" '; ?>value="AX"><?php _e('Åland Islands', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $countryshipping == 'AX') echo 'selected="selected" '; ?>value="AX"><?php _e('&Aring;land Islands', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'AL') echo 'selected="selected" '; ?>value="AL"><?php _e('Albania', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'DZ') echo 'selected="selected" '; ?>value="DZ"><?php _e('Algeria', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'AS') echo 'selected="selected" '; ?>value="AS"><?php _e('American Samoa', 'caixabank_tools_official'); ?></option>
@@ -662,10 +662,10 @@ function caixabank_show_extra_profile_fields( $user ) {
 					<option <?php if( $countryshipping == 'CD') echo 'selected="selected" '; ?>value="CD"><?php _e('Congo, the Democratic Republic of the', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'CK') echo 'selected="selected" '; ?>value="CK"><?php _e('Cook Islands', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'CR') echo 'selected="selected" '; ?>value="CR"><?php _e('Costa Rica', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $countryshipping == 'CI') echo 'selected="selected" '; ?>value="CI"><?php _e('Côte d&quot;Ivoire', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $countryshipping == 'CI') echo 'selected="selected" '; ?>value="CI"><?php _e('C&ocirc;te d&quot;Ivoire', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'HR') echo 'selected="selected" '; ?>value="HR"><?php _e('Croatia', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'CU') echo 'selected="selected" '; ?>value="CU"><?php _e('Cuba', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $countryshipping == 'CW') echo 'selected="selected" '; ?>value="CW"><?php _e('Curaçao', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $countryshipping == 'CW') echo 'selected="selected" '; ?>value="CW"><?php _e('Cura&ccedil;ao', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'CY') echo 'selected="selected" '; ?>value="CY"><?php _e('Cyprus', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'CZ') echo 'selected="selected" '; ?>value="CZ"><?php _e('Czech Republic', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'DK') echo 'selected="selected" '; ?>value="DK"><?php _e('Denmark', 'caixabank_tools_official'); ?></option>
@@ -788,11 +788,11 @@ function caixabank_show_extra_profile_fields( $user ) {
 					<option <?php if( $countryshipping == 'PT') echo 'selected="selected" '; ?>value="PT"><?php _e('Portugal', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'PR') echo 'selected="selected" '; ?>value="PR"><?php _e('Puerto Rico', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'QA') echo 'selected="selected" '; ?>value="QA"><?php _e('Qatar', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $countryshipping == 'RE') echo 'selected="selected" '; ?>value="RE"><?php _e('Réunion', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $countryshipping == 'RE') echo 'selected="selected" '; ?>value="RE"><?php _e('R&eacute;union', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'RO') echo 'selected="selected" '; ?>value="RO"><?php _e('Romania', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'RU') echo 'selected="selected" '; ?>value="RU"><?php _e('Russian Federation', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'RW') echo 'selected="selected" '; ?>value="RW"><?php _e('Rwanda', 'caixabank_tools_official'); ?></option>
-					<option <?php if( $countryshipping == 'BL') echo 'selected="selected" '; ?>value="BL"><?php _e('Saint Barthélemy', 'caixabank_tools_official'); ?></option>
+					<option <?php if( $countryshipping == 'BL') echo 'selected="selected" '; ?>value="BL"><?php _e('Saint Barth&eacute;lemy', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'SH') echo 'selected="selected" '; ?>value="SH"><?php _e('Saint Helena, Ascension and Tristan da Cunha', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'KN') echo 'selected="selected" '; ?>value="KN"><?php _e('Saint Kitts and Nevis', 'caixabank_tools_official'); ?></option>
 					<option <?php if( $countryshipping == 'LC') echo 'selected="selected" '; ?>value="LC"><?php _e('Saint Lucia', 'caixabank_tools_official'); ?></option>
@@ -868,39 +868,39 @@ function caixabank_show_extra_profile_fields( $user ) {
 				<td>
 					<select name="caixabank_shipping_state" id="caixabank_shipping_state">
 						 <option <?php if( $statebilling == 'fueraespana')   echo 'selected="selected" '; ?> value='fueraespana'><?php _e('Outsite Spain','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'alava')    echo 'selected="selected" '; ?> value='alava'><?php _e('Álava','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'alava')    echo 'selected="selected" '; ?> value='alava'><?php _e('&Aacute;lava','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'albacete')    echo 'selected="selected" '; ?> value='albacete'><?php _e('Albacete','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'alicante')    echo 'selected="selected" '; ?> value='alicante'><?php _e('Alicante/Alacant','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'almeria')    echo 'selected="selected" '; ?> value='almeria'><?php _e('Almería','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'almeria')    echo 'selected="selected" '; ?> value='almeria'><?php _e('Almer&iacute;a','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'asturias')    echo 'selected="selected" '; ?> value='asturias'><?php _e('Asturias','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'avila')    echo 'selected="selected" '; ?> value='avila'><?php _e('Ávila','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'avila')    echo 'selected="selected" '; ?> value='avila'><?php _e('&Aacute;vila','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'badajoz')    echo 'selected="selected" '; ?> value='badajoz'><?php _e('Badajoz','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'barcelona')   echo 'selected="selected" '; ?> value='barcelona'><?php _e('Barcelona','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'burgos')    echo 'selected="selected" '; ?> value='burgos'><?php _e('Burgos','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'caceres')    echo 'selected="selected" '; ?> value='caceres'><?php _e('Cáceres','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'cadiz')    echo 'selected="selected" '; ?> value='cadiz'><?php _e('Cádiz','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'caceres')    echo 'selected="selected" '; ?> value='caceres'><?php _e('C&Aacute;ceres','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'cadiz')    echo 'selected="selected" '; ?> value='cadiz'><?php _e('C&Aacute;diz','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'cantabria')   echo 'selected="selected" '; ?> value='cantabria'><?php _e('Cantabria','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'castellon')   echo 'selected="selected" '; ?> value='castellon'><?php _e('Castellón/Castelló','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'castellon')   echo 'selected="selected" '; ?> value='castellon'><?php _e('Castell&oacute;n/Castell&oacute;','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'ceuta')    echo 'selected="selected" '; ?> value='ceuta'><?php _e('Ceuta','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'ciudadreal')   echo 'selected="selected" '; ?> value='ciudadreal'><?php _e('Ciudad Real','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'cordoba')    echo 'selected="selected" '; ?> value='cordoba'><?php _e('Córdoba','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'cordoba')    echo 'selected="selected" '; ?> value='cordoba'><?php _e('C&oacute;rdoba','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'cuenca')    echo 'selected="selected" '; ?> value='cuenca'><?php _e('Cuenca','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'girona')    echo 'selected="selected" '; ?> value='girona'><?php _e('Girona','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'laspalmas')   echo 'selected="selected" '; ?> value='laspalmas'><?php _e('Las Palmas','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'granada')    echo 'selected="selected" '; ?> value='granada'><?php _e('Granada','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'guadalajara')   echo 'selected="selected" '; ?> value='guadalajara'><?php _e('Guadalajara','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'guipuzcoa')   echo 'selected="selected" '; ?> value='guipuzcoa'><?php _e('Guipúzcoa','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'guipuzcoa')   echo 'selected="selected" '; ?> value='guipuzcoa'><?php _e('Guip&uacute;zcoa','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'huelva')    echo 'selected="selected" '; ?> value='huelva'><?php _e('Huelva','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'huesca')    echo 'selected="selected" '; ?> value='huesca'><?php _e('Huesca','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'illesbalears')   echo 'selected="selected" '; ?> value='illesbalears'><?php _e('Illes Balears','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'jaen')     echo 'selected="selected" '; ?> value='jaen'><?php _e('Jaén','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'acoruña')    echo 'selected="selected" '; ?> value='acoruña'><?php _e('A Coruña','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'jaen')     echo 'selected="selected" '; ?> value='jaen'><?php _e('Ja&eacute;n','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'acoruna')    echo 'selected="selected" '; ?> value='acoruna'><?php _e('A Coru&ntilde;a','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'larioja')    echo 'selected="selected" '; ?> value='larioja'><?php _e('La Rioja','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'leon')     echo 'selected="selected" '; ?> value='leon'><?php _e('León','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'leon')     echo 'selected="selected" '; ?> value='leon'><?php _e('Le&oacute;n','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'lleida')    echo 'selected="selected" '; ?> value='lleida'><?php _e('Lleida','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'lugo')     echo 'selected="selected" '; ?> value='lugo'><?php _e('Lugo','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'madrid')    echo 'selected="selected" '; ?> value='madrid'><?php _e('Madrid','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'malaga')    echo 'selected="selected" '; ?> value='malaga'><?php _e('Málaga','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'malaga')    echo 'selected="selected" '; ?> value='malaga'><?php _e('M&Aacute;laga','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'melilla')    echo 'selected="selected" '; ?> value='melilla'><?php _e('Melilla','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'murcia')    echo 'selected="selected" '; ?> value='murcia'><?php _e('Murcia','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'navarra')    echo 'selected="selected" '; ?> value='navarra'><?php _e('Navarra','caixabank-tools-official'); ?></option>
@@ -915,7 +915,7 @@ function caixabank_show_extra_profile_fields( $user ) {
 						 <option <?php if( $statebilling == 'santacruztenerife') echo 'selected="selected" '; ?> value='santacruztenerife'><?php _e('Santa Cruz de Tenerife','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'teruel')    echo 'selected="selected" '; ?> value='teruel'><?php _e('Teruel','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'toledo')    echo 'selected="selected" '; ?> value='toledo'><?php _e('Toledo','caixabank-tools-official'); ?></option>
-						 <option <?php if( $statebilling == 'valencia')    echo 'selected="selected" '; ?> value='valencia'><?php _e('Valencia/Valéncia','caixabank-tools-official'); ?></option>
+						 <option <?php if( $statebilling == 'valencia')    echo 'selected="selected" '; ?> value='valencia'><?php _e('Valencia/Val&eacute;ncia','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'valladolid')   echo 'selected="selected" '; ?> value='valladolid'><?php _e('Valladolid','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'vizcaya')    echo 'selected="selected" '; ?> value='vizcaya'><?php _e('Vizcaya','caixabank-tools-official'); ?></option>
 						 <option <?php if( $statebilling == 'zamora')    echo 'selected="selected" '; ?> value='zamora'><?php _e('Zamora','caixabank-tools-official'); ?></option>

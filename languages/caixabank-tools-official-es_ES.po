@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Woocommerce BBVA\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-17 00:42+0100\n"
-"PO-Revision-Date: 2016-03-17 00:45+0100\n"
+"POT-Creation-Date: 2016-03-31 13:26+0200\n"
+"PO-Revision-Date: 2016-03-31 13:27+0200\n"
 "Last-Translator: José Conti <admin@wangguard.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -14,6 +14,1873 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Generator: Poedit 1.8.7\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../core/cpt/caixabank-ordes-cpt.php:10
+#: ../core/cpt/caixabank-ordes-cpt.php:11
+msgid "CaixaBank Orders"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:12
+msgid "Order Archives"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:13
+msgid "Parent Item:"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:14
+msgid "All Orders"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:15
+msgid "Add new Order"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:16
+msgid "Add New"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:17
+msgid "New Order"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:18
+msgid "Edit Order"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:19
+msgid "Update Order"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:20
+msgid "View Order"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:21
+msgid "Search Order"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:22
+msgid "Not found"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:23
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:24
+msgid "Featured Image"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:25
+msgid "Set featured image"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:26
+msgid "Remove featured image"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:27
+msgid "Use as featured image"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:28
+msgid "Insert into item"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:29
+msgid "Uploaded to this item"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:30
+msgid "Items list"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:31
+msgid "Items list navigation"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:32
+msgid "Filter items list"
+msgstr ""
+
+#: ../core/cpt/caixabank-ordes-cpt.php:35
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:291
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:296
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:323
+msgid "Order"
+msgstr "Orden"
+
+#: ../core/cpt/caixabank-ordes-cpt.php:36
+msgid "Orders"
+msgstr ""
+
+#: ../core/functions/functions.php:25
+msgid "DNI / NIF / NIE"
+msgstr ""
+
+#: ../core/functions/functions.php:34 ../core/functions/functions.php:44
+msgid "DNI/NIF/NIE"
+msgstr ""
+
+#: ../core/functions/functions.php:93
+msgid "CaixaBank incorrect data sent"
+msgstr ""
+
+#: ../core/menu/menu.php:19
+msgid "CaixaBank"
+msgstr ""
+
+#: ../core/menu/menu.php:27
+msgid "Settings"
+msgstr ""
+
+#: ../core/menu/menu.php:29
+msgid "About"
+msgstr ""
+
+#: ../core/metaboxes/caixabank-orders-metaboxes.php:25
+msgid "caixabank Order Data"
+msgstr ""
+
+#: ../core/metaboxes/caixabank-orders-metaboxes.php:40
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:122
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:133
+msgid "Description"
+msgstr "Descripción"
+
+#: ../core/pages/caixabank-settings.php:7
+msgid "CaixaBank Tools Official Settings"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:17
+msgid "CaixaBank Billing Address"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:22
+#: ../core/user-fields/caixabank-user-fields.php:517
+msgid "First name"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:26
+#: ../core/user-fields/caixabank-user-fields.php:521
+msgid "Please enter your First name."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:31
+#: ../core/user-fields/caixabank-user-fields.php:526
+msgid "Last name"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:35
+#: ../core/user-fields/caixabank-user-fields.php:530
+msgid "Please enter your Last name."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:40
+#: ../core/user-fields/caixabank-user-fields.php:72
+#: ../core/user-fields/caixabank-user-fields.php:535
+#: ../core/user-fields/caixabank-user-fields.php:567
+msgid "Company"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:44
+#: ../core/user-fields/caixabank-user-fields.php:539
+msgid "Please enter your Company name."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:49
+#: ../core/user-fields/caixabank-user-fields.php:544
+msgid "Address 1"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:53
+#: ../core/user-fields/caixabank-user-fields.php:548
+msgid "Please enter your Address 1."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:58
+#: ../core/user-fields/caixabank-user-fields.php:553
+msgid "Address 2"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:62
+#: ../core/user-fields/caixabank-user-fields.php:557
+msgid "Please enter your Address 2."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:67
+#: ../core/user-fields/caixabank-user-fields.php:562
+msgid "Tax Status"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:71
+#: ../core/user-fields/caixabank-user-fields.php:566
+msgid "Individual"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:73
+#: ../core/user-fields/caixabank-user-fields.php:568
+msgid "Freelance"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:74
+#: ../core/user-fields/caixabank-user-fields.php:569
+msgid "Non-profit organization"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:75
+#: ../core/user-fields/caixabank-user-fields.php:570
+msgid "Educational institutions regulated"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:76
+#: ../core/user-fields/caixabank-user-fields.php:571
+msgid "Schools unregulated"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:77
+#: ../core/user-fields/caixabank-user-fields.php:572
+msgid "Government organization"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:79
+#: ../core/user-fields/caixabank-user-fields.php:574
+msgid "Please select your tax status."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:85
+#: ../core/user-fields/caixabank-user-fields.php:580
+msgid "NIF / CIF / NIE (IC)"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:89
+#: ../core/user-fields/caixabank-user-fields.php:584
+msgid "Please enter your NIF / CIF / NIE (IC)."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:94
+#: ../core/user-fields/caixabank-user-fields.php:589
+msgid "City"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:98
+#: ../core/user-fields/caixabank-user-fields.php:593
+msgid "Please enter your City."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:103
+#: ../core/user-fields/caixabank-user-fields.php:598
+msgid "Postcode"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:107
+#: ../core/user-fields/caixabank-user-fields.php:602
+msgid "Please enter your Postcode."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:112
+#: ../core/user-fields/caixabank-user-fields.php:607
+msgid "Country"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:116
+#: ../core/user-fields/caixabank-user-fields.php:611
+msgid "Afghanistan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:117
+#: ../core/user-fields/caixabank-user-fields.php:612
+msgid "&Aring;land Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:118
+#: ../core/user-fields/caixabank-user-fields.php:613
+msgid "Albania"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:119
+#: ../core/user-fields/caixabank-user-fields.php:614
+msgid "Algeria"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:120
+#: ../core/user-fields/caixabank-user-fields.php:615
+msgid "American Samoa"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:121
+#: ../core/user-fields/caixabank-user-fields.php:616
+msgid "Andorra"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:122
+#: ../core/user-fields/caixabank-user-fields.php:617
+msgid "Angola"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:123
+#: ../core/user-fields/caixabank-user-fields.php:618
+msgid "Anguilla"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:124
+#: ../core/user-fields/caixabank-user-fields.php:619
+msgid "Antarctica"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:125
+#: ../core/user-fields/caixabank-user-fields.php:620
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:126
+#: ../core/user-fields/caixabank-user-fields.php:621
+msgid "Argentina"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:127
+#: ../core/user-fields/caixabank-user-fields.php:622
+msgid "Armenia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:128
+#: ../core/user-fields/caixabank-user-fields.php:623
+msgid "Aruba"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:129
+#: ../core/user-fields/caixabank-user-fields.php:624
+msgid "Australia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:130
+#: ../core/user-fields/caixabank-user-fields.php:625
+msgid "Austria"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:131
+#: ../core/user-fields/caixabank-user-fields.php:626
+msgid "Azerbaijan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:132
+#: ../core/user-fields/caixabank-user-fields.php:627
+msgid "Bahamas"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:133
+#: ../core/user-fields/caixabank-user-fields.php:628
+msgid "Bahrain"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:134
+#: ../core/user-fields/caixabank-user-fields.php:629
+msgid "Bangladesh"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:135
+#: ../core/user-fields/caixabank-user-fields.php:630
+msgid "Barbados"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:136
+#: ../core/user-fields/caixabank-user-fields.php:631
+msgid "Belarus"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:137
+#: ../core/user-fields/caixabank-user-fields.php:632
+msgid "Belgium"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:138
+#: ../core/user-fields/caixabank-user-fields.php:633
+msgid "Belize"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:139
+#: ../core/user-fields/caixabank-user-fields.php:634
+msgid "Benin"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:140
+#: ../core/user-fields/caixabank-user-fields.php:635
+msgid "Bermuda"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:141
+#: ../core/user-fields/caixabank-user-fields.php:636
+msgid "Bhutan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:142
+#: ../core/user-fields/caixabank-user-fields.php:637
+msgid "Bolivia, Plurinational State of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:143
+#: ../core/user-fields/caixabank-user-fields.php:638
+msgid "Bonaire, Sint Eustatius and Saba"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:144
+#: ../core/user-fields/caixabank-user-fields.php:639
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:145
+#: ../core/user-fields/caixabank-user-fields.php:640
+msgid "Botswana"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:146
+#: ../core/user-fields/caixabank-user-fields.php:641
+msgid "Bouvet Island"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:147
+#: ../core/user-fields/caixabank-user-fields.php:642
+msgid "Brazil"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:148
+#: ../core/user-fields/caixabank-user-fields.php:643
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:149
+#: ../core/user-fields/caixabank-user-fields.php:644
+msgid "Brunei Darussalam"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:150
+#: ../core/user-fields/caixabank-user-fields.php:645
+msgid "Bulgaria"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:151
+#: ../core/user-fields/caixabank-user-fields.php:646
+msgid "Burkina Faso"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:152
+#: ../core/user-fields/caixabank-user-fields.php:647
+msgid "Burundi"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:153
+#: ../core/user-fields/caixabank-user-fields.php:648
+msgid "Cambodia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:154
+#: ../core/user-fields/caixabank-user-fields.php:649
+msgid "Cameroon"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:155
+#: ../core/user-fields/caixabank-user-fields.php:650
+msgid "Canada"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:156
+#: ../core/user-fields/caixabank-user-fields.php:651
+msgid "Cape Verde"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:157
+#: ../core/user-fields/caixabank-user-fields.php:652
+msgid "Cayman Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:158
+#: ../core/user-fields/caixabank-user-fields.php:653
+msgid "Central African Republic"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:159
+#: ../core/user-fields/caixabank-user-fields.php:654
+msgid "Chad"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:160
+#: ../core/user-fields/caixabank-user-fields.php:655
+msgid "Chile"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:161
+#: ../core/user-fields/caixabank-user-fields.php:656
+msgid "China"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:162
+#: ../core/user-fields/caixabank-user-fields.php:657
+msgid "Christmas Island"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:163
+#: ../core/user-fields/caixabank-user-fields.php:658
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:164
+#: ../core/user-fields/caixabank-user-fields.php:659
+msgid "Colombia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:165
+#: ../core/user-fields/caixabank-user-fields.php:660
+msgid "Comoros"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:166
+#: ../core/user-fields/caixabank-user-fields.php:661
+msgid "Congo"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:167
+#: ../core/user-fields/caixabank-user-fields.php:662
+msgid "Congo, the Democratic Republic of the"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:168
+#: ../core/user-fields/caixabank-user-fields.php:663
+msgid "Cook Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:169
+#: ../core/user-fields/caixabank-user-fields.php:664
+msgid "Costa Rica"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:170
+#: ../core/user-fields/caixabank-user-fields.php:665
+msgid "C&ocirc;te d&quot;Ivoire"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:171
+#: ../core/user-fields/caixabank-user-fields.php:666
+msgid "Croatia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:172
+#: ../core/user-fields/caixabank-user-fields.php:667
+msgid "Cuba"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:173
+#: ../core/user-fields/caixabank-user-fields.php:668
+msgid "Cura&ccedil;ao"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:174
+#: ../core/user-fields/caixabank-user-fields.php:669
+msgid "Cyprus"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:175
+#: ../core/user-fields/caixabank-user-fields.php:670
+msgid "Czech Republic"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:176
+#: ../core/user-fields/caixabank-user-fields.php:671
+msgid "Denmark"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:177
+#: ../core/user-fields/caixabank-user-fields.php:672
+msgid "Djibouti"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:178
+#: ../core/user-fields/caixabank-user-fields.php:673
+msgid "Dominica"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:179
+#: ../core/user-fields/caixabank-user-fields.php:674
+msgid "Dominican Republic"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:180
+#: ../core/user-fields/caixabank-user-fields.php:675
+msgid "Ecuador"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:181
+#: ../core/user-fields/caixabank-user-fields.php:676
+msgid "Egypt"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:182
+#: ../core/user-fields/caixabank-user-fields.php:677
+msgid "El Salvador"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:183
+#: ../core/user-fields/caixabank-user-fields.php:678
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:184
+#: ../core/user-fields/caixabank-user-fields.php:679
+msgid "Eritrea"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:185
+#: ../core/user-fields/caixabank-user-fields.php:680
+msgid "Estonia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:186
+#: ../core/user-fields/caixabank-user-fields.php:681
+msgid "Ethiopia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:187
+#: ../core/user-fields/caixabank-user-fields.php:682
+msgid "Falkland Islands (Malvinas)"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:188
+#: ../core/user-fields/caixabank-user-fields.php:683
+msgid "Faroe Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:189
+#: ../core/user-fields/caixabank-user-fields.php:684
+msgid "Fiji"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:190
+#: ../core/user-fields/caixabank-user-fields.php:685
+msgid "Finland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:191
+#: ../core/user-fields/caixabank-user-fields.php:686
+msgid "France"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:192
+#: ../core/user-fields/caixabank-user-fields.php:687
+msgid "French Guiana"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:193
+#: ../core/user-fields/caixabank-user-fields.php:688
+msgid "French Polynesia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:194
+#: ../core/user-fields/caixabank-user-fields.php:689
+msgid "French Southern Territories"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:195
+#: ../core/user-fields/caixabank-user-fields.php:690
+msgid "Gabon"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:196
+#: ../core/user-fields/caixabank-user-fields.php:691
+msgid "Gambia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:197
+#: ../core/user-fields/caixabank-user-fields.php:692
+msgid "Georgia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:198
+#: ../core/user-fields/caixabank-user-fields.php:693
+msgid "Germany"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:199
+#: ../core/user-fields/caixabank-user-fields.php:694
+msgid "Ghana"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:200
+#: ../core/user-fields/caixabank-user-fields.php:695
+msgid "Gibraltar"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:201
+#: ../core/user-fields/caixabank-user-fields.php:696
+msgid "Greece"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:202
+#: ../core/user-fields/caixabank-user-fields.php:697
+msgid "Greenland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:203
+#: ../core/user-fields/caixabank-user-fields.php:698
+msgid "Grenada"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:204
+#: ../core/user-fields/caixabank-user-fields.php:699
+msgid "Guadeloupe"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:205
+#: ../core/user-fields/caixabank-user-fields.php:700
+msgid "Guam"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:206
+#: ../core/user-fields/caixabank-user-fields.php:701
+msgid "Guatemala"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:207
+#: ../core/user-fields/caixabank-user-fields.php:702
+msgid "Guernsey"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:208
+#: ../core/user-fields/caixabank-user-fields.php:703
+msgid "Guinea"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:209
+#: ../core/user-fields/caixabank-user-fields.php:704
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:210
+#: ../core/user-fields/caixabank-user-fields.php:705
+msgid "Guyana"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:211
+#: ../core/user-fields/caixabank-user-fields.php:706
+msgid "Haiti"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:212
+#: ../core/user-fields/caixabank-user-fields.php:707
+msgid "Heard Island and McDonald Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:213
+#: ../core/user-fields/caixabank-user-fields.php:708
+msgid "Holy See (Vatican City State)"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:214
+#: ../core/user-fields/caixabank-user-fields.php:709
+msgid "Honduras"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:215
+#: ../core/user-fields/caixabank-user-fields.php:710
+msgid "Hong Kong"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:216
+#: ../core/user-fields/caixabank-user-fields.php:711
+msgid "Hungary"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:217
+#: ../core/user-fields/caixabank-user-fields.php:712
+msgid "Iceland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:218
+#: ../core/user-fields/caixabank-user-fields.php:713
+msgid "India"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:219
+#: ../core/user-fields/caixabank-user-fields.php:714
+msgid "Indonesia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:220
+#: ../core/user-fields/caixabank-user-fields.php:715
+msgid "Iran, Islamic Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:221
+#: ../core/user-fields/caixabank-user-fields.php:716
+msgid "Iraq"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:222
+#: ../core/user-fields/caixabank-user-fields.php:717
+msgid "Ireland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:223
+#: ../core/user-fields/caixabank-user-fields.php:718
+msgid "Isle of Man"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:224
+#: ../core/user-fields/caixabank-user-fields.php:719
+msgid "Israel"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:225
+#: ../core/user-fields/caixabank-user-fields.php:720
+msgid "Italy"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:226
+#: ../core/user-fields/caixabank-user-fields.php:721
+msgid "Jamaica"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:227
+#: ../core/user-fields/caixabank-user-fields.php:722
+msgid "Japan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:228
+#: ../core/user-fields/caixabank-user-fields.php:723
+msgid "Jersey"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:229
+#: ../core/user-fields/caixabank-user-fields.php:724
+msgid "Jordan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:230
+#: ../core/user-fields/caixabank-user-fields.php:725
+msgid "Kazakhstan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:231
+#: ../core/user-fields/caixabank-user-fields.php:726
+msgid "Kenya"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:232
+#: ../core/user-fields/caixabank-user-fields.php:727
+msgid "Kiribati"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:233
+#: ../core/user-fields/caixabank-user-fields.php:728
+msgid "Korea, Democratic People&quot;s Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:234
+#: ../core/user-fields/caixabank-user-fields.php:729
+msgid "Korea, Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:235
+#: ../core/user-fields/caixabank-user-fields.php:730
+msgid "Kuwait"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:236
+#: ../core/user-fields/caixabank-user-fields.php:731
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:237
+#: ../core/user-fields/caixabank-user-fields.php:732
+msgid "Lao People&quot;s Democratic Republic"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:238
+#: ../core/user-fields/caixabank-user-fields.php:733
+msgid "Latvia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:239
+#: ../core/user-fields/caixabank-user-fields.php:734
+msgid "Lebanon"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:240
+#: ../core/user-fields/caixabank-user-fields.php:735
+msgid "Lesotho"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:241
+#: ../core/user-fields/caixabank-user-fields.php:736
+msgid "Liberia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:242
+#: ../core/user-fields/caixabank-user-fields.php:737
+msgid "Libya"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:243
+#: ../core/user-fields/caixabank-user-fields.php:738
+msgid "Liechtenstein"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:244
+#: ../core/user-fields/caixabank-user-fields.php:739
+msgid "Lithuania"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:245
+#: ../core/user-fields/caixabank-user-fields.php:740
+msgid "Luxembourg"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:246
+#: ../core/user-fields/caixabank-user-fields.php:741
+msgid "Macao"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:247
+#: ../core/user-fields/caixabank-user-fields.php:742
+msgid "Macedonia, the former Yugoslav Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:248
+#: ../core/user-fields/caixabank-user-fields.php:743
+msgid "Madagascar"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:249
+#: ../core/user-fields/caixabank-user-fields.php:744
+msgid "Malawi"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:250
+#: ../core/user-fields/caixabank-user-fields.php:745
+msgid "Malaysia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:251
+#: ../core/user-fields/caixabank-user-fields.php:746
+msgid "Maldives"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:252
+#: ../core/user-fields/caixabank-user-fields.php:747
+msgid "Mali"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:253
+#: ../core/user-fields/caixabank-user-fields.php:748
+msgid "Malta"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:254
+#: ../core/user-fields/caixabank-user-fields.php:749
+msgid "Marshall Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:255
+#: ../core/user-fields/caixabank-user-fields.php:750
+msgid "Martinique"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:256
+#: ../core/user-fields/caixabank-user-fields.php:751
+msgid "Mauritania"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:257
+#: ../core/user-fields/caixabank-user-fields.php:752
+msgid "Mauritius"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:258
+#: ../core/user-fields/caixabank-user-fields.php:753
+msgid "Mayotte"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:259
+#: ../core/user-fields/caixabank-user-fields.php:754
+msgid "Mexico"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:260
+#: ../core/user-fields/caixabank-user-fields.php:755
+msgid "Micronesia, Federated States of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:261
+#: ../core/user-fields/caixabank-user-fields.php:756
+msgid "Moldova, Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:262
+#: ../core/user-fields/caixabank-user-fields.php:757
+msgid "Monaco"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:263
+#: ../core/user-fields/caixabank-user-fields.php:758
+msgid "Mongolia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:264
+#: ../core/user-fields/caixabank-user-fields.php:759
+msgid "Montenegro"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:265
+#: ../core/user-fields/caixabank-user-fields.php:760
+msgid "Montserrat"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:266
+#: ../core/user-fields/caixabank-user-fields.php:761
+msgid "Morocco"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:267
+#: ../core/user-fields/caixabank-user-fields.php:762
+msgid "Mozambique"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:268
+#: ../core/user-fields/caixabank-user-fields.php:763
+msgid "Myanmar"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:269
+#: ../core/user-fields/caixabank-user-fields.php:764
+msgid "Namibia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:270
+#: ../core/user-fields/caixabank-user-fields.php:765
+msgid "Nauru"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:271
+#: ../core/user-fields/caixabank-user-fields.php:766
+msgid "Nepal"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:272
+#: ../core/user-fields/caixabank-user-fields.php:767
+msgid "Netherlands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:273
+#: ../core/user-fields/caixabank-user-fields.php:768
+msgid "New Caledonia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:274
+#: ../core/user-fields/caixabank-user-fields.php:769
+msgid "New Zealand"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:275
+#: ../core/user-fields/caixabank-user-fields.php:770
+msgid "Nicaragua"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:276
+#: ../core/user-fields/caixabank-user-fields.php:771
+msgid "Niger"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:277
+#: ../core/user-fields/caixabank-user-fields.php:772
+msgid "Nigeria"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:278
+#: ../core/user-fields/caixabank-user-fields.php:773
+msgid "Niue"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:279
+#: ../core/user-fields/caixabank-user-fields.php:774
+msgid "Norfolk Island"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:280
+#: ../core/user-fields/caixabank-user-fields.php:775
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:281
+#: ../core/user-fields/caixabank-user-fields.php:776
+msgid "Norway"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:282
+#: ../core/user-fields/caixabank-user-fields.php:777
+msgid "Oman"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:283
+#: ../core/user-fields/caixabank-user-fields.php:778
+msgid "Pakistan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:284
+#: ../core/user-fields/caixabank-user-fields.php:779
+msgid "Palau"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:285
+#: ../core/user-fields/caixabank-user-fields.php:780
+msgid "Palestinian Territory, Occupied"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:286
+#: ../core/user-fields/caixabank-user-fields.php:781
+msgid "Panama"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:287
+#: ../core/user-fields/caixabank-user-fields.php:782
+msgid "Papua New Guinea"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:288
+#: ../core/user-fields/caixabank-user-fields.php:783
+msgid "Paraguay"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:289
+#: ../core/user-fields/caixabank-user-fields.php:784
+msgid "Peru"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:290
+#: ../core/user-fields/caixabank-user-fields.php:785
+msgid "Philippines"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:291
+#: ../core/user-fields/caixabank-user-fields.php:786
+msgid "Pitcairn"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:292
+#: ../core/user-fields/caixabank-user-fields.php:787
+msgid "Poland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:293
+#: ../core/user-fields/caixabank-user-fields.php:788
+msgid "Portugal"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:294
+#: ../core/user-fields/caixabank-user-fields.php:789
+msgid "Puerto Rico"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:295
+#: ../core/user-fields/caixabank-user-fields.php:790
+msgid "Qatar"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:296
+#: ../core/user-fields/caixabank-user-fields.php:791
+msgid "R&eacute;union"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:297
+#: ../core/user-fields/caixabank-user-fields.php:792
+msgid "Romania"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:298
+#: ../core/user-fields/caixabank-user-fields.php:793
+msgid "Russian Federation"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:299
+#: ../core/user-fields/caixabank-user-fields.php:794
+msgid "Rwanda"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:300
+#: ../core/user-fields/caixabank-user-fields.php:795
+msgid "Saint Barth&eacute;lemy"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:301
+#: ../core/user-fields/caixabank-user-fields.php:796
+msgid "Saint Helena, Ascension and Tristan da Cunha"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:302
+#: ../core/user-fields/caixabank-user-fields.php:797
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:303
+#: ../core/user-fields/caixabank-user-fields.php:798
+msgid "Saint Lucia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:304
+#: ../core/user-fields/caixabank-user-fields.php:799
+msgid "Saint Martin (French part)"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:305
+#: ../core/user-fields/caixabank-user-fields.php:800
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:306
+#: ../core/user-fields/caixabank-user-fields.php:801
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:307
+#: ../core/user-fields/caixabank-user-fields.php:802
+msgid "Samoa"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:308
+#: ../core/user-fields/caixabank-user-fields.php:803
+msgid "San Marino"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:309
+#: ../core/user-fields/caixabank-user-fields.php:804
+msgid "Sao Tome and Principe"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:310
+#: ../core/user-fields/caixabank-user-fields.php:805
+msgid "Saudi Arabia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:311
+#: ../core/user-fields/caixabank-user-fields.php:806
+msgid "Senegal"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:312
+#: ../core/user-fields/caixabank-user-fields.php:807
+msgid "Serbia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:313
+#: ../core/user-fields/caixabank-user-fields.php:808
+msgid "Seychelles"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:314
+#: ../core/user-fields/caixabank-user-fields.php:809
+msgid "Sierra Leone"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:315
+#: ../core/user-fields/caixabank-user-fields.php:810
+msgid "Singapore"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:316
+#: ../core/user-fields/caixabank-user-fields.php:811
+msgid "Sint Maarten (Dutch part)"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:317
+#: ../core/user-fields/caixabank-user-fields.php:812
+msgid "Slovakia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:318
+#: ../core/user-fields/caixabank-user-fields.php:813
+msgid "Slovenia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:319
+#: ../core/user-fields/caixabank-user-fields.php:814
+msgid "Solomon Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:320
+#: ../core/user-fields/caixabank-user-fields.php:815
+msgid "Somalia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:321
+#: ../core/user-fields/caixabank-user-fields.php:816
+msgid "South Africa"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:322
+#: ../core/user-fields/caixabank-user-fields.php:817
+msgid "South Georgia and the South Sandwich Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:323
+#: ../core/user-fields/caixabank-user-fields.php:818
+msgid "South Sudan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:324
+#: ../core/user-fields/caixabank-user-fields.php:819
+msgid "Spain"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:325
+#: ../core/user-fields/caixabank-user-fields.php:820
+msgid "Sri Lanka"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:326
+#: ../core/user-fields/caixabank-user-fields.php:821
+msgid "Sudan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:327
+#: ../core/user-fields/caixabank-user-fields.php:822
+msgid "Suriname"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:328
+#: ../core/user-fields/caixabank-user-fields.php:823
+msgid "Svalbard and Jan Mayen"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:329
+#: ../core/user-fields/caixabank-user-fields.php:824
+msgid "Swaziland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:330
+#: ../core/user-fields/caixabank-user-fields.php:825
+msgid "Sweden"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:331
+#: ../core/user-fields/caixabank-user-fields.php:826
+msgid "Switzerland"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:332
+#: ../core/user-fields/caixabank-user-fields.php:827
+msgid "Syrian Arab Republic"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:333
+#: ../core/user-fields/caixabank-user-fields.php:828
+msgid "Taiwan, Province of China"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:334
+#: ../core/user-fields/caixabank-user-fields.php:829
+msgid "Tajikistan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:335
+#: ../core/user-fields/caixabank-user-fields.php:830
+msgid "Tanzania, United Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:336
+#: ../core/user-fields/caixabank-user-fields.php:831
+msgid "Thailand"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:337
+#: ../core/user-fields/caixabank-user-fields.php:832
+msgid "Timor-Leste"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:338
+#: ../core/user-fields/caixabank-user-fields.php:833
+msgid "Togo"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:339
+#: ../core/user-fields/caixabank-user-fields.php:834
+msgid "Tokelau"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:340
+#: ../core/user-fields/caixabank-user-fields.php:835
+msgid "Tonga"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:341
+#: ../core/user-fields/caixabank-user-fields.php:836
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:342
+#: ../core/user-fields/caixabank-user-fields.php:837
+msgid "Tunisia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:343
+#: ../core/user-fields/caixabank-user-fields.php:838
+msgid "Turkey"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:344
+#: ../core/user-fields/caixabank-user-fields.php:839
+msgid "Turkmenistan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:345
+#: ../core/user-fields/caixabank-user-fields.php:840
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:346
+#: ../core/user-fields/caixabank-user-fields.php:841
+msgid "Tuvalu"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:347
+#: ../core/user-fields/caixabank-user-fields.php:842
+msgid "Uganda"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:348
+#: ../core/user-fields/caixabank-user-fields.php:843
+msgid "Ukraine"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:349
+#: ../core/user-fields/caixabank-user-fields.php:844
+msgid "United Arab Emirates"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:350
+#: ../core/user-fields/caixabank-user-fields.php:845
+msgid "United Kingdom"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:351
+#: ../core/user-fields/caixabank-user-fields.php:846
+msgid "United States"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:352
+#: ../core/user-fields/caixabank-user-fields.php:847
+msgid "United States Minor Outlying Islands"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:353
+#: ../core/user-fields/caixabank-user-fields.php:848
+msgid "Uruguay"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:354
+#: ../core/user-fields/caixabank-user-fields.php:849
+msgid "Uzbekistan"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:355
+#: ../core/user-fields/caixabank-user-fields.php:850
+msgid "Vanuatu"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:356
+#: ../core/user-fields/caixabank-user-fields.php:851
+msgid "Venezuela, Bolivarian Republic of"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:357
+#: ../core/user-fields/caixabank-user-fields.php:852
+msgid "Viet Nam"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:358
+#: ../core/user-fields/caixabank-user-fields.php:853
+msgid "Virgin Islands, British"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:359
+#: ../core/user-fields/caixabank-user-fields.php:854
+msgid "Virgin Islands, U.S."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:360
+#: ../core/user-fields/caixabank-user-fields.php:855
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:361
+#: ../core/user-fields/caixabank-user-fields.php:856
+msgid "Western Sahara"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:362
+#: ../core/user-fields/caixabank-user-fields.php:857
+msgid "Yemen"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:363
+#: ../core/user-fields/caixabank-user-fields.php:858
+msgid "Zambia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:364
+#: ../core/user-fields/caixabank-user-fields.php:859
+msgid "Zimbabwe"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:366
+#: ../core/user-fields/caixabank-user-fields.php:861
+msgid "Please select your Country."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:371
+#: ../core/user-fields/caixabank-user-fields.php:866
+#: ../core/user-fields/caixabank-user-fields.php:929
+msgid "State/County"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:375
+#: ../core/user-fields/caixabank-user-fields.php:870
+msgid "Outsite Spain"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:376
+#: ../core/user-fields/caixabank-user-fields.php:871
+msgid "&Aacute;lava"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:377
+#: ../core/user-fields/caixabank-user-fields.php:872
+msgid "Albacete"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:378
+#: ../core/user-fields/caixabank-user-fields.php:873
+msgid "Alicante/Alacant"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:379
+#: ../core/user-fields/caixabank-user-fields.php:874
+msgid "Almer&iacute;a"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:380
+#: ../core/user-fields/caixabank-user-fields.php:875
+msgid "Asturias"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:381
+#: ../core/user-fields/caixabank-user-fields.php:876
+msgid "&Aacute;vila"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:382
+#: ../core/user-fields/caixabank-user-fields.php:877
+msgid "Badajoz"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:383
+#: ../core/user-fields/caixabank-user-fields.php:878
+msgid "Barcelona"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:384
+#: ../core/user-fields/caixabank-user-fields.php:879
+msgid "Burgos"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:385
+#: ../core/user-fields/caixabank-user-fields.php:880
+msgid "C&Aacute;ceres"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:386
+#: ../core/user-fields/caixabank-user-fields.php:881
+msgid "C&Aacute;diz"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:387
+#: ../core/user-fields/caixabank-user-fields.php:882
+msgid "Cantabria"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:388
+#: ../core/user-fields/caixabank-user-fields.php:883
+msgid "Castell&oacute;n/Castell&oacute;"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:389
+#: ../core/user-fields/caixabank-user-fields.php:884
+msgid "Ceuta"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:390
+#: ../core/user-fields/caixabank-user-fields.php:885
+msgid "Ciudad Real"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:391
+#: ../core/user-fields/caixabank-user-fields.php:886
+msgid "C&oacute;rdoba"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:392
+#: ../core/user-fields/caixabank-user-fields.php:887
+msgid "Cuenca"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:393
+#: ../core/user-fields/caixabank-user-fields.php:888
+msgid "Girona"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:394
+#: ../core/user-fields/caixabank-user-fields.php:889
+msgid "Las Palmas"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:395
+#: ../core/user-fields/caixabank-user-fields.php:890
+msgid "Granada"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:396
+#: ../core/user-fields/caixabank-user-fields.php:891
+msgid "Guadalajara"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:397
+#: ../core/user-fields/caixabank-user-fields.php:892
+msgid "Guip&uacute;zcoa"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:398
+#: ../core/user-fields/caixabank-user-fields.php:893
+msgid "Huelva"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:399
+#: ../core/user-fields/caixabank-user-fields.php:894
+msgid "Huesca"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:400
+#: ../core/user-fields/caixabank-user-fields.php:895
+msgid "Illes Balears"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:401
+#: ../core/user-fields/caixabank-user-fields.php:896
+msgid "Ja&eacute;n"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:402
+#: ../core/user-fields/caixabank-user-fields.php:897
+msgid "A Coru&ntilde;a"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:403
+#: ../core/user-fields/caixabank-user-fields.php:898
+msgid "La Rioja"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:404
+#: ../core/user-fields/caixabank-user-fields.php:899
+msgid "Le&oacute;n"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:405
+#: ../core/user-fields/caixabank-user-fields.php:900
+msgid "Lleida"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:406
+#: ../core/user-fields/caixabank-user-fields.php:901
+msgid "Lugo"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:407
+#: ../core/user-fields/caixabank-user-fields.php:902
+msgid "Madrid"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:408
+#: ../core/user-fields/caixabank-user-fields.php:903
+msgid "M&Aacute;laga"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:409
+#: ../core/user-fields/caixabank-user-fields.php:904
+msgid "Melilla"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:410
+#: ../core/user-fields/caixabank-user-fields.php:905
+msgid "Murcia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:411
+#: ../core/user-fields/caixabank-user-fields.php:906
+msgid "Navarra"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:412
+#: ../core/user-fields/caixabank-user-fields.php:907
+msgid "Ourense"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:413
+#: ../core/user-fields/caixabank-user-fields.php:908
+msgid "Palencia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:414
+#: ../core/user-fields/caixabank-user-fields.php:909
+msgid "Pontevedra"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:415
+#: ../core/user-fields/caixabank-user-fields.php:910
+msgid "Salamanca"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:416
+#: ../core/user-fields/caixabank-user-fields.php:911
+msgid "Segovia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:417
+#: ../core/user-fields/caixabank-user-fields.php:912
+msgid "Sevilla"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:418
+#: ../core/user-fields/caixabank-user-fields.php:913
+msgid "Soria"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:419
+#: ../core/user-fields/caixabank-user-fields.php:914
+msgid "Tarragona"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:420
+#: ../core/user-fields/caixabank-user-fields.php:915
+msgid "Santa Cruz de Tenerife"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:421
+#: ../core/user-fields/caixabank-user-fields.php:916
+msgid "Teruel"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:422
+#: ../core/user-fields/caixabank-user-fields.php:917
+msgid "Toledo"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:423
+#: ../core/user-fields/caixabank-user-fields.php:918
+msgid "Valencia/Val&eacute;ncia"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:424
+#: ../core/user-fields/caixabank-user-fields.php:919
+msgid "Valladolid"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:425
+#: ../core/user-fields/caixabank-user-fields.php:920
+msgid "Vizcaya"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:426
+#: ../core/user-fields/caixabank-user-fields.php:921
+msgid "Zamora"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:427
+#: ../core/user-fields/caixabank-user-fields.php:922
+msgid "Zaragoza"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:429
+#: ../core/user-fields/caixabank-user-fields.php:924
+msgid "Please select your State/County."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:434
+msgid "State/County Outsite Spain"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:438
+#: ../core/user-fields/caixabank-user-fields.php:933
+msgid "Please enter your State/County if you are from outsite Spain."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:443
+#: ../core/user-fields/caixabank-user-fields.php:938
+msgid "Telephone"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:447
+#: ../core/user-fields/caixabank-user-fields.php:942
+msgid "Please enter your Telephone."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:452
+#: ../core/user-fields/caixabank-user-fields.php:947
+msgid "Mobile"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:456
+#: ../core/user-fields/caixabank-user-fields.php:951
+msgid "Please enter your Mobile."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:461
+#: ../core/user-fields/caixabank-user-fields.php:956
+msgid "Email"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:465
+#: ../core/user-fields/caixabank-user-fields.php:960
+msgid "Please enter your email."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:472
+#: ../core/user-fields/caixabank-user-fields.php:491
+msgid "Custom IVA"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:476
+msgid "Please enter a custom IVA for this user."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:481
+#: ../core/user-fields/caixabank-user-fields.php:500
+msgid "Custom IRPF"
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:485
+msgid "Please enter a custom IRPF for this user."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:495
+msgid ""
+"If you need to modify IVA Tax, you need to contact with the site "
+"administrator."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:504
+msgid ""
+"If you need to modify IRPF, you need to contact with the site administrator.."
+msgstr ""
+
+#: ../core/user-fields/caixabank-user-fields.php:512
+msgid "CaixaBank Shipping Address"
+msgstr ""
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:25
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:81
@@ -30,11 +1897,12 @@ msgstr ""
 "unos pocos datos aumentando el ratio de ventas."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:84
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:97
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:95
 msgid "Attention! WPML detected."
 msgstr "¡Atención! detectado WPML."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:85
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:96
 msgid ""
 "The Gateway will be shown in the customer language. The option \"Language "
 "Gateway\" is not taken into consideration"
@@ -43,17 +1911,18 @@ msgstr ""
 "de la pasarela\" no se tomará en cuenta."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:96
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:109
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:107
 msgid "Gateway Disabled"
 msgstr "Pasarela desactivada"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:96
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:107
 msgid "Servired/RedSys only support EUROS &euro; and BRL currency."
 msgstr ""
 "Servired/RedSys en estos momentos solo soporta la moneda EURO &euro; y BRL"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:109
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:122
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:120
 msgid "Enable/Disable"
 msgstr "Activar/Desactivar"
 
@@ -62,22 +1931,17 @@ msgid "Enable Iupay"
 msgstr "Activar Iupay"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:115
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:128
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:126
 msgid "Title"
 msgstr "Título"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:117
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:130
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:128
 msgid "This controls the title which the user sees during checkout."
 msgstr "Título que sus clientes verán al finalizar la compra."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:122
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:135
-msgid "Description"
-msgstr "Descripción"
-
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:124
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:137
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:135
 msgid "This controls the description which the user sees during checkout."
 msgstr "Descripción que sus clientes verán al finalizar la compra."
 
@@ -86,30 +1950,32 @@ msgid "Pay via Iupay; you can pay with your credit card."
 msgstr "Paga mediante Iupay, puedes pagar fácilmente con tu cuenta Iupay."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:128
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:141
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:139
 msgid "Commerce number (FUC)"
 msgstr "Número de comercio (FUC)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:130
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:143
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:141
 msgid "Commerce number (FUC) provided by your bank."
 msgstr "Número de comercio (FUC) provisto por su entidad bancaria."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:134
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:154
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:152
 msgid "Terminal number"
 msgstr "Número de terminal"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:136
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:154
 msgid "Terminal number provided by your bank."
 msgstr "Número de terminal provisto por su entidad bancaria."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:140
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:160
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:158
 msgid "Second Terminal"
 msgstr "Segundo terminal (Si tienes)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:142
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:160
 msgid ""
 "If you use a second Terminal number, you need to add here the second "
 "terminal provided by your bank"
@@ -118,17 +1984,17 @@ msgstr ""
 "terminal provisto por tu entidad bancaria."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:146
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:166
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:164
 msgid "Activate Second Terminal"
 msgstr "Activar segundo terminal"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:148
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:168
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:166
 msgid "Activate Second Terminal."
 msgstr "Activar segundo Terminal"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:150
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:170
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:168
 msgid ""
 "If you use a second terminal, you need to add it in the field above and "
 "activate it here. You will need to set when use the Second Terminal in the "
@@ -139,13 +2005,13 @@ msgstr ""
 "campo siguiente."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:153
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:173
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:171
 msgid "Use the Second Terminal from 0 to (Don't use Currency Symbol)"
 msgstr ""
 "Utilizar el segundo terminal desde 0 a... (No añadir el símbolo de moneda)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:155
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:175
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:173
 msgid ""
 "When will the Second Terminal used? from 0 to...? Add the amount. Ex. Add "
 "100 and the Second Terminal will be used when the amount be from 0 to 100"
@@ -156,100 +2022,105 @@ msgstr ""
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:159
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:165
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:179
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:177
 msgid "Encryption secret passphrase SHA-256"
 msgstr "Frase de encriptación SHA-256"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:161
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:167
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:179
 msgid "Encryption secret passphrase SHA-256 provided by your bank."
 msgstr "Frase de encriptación facilitada por tu banco"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:171
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:183
 msgid "Language Gateway"
 msgstr "Idioma de la pasarela"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:173
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:185
 msgid "Choose the language for the Gateway. Not all Banks accept all languages"
 msgstr ""
 "Selecciona el idioma para la pasarela de pago. No todos los bancos aceptan "
 "todos los idiomas."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:176
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:190
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:188
 msgid "Spanish"
 msgstr "Español"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:177
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:191
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:189
 msgid "English"
 msgstr "Inglés"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:178
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:192
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:190
 msgid "Catalan"
 msgstr "Catalán"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:179
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:193
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:191
 msgid "French"
 msgstr "Frances"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:180
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:194
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:192
 msgid "German"
 msgstr "Alemán"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:181
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:195
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:193
 msgid "Dutch"
 msgstr "Holandes"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:182
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:196
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:194
 msgid "Italian"
 msgstr "Italiano"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:183
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:197
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:195
 msgid "Swedish"
 msgstr "Sueco"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:184
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:198
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:196
 msgid "Portuguese"
 msgstr "Portugués"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:185
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:199
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:197
 msgid "Valencian"
 msgstr "Valenciano"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:186
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:200
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:198
 msgid "Polish"
 msgstr "Polaco"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:187
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:201
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:199
 msgid "Galician"
 msgstr "Galllego"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:188
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:202
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:200
 msgid "Basque"
 msgstr "Euskera"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:189
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:203
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:201
 msgid "Danish"
 msgstr "Danés"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:193
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:205
 msgid "Return URL (Redsys Error button)"
 msgstr "URL de retorno (Botón de error en Redsys)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:195
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:207
 msgid ""
 "When the user press the return button at Redsys Gateway (Ex: The user type "
 "an incorrect creadit cart), you can redirect the user to My Cart page "
@@ -262,23 +2133,24 @@ msgstr ""
 "redirigirlo a la página de pago de tu tienda sin cancelar el pedido."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:198
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:212
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:210
 msgid "Cancel the order and return to My Cart page"
 msgstr "Cancelar el pedido y enviar al cliente al carro de compra"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:199
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:213
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:211
 msgid "Don't cancel the order and return to Checkout page"
 msgstr "No cancelar el pedido y enviar al cliente a la página de pago"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:203
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:205
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:215
 #: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:217
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:219
 msgid "Running in test mode"
 msgstr "Ejecutando en entorno de pruebas"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:207
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:219
 msgid ""
 "Select this option for the initial testing required by your bank, deselect "
 "this option once you pass the required test phase and your production "
@@ -288,12 +2160,12 @@ msgstr ""
 "deseleccione esta opción una vez que haya activado su entorno de producción."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:210
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:224
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:222
 msgid "Debug Log"
 msgstr "Registro"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:212
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:226
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:224
 msgid "Enable logging"
 msgstr "Habilitar registro"
 
@@ -304,12 +2176,6 @@ msgid ""
 msgstr ""
 "Guarda los logs de Iupay, como notificaciones o errores en <code>woocommerce/"
 "logs/iupay.txt</code>"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:291
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:298
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:325
-msgid "Order"
-msgstr "Orden"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:336
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:372
@@ -327,8 +2193,7 @@ msgstr "Paga con tu cuenta de Iupay"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:356
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:392
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:374
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:410
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:371
 msgid "Cancel order &amp; restore cart"
 msgstr "Cancelar orden &amp; volver al carro"
 
@@ -340,7 +2205,7 @@ msgstr ""
 "pagar con Iupay."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:528
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:545
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:491
 #, php-format
 msgid ""
 "Validation error: Order vs. Notification amounts do not match (order: %s - "
@@ -350,12 +2215,12 @@ msgstr ""
 "%s - recibido: %s)."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:545
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:562
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:508
 msgid "HTTP Notification received - payment completed"
 msgstr "Notificación HTTP recibida - pago completado"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:546
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:563
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:509
 msgid "Authorisation code: "
 msgstr "Código autorización: "
 
@@ -376,7 +2241,7 @@ msgstr ""
 "configuración de Iupay."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:658
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:679
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:625
 msgid "Payment Details"
 msgstr "Detalles del pago"
 
@@ -540,141 +2405,125 @@ msgstr "Número factura: %s"
 msgid "-ORDER"
 msgstr "-PEDIDO"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:26
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:94
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:131
-msgid "CaixaBank"
-msgstr ""
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:24
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:129
+msgid "Servired/RedSys"
+msgstr "Servired/RedSys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:62
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:60
 msgid ""
 "WARNING: The PHP mcrypt_encrypt module is not installed on your server. The "
-"CaixaBank API SHA-256 needs this module in order to work.  Please contact "
-"with your hosting provider and ask them to install it. Otherwise, CaixaBank "
-"Gateway will not work."
+"new API caixabank SHA-256 needs this module in order to work.  Please "
+"contact your hosting provider and ask them to install it. Otherwise, your "
+"shop will stop working."
 msgstr ""
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:95
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:92
+msgid "Servired/caixabank Spain"
+msgstr ""
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:93
 msgid ""
-"Caixabank works by sending the user to the TPV to enter their payment "
-"information."
+"Servired/RedSys works by sending the user to your bank TPV to enter their "
+"payment information."
 msgstr ""
+"La pasarela Servired/RedSys envía a su cliente al TPV de su entidad bancaria "
+"para ingresar su información para el pago."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:98
-msgid ""
-"CaixaBank gateway will be shown in the customer language. The option "
-"\"Language Gateway\" is not taken into consideration"
-msgstr ""
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:122
+msgid "Enable Servired/RedSys"
+msgstr "Activar Servired/RedSys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:109
-msgid "CaixaBank only support EUROS &euro; and BRL currency."
-msgstr ""
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:136
+msgid "Pay via Servired/RedSys; you can pay with your credit card."
+msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:124
-msgid "Enable CaixaBank gateway"
-msgstr ""
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:138
-msgid "Pay via CaixaBank; you can pay with your credit card."
-msgstr ""
-
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:146
 #: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:148
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:150
 msgid "Commerce Name"
 msgstr "Nombre de Comercio"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:156
-msgid "Terminal number provided by CaixaBank."
-msgstr ""
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:162
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:226
 msgid ""
-"If you use a second Terminal number, you need to add here the second "
-"terminal provided by CaixaBank"
+"Log Servired/RedSys events, such as notifications requests, inside "
+"<code>woocommerce/logs/caixabank.txt</code>"
 msgstr ""
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:181
-msgid "Encryption secret passphrase SHA-256 provided by CaixaBank."
-msgstr ""
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:185
-msgid "Language CaixaBank Gateway"
-msgstr "Idioma de la pasarela de pago CaixaBank"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:187
-msgid "Choose the language for the Gateway."
-msgstr "Selecciona el idioma de la pasarela de pago"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:207
-msgid "Return URL (CaixaBank Error button)"
-msgstr "URL de vuelta (botón de error en CaixBank)"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:209
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:351
 msgid ""
-"When the user press the return button at CaixaBank Gateway (Ex: The user "
-"type an incorrect creadit cart), you can redirect the user to My Cart page "
-"canceling the order, or you can redirect the user to Checkput page without "
-"cancel the order."
+"Thank you for your order. We are now redirecting you to Servired/RedSys to "
+"make the payment."
 msgstr ""
+"Gracias por su compra, ahora está siendo redirigido a Servired/RedSys para "
+"realizar el pago."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:221
-msgid ""
-"Select this option for the initial testing required by CaixaBank, deselect "
-"this option once you pass the required test phase and your production "
-"environment is active."
-msgstr ""
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:371
+msgid "Pay with Credit Card via Servired/RedSys"
+msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:228
-msgid ""
-"Log CaixaBank events, such as notifications requests, inside "
-"<code>WooCommerce > /code>"
-msgstr ""
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:354
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:390
-msgid ""
-"Thank you for your order. We are now redirecting you to CaixaBank to make "
-"the payment."
-msgstr ""
-"Gracias por tu pedido. Te estamos transfiriendo a CaixaBank para realizar el "
-"pago."
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:374
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:410
-msgid "Pay with Credit Card via CaixaBank"
-msgstr "Paga mediante tarjeta de crédito a través de CaixaBank"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:435
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:395
 msgid ""
 "Thank you for your order, please click the button below to pay with Credit "
-"Card via CaixaBank."
+"Card via Servired/RedSys."
 msgstr ""
+"Gracias por su compra, haga click en el botón debajo para pagar con su "
+"tarjeta de crédito vía Servired/RedSys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:572
-msgid "Cancelled by CaixaBank"
-msgstr "Cancelado por CaixaBack"
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:518
+msgid "Cancelled by Redsys"
+msgstr "Cancelado por Redys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:573
-msgid "Pedido cancelado por CaixaBank: Tarjeta caducada"
-msgstr ""
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:519
+msgid "Pedido cancelado por Redsys: Tarjeta caducada"
+msgstr "Pedido cancelado por Redys: Tarjeta caducada."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:662
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:608
 msgid ""
-"WARNING: You need to add Encryption secret passphrase SHA-256 to CaixaBank "
+"WARNING: You need to add Encryption secret passphrase SHA-256 to Redsys "
 "Gateway Settings."
 msgstr ""
+"ATENCIÓN: Necesitas añadir la clave de encriptación SHA-256 a la "
+"configuración de Redsys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:680
-msgid "CaixaBank Date"
-msgstr "Fecha CaixaBank"
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:626
+msgid "Redsys Date"
+msgstr "Fecha Redsys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:681
-msgid "CaixaBank Hour"
-msgstr "Hora CaixaBank"
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:627
+msgid "Redsys Hour"
+msgstr "Hora Redsys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:682
-msgid "CaixaBank Authorisation Code"
-msgstr ""
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:628
+msgid "Redsys Authorisation Code"
+msgstr "Código autorización Redsys"
+
+#~ msgid "Language CaixaBank Gateway"
+#~ msgstr "Idioma de la pasarela de pago CaixaBank"
+
+#~ msgid "Choose the language for the Gateway."
+#~ msgstr "Selecciona el idioma de la pasarela de pago"
+
+#~ msgid "Return URL (CaixaBank Error button)"
+#~ msgstr "URL de vuelta (botón de error en CaixBank)"
+
+#~ msgid ""
+#~ "Thank you for your order. We are now redirecting you to CaixaBank to make "
+#~ "the payment."
+#~ msgstr ""
+#~ "Gracias por tu pedido. Te estamos transfiriendo a CaixaBank para realizar "
+#~ "el pago."
+
+#~ msgid "Pay with Credit Card via CaixaBank"
+#~ msgstr "Paga mediante tarjeta de crédito a través de CaixaBank"
+
+#~ msgid "Cancelled by CaixaBank"
+#~ msgstr "Cancelado por CaixaBack"
+
+#~ msgid "CaixaBank Date"
+#~ msgstr "Fecha CaixaBank"
+
+#~ msgid "CaixaBank Hour"
+#~ msgstr "Hora CaixaBank"
 
 #~ msgid "Tax"
 #~ msgstr "Impuestos"
@@ -767,9 +2616,6 @@ msgstr ""
 #~ "(Redsys Gateway Extension) añadirá muchas funcionalidad al plugin para "
 #~ "que sirva para España. Muchas gracias."
 
-#~ msgid "Servired/RedSys"
-#~ msgstr "Servired/RedSys"
-
 #~ msgid ""
 #~ "WARNING: The PHP mcrypt_encrypt module is not installed on your server. "
 #~ "The new API Redsys SHA-256 needs this module in order to work.  Please "
@@ -785,63 +2631,11 @@ msgstr ""
 #~ msgstr "Servired/RedSys España"
 
 #~ msgid ""
-#~ "Servired/RedSys works by sending the user to your bank TPV to enter their "
-#~ "payment information."
-#~ msgstr ""
-#~ "La pasarela Servired/RedSys envía a su cliente al TPV de su entidad "
-#~ "bancaria para ingresar su información para el pago."
-
-#~ msgid "Enable Servired/RedSys"
-#~ msgstr "Activar Servired/RedSys"
-
-#~ msgid "Pay via Servired/RedSys; you can pay with your credit card."
-#~ msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
-
-#~ msgid ""
 #~ "Log Servired/RedSys events, such as notifications requests, inside "
 #~ "<code>woocommerce/logs/redsys.txt</code>"
 #~ msgstr ""
 #~ "Guardar eventos generados por el plugin, como podrían ser notificaciones, "
 #~ "se guardarán en <code>woocommerce/logs/redsys.txt</code>"
-
-#~ msgid ""
-#~ "Thank you for your order. We are now redirecting you to Servired/RedSys "
-#~ "to make the payment."
-#~ msgstr ""
-#~ "Gracias por su compra, ahora está siendo redirigido a Servired/RedSys "
-#~ "para realizar el pago."
-
-#~ msgid "Pay with Credit Card via Servired/RedSys"
-#~ msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
-
-#~ msgid ""
-#~ "Thank you for your order, please click the button below to pay with "
-#~ "Credit Card via Servired/RedSys."
-#~ msgstr ""
-#~ "Gracias por su compra, haga click en el botón debajo para pagar con su "
-#~ "tarjeta de crédito vía Servired/RedSys."
-
-#~ msgid "Cancelled by Redsys"
-#~ msgstr "Cancelado por Redys"
-
-#~ msgid "Pedido cancelado por Redsys: Tarjeta caducada"
-#~ msgstr "Pedido cancelado por Redys: Tarjeta caducada."
-
-#~ msgid ""
-#~ "WARNING: You need to add Encryption secret passphrase SHA-256 to Redsys "
-#~ "Gateway Settings."
-#~ msgstr ""
-#~ "ATENCIÓN: Necesitas añadir la clave de encriptación SHA-256 a la "
-#~ "configuración de Redsys."
-
-#~ msgid "Redsys Date"
-#~ msgstr "Fecha Redsys"
-
-#~ msgid "Redsys Hour"
-#~ msgstr "Hora Redsys"
-
-#~ msgid "Redsys Authorisation Code"
-#~ msgstr "Código autorización Redsys"
 
 #~ msgid "Encription secret passphrase"
 #~ msgstr "Clave secreta de encriptación"
