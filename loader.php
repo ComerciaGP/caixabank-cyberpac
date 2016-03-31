@@ -27,6 +27,7 @@ add_action('init', 'caixabank_tools_official_init');
 if( !class_exists( 'RedsysAPI' ) ) require_once( 'includes/redsys-api/apiRedsys.php' );
 require_once( 'core/loader-core.php' );
 require_once( 'includes/woocommerce/loader-woocommerce.php' );
+require_once( 'includes/tgm/tgm-loader.php' );
 
 function caixabank_welcome_splash(){
 	$caixabank_parent = caixabank_get_parent_page();
