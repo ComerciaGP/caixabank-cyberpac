@@ -1,3 +1,3 @@
 <?php
-	//golden silence is
+	//golden silence is (Yoda dixit)
 ?>
