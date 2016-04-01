@@ -93,6 +93,55 @@ function caixabank_handle_rest_api_requests_error() {
 	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'my_textdomain' ) );
 }
 
+add_filter( 'query_vars', 'caixabank_add_query_vars_tpv' );
+
+// register API endpoints
+add_action( 'init', 'caixabank_add_endpoint_tpv' );
+// handle REST API requests
+add_action( 'parse_request', 'caixabank_handle_prepara_tpv_api' );
+
+function caixabank_add_query_vars_tpv( $vars ) {
+	$vars[] = 'caixabank-tpv';
+	return $vars;
+}
+
+function caixabank_add_endpoint_tpv() {
+	// REST API
+	add_rewrite_rule( '^caixabank-tpv/v1/?$', 'index.php?caixabank-tpv=$matches[1]', 'top' );
+
+	// WC API for payment gateway IPNs, etc
+	add_rewrite_endpoint( 'caixabank-tpv', EP_ALL );
+}
+
+function caixabank_handle_prepara_tpv_api(){
+	global $wp;
+
+	if ( ! empty( $_GET['caixabank-tpv'] ) ) {
+		$wp->query_vars['caixabank-tpv'] = $_GET['caixabank-tpv'];
+	}
+	if ( isset($_GET['caixabank-tpv']) && $_GET['caixabank-tpv'] == '' ) {
+		$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_tpv_api_requests_error();
+		echo $caixabank_handle_rest_api_requests_error->get_error_message();
+		exit;
+	}
+	if ( ! empty( $_GET['caixabank-tpv'] ) ) {
+		if ( $wp->query_vars['caixabank-tpv'] != '' ) {
+			$prueba = isset($_GET['default']) ? $_GET['default']  : '';
+			echo isset($wp->query_vars['caixabank-tpv']) ?  $wp->query_vars['caixabank-tpv'] . '<br />'   : '';
+			echo $prueba;
+			exit;
+		} else {
+			$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_tpv_api_requests_error();
+			echo $caixabank_handle_rest_api_requests_error->get_error_message();
+			exit;
+		}
+	}
+}
+
+function caixabank_handle_prepara_tpv_api_requests_error() {
+	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'my_textdomain' ) );
+}
+
 function caixabank_check_nif_cif_nie($cif) {
 	//Returns:
 	// 1 = NIF ok,
