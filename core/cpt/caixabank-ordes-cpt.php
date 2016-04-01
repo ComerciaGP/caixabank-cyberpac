@@ -61,4 +61,13 @@ function caixabank_remove_page_fields() {
  remove_meta_box(	'postcustom',		'caixabank_orders', 'normal');
 }
 add_action( 'admin_menu' , 'caixabank_remove_page_fields' );
+
+function caixabank_load_styles_cpt_orders() {
+	global $post_type;
+    if( 'caixabank_orders' == $post_type ){
+		wp_register_style( 'caixabank_cpt_orders', CAIXABANK_DIR_URL . '/assets/css/caixabank-cpt.css', false, CAIXABANK_TOOLS_OFFICIAL_VERSION );
+		wp_enqueue_style( 'caixabank_cpt_orders' );
+		}
+	}
+add_action( 'admin_enqueue_scripts', 'caixabank_load_styles_cpt_orders' );
 ?>
