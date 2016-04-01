@@ -17,6 +17,7 @@ define( 'CAIXABANK_TOOLS_LIVE_URL',   'https://sis.redsys.es/sis/realizarPago'		
 define( 'CAIXABANK_TOOLS_TEST_URL',   'https://sis-t.redsys.es:25443/sis/realizarPago'	);
 define( 'CAIXABANK_PATH',     plugin_dir_path( __FILE__ )								);
 define( 'CAIXABANK_DIR_URL',    plugin_dir_url(  __FILE__ )								);
+define( 'CAIXABANK_DIR_TEMPLATE',    CAIXABANK_PATH . '/templates/');
 
 function caixabank_tools_official_init() {
 	load_plugin_textdomain('caixabank-tools-official', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
@@ -53,6 +54,7 @@ register_activation_hook( __FILE__, 'caixabank_flush_rewrites' );
 function caixabank_flush_rewrites() {
 	// call your CPT registration function here (it should also be hooked into 'init')
 	caixabank_add_endpoint();
+	caixabank_add_endpoint_tpv();
 	flush_rewrite_rules();
 }
 
