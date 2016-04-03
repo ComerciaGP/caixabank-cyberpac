@@ -90,7 +90,7 @@ function caixabank_handle_rest_api_requests(){
 }
 
 function caixabank_handle_rest_api_requests_error() {
-	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'my_textdomain' ) );
+	return wp_die( "CaixaBank Notification Request Failure" );
 }
 
 add_filter( 'query_vars', 'caixabank_add_query_vars_tpv' );
@@ -141,6 +141,13 @@ function caixabank_handle_prepara_tpv_api(){
 function caixabank_handle_prepara_tpv_api_requests_error() {
 	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'my_textdomain' ) );
 }
+
+function caixabank_register_css_front_end() {
+    wp_register_style( 'caixabankfrontend', CAIXABANK_DIR_URL . 'assets/css/caixabank-front.css' );
+    wp_enqueue_style( 'caixabankfrontend' );
+}
+// Register style sheet.
+add_action( 'wp_enqueue_scripts', 'caixabank_register_css_front_end' );
 
 function caixabank_check_nif_cif_nie($cif) {
 	//Returns:
