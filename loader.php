@@ -12,12 +12,17 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-define( 'CAIXABANK_TOOLS_OFFICIAL_VERSION', '1.0.0-Alpha'								);
-define( 'CAIXABANK_TOOLS_LIVE_URL',   'https://sis.redsys.es/sis/realizarPago'			);
-define( 'CAIXABANK_TOOLS_TEST_URL',   'https://sis-t.redsys.es:25443/sis/realizarPago'	);
-define( 'CAIXABANK_PATH',     plugin_dir_path( __FILE__ )								);
-define( 'CAIXABANK_DIR_URL',    plugin_dir_url(  __FILE__ )								);
-define( 'CAIXABANK_DIR_TEMPLATE',    CAIXABANK_PATH . '/templates/');
+define( 'CAIXABANK_TOOLS_OFFICIAL_VERSION',		'1.0.0-Alpha'										);
+define( 'CAIXABANK_TOOLS_LIVE_URL',				'https://sis.redsys.es/sis/realizarPago'			);
+define( 'CAIXABANK_TOOLS_TEST_URL',				'https://sis-t.redsys.es:25443/sis/realizarPago'	);
+define( 'CAIXABANK_SITE_CANCEL_ORDER_URL',		home_url() . '/caixabank-cancel/v1/'				);
+define( 'CAIXABANK_SITE_CHECKOUT_URL',			home_url() . '/caixabank-checkout/v1/'				);
+define( 'CAIXABANK_RETURN OK',					home_url() . '/caixabank-pedido-ok/v1/'				);
+define( 'CAIXABANK_NOTIFY_URL',					home_url() . '/caixabank-api/v1/'					);
+define( 'CAIXABANK_SITE_TO_TPV',				home_url() . '/caixabank-tpv/v1/'					);
+define( 'CAIXABANK_PATH',						plugin_dir_path( __FILE__ )							);
+define( 'CAIXABANK_DIR_URL',					plugin_dir_url(  __FILE__ )							);
+define( 'CAIXABANK_DIR_TEMPLATE',				CAIXABANK_PATH . '/templates/');
 
 function caixabank_tools_official_init() {
 	load_plugin_textdomain('caixabank-tools-official', false, dirname( plugin_basename( __FILE__ ) ) . '/languages');
