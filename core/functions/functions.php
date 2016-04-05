@@ -143,8 +143,8 @@ function caixabank_handle_prepara_tpv_api_requests_error() {
 }
 
 function caixabank_register_css_front_end() {
-    wp_register_style( 'caixabankfrontend', CAIXABANK_DIR_URL . 'assets/css/caixabank-front.css' );
-    wp_enqueue_style( 'caixabankfrontend' );
+	wp_register_style( 'caixabankfrontend', CAIXABANK_DIR_URL . 'assets/css/caixabank-front.css' );
+	wp_enqueue_style( 'caixabankfrontend' );
 }
 // Register style sheet.
 add_action( 'wp_enqueue_scripts', 'caixabank_register_css_front_end' );
@@ -222,6 +222,179 @@ function caixabank_check_nif_cif_nie($cif) {
 	}
 	//si todavia no se ha verificado devuelve error
 	return 0;
+}
+
+function caixabank_redirect_to_tpv( $order_id ){
+	$caixabankform = caixabank_get_arg( $order_id );
+
+	return $caixabankform;
+}
+
+function caixabank_order_use_iva( $order_id ){
+	$siteusetax = get_option('caixabank_use_tax');
+	$orderusetax = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_use_tax', true );
+	// DESACTIVADO POR DEBUG if( ( $siteusetax == '1' ) && ( $orderusetax == '1' ) ) { return true; } else { return false; }
+	return true;
+}
+
+function caixabank_order_use_irpf( $order_id ){
+	$siteuseirpf = get_option('caixabank_irfp_activated');
+	$orderuseirpf = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_use_irpf', true );
+	if( ( $siteuseirpf == '1' ) && ( $orderuseirpf == '1' ) ) { return true; } else { return false; }
+}
+
+function caixabank_get_total( $order_id ){
+	$caixabank_get_price	= get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_price', true );
+	$caixabank_price_int	= (int)$caixabank_get_price;
+	$caixabank_use_tax		= true; //DESACTIVADO PARA DEBUG caixabank_order_use_iva( $order_id );
+	$caixabank_use_irpf		= caixabank_order_use_irpf( $order_id );
+	if ( $caixabank_use_tax ) {
+		$caixabank_tax_int = (int)get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_tax', true ); //$caixabank_tax;
+	} else {
+		$caixabank_tax_int = 0;
+	}
+	if ( caixabank_order_use_irpf( $order_id ) ) {
+		$caixabank_irpf_int = (int)get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_irpf', true ); //$caixabank_irpf;
+	} else {
+		$caixabank_irpf_int = 0;
+	}
+	$caixabank_price = (int)( $caixabank_price_int + $caixabank_tax_int - $caixabank_irpf_int );
+	$caixabank_price_rounded = round( $caixabank_price, 2 );
+	return $caixabank_price_rounded;
+}
+
+function caixabank_get_arg( $order_id ){
+	$caixabanktransaction_id	= str_pad( $order_id , 12 , '0' , STR_PAD_LEFT );
+	$caixabanktransaction_id1	= mt_rand( 1, 999 ); // lets to create a random number
+	$caixabanktransaction_id2	= substr_replace( $caixabanktransaction_id, $caixabanktransaction_id1, 0,-9 ); // new order number
+	$caixabankorder_total		= number_format( caixabank_get_total( $order_id ) , 2 , ',' , '' );
+	$caixabankorder_total_sign	= number_format( caixabank_get_total( $order_id ) , 2 , '' , '' );
+	$caixabanktransaction_type	= '0';
+	$caixabanklanguage			= get_option('caixabank_language');
+
+	if( defined( 'CAIXABANK_TOOLS_LIVE_URL' ) ) $caixabankliveurl		= CAIXABANK_TOOLS_LIVE_URL;
+	if( defined( 'CAIXABANK_TOOLS_TEST_URL' ) ) $caixabanktesturl		= CAIXABANK_TOOLS_TEST_URL;
+	if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $caixabankurlko	= CAIXABANK_SITE_CANCEL_ORDER_URL;
+	if( defined( 'CAIXABANK_RETURN_OK' ) ) $caixabankok					= CAIXABANK_RETURN_OK;
+	$caixabanktestmode			= get_option( 'caixabank_gateway_test_mode' );
+	$caixabankmethod_title		= __( 'Servired/RedSys', 'woocommerce' );
+	if( defined( 'CAIXABANK_NOTIFY_URL' ) ) $caixabanknotify_url		= CAIXABANK_NOTIFY_URL;
+
+	// Define user set variables
+	$caixabanktitle				= get_option( 'caixabank_gateway_title' );
+	$caixabankdescription		= get_option( 'caixabank_gateway_description' );
+	$caixabankcustomer			= get_option( 'caixabank_gateway_fuc' );
+	$caixabankcommercename		= get_option( 'caixabank_gateway_commerce_name' );
+	$caixabankterminal			= get_option( 'caixabank_gateway_terminal_number' );
+	$caixabanksecretsha256		= utf8_decode(  get_option('caixabank_gateway_passsha256') );
+	$caixabankdebug				= get_option( 'caixabank_gateway_debug' );
+	$caixabanklanguage			= get_option( 'caixabank_gateway_language_gateway');
+	$caixabankurlko				= get_option( 'caixabankurlko' );
+	$caixabankterminal2			= get_option( 'caixabank_gateway_second_terminal_number' );
+	$caixabankuseterminal2		= get_option( 'caixabank_gateway_activate_second_terminal' );
+	$caixabanktoamount			= get_option( 'caixabank_gateway_when_use_second_terminal' );
+	$caixabankcurrencycode		= get_option( 'caixabankcurrencycide' );
+
+	//para debug
+	$caixabankdebug				= false;
+
+	$caixabankcurrencycode		= '978';
+	//$caixabankorder_total_sign	= '1000';
+
+
+
+	if( class_exists( 'SitePress' )){
+		if (ICL_LANGUAGE_CODE == 'es') { $gatewaylanguage = '001'; }
+		elseif (ICL_LANGUAGE_CODE == 'en') { $gatewaylanguage = '002'; }
+		elseif (ICL_LANGUAGE_CODE == 'ca') { $gatewaylanguage = '003'; }
+		elseif (ICL_LANGUAGE_CODE == 'fr') { $gatewaylanguage = '004'; }
+		elseif (ICL_LANGUAGE_CODE == 'ge') { $gatewaylanguage = '005'; }
+		elseif (ICL_LANGUAGE_CODE == 'nl') { $gatewaylanguage = '006'; }
+		elseif (ICL_LANGUAGE_CODE == 'it') { $gatewaylanguage = '007'; }
+		elseif (ICL_LANGUAGE_CODE == 'sv') { $gatewaylanguage = '008'; }
+		elseif (ICL_LANGUAGE_CODE == 'pt') { $gatewaylanguage = '009'; }
+		elseif (ICL_LANGUAGE_CODE == 'pl') { $gatewaylanguage = '011'; }
+		elseif (ICL_LANGUAGE_CODE == 'gl') { $gatewaylanguage = '012'; }
+		elseif (ICL_LANGUAGE_CODE == 'eu') { $gatewaylanguage = '013'; }
+		elseif (ICL_LANGUAGE_CODE == 'da') { $gatewaylanguage = '108'; }
+		else {
+			$gatewaylanguage = '002';
+		}
+	} elseif( $caixabanklanguage ){
+		$gatewaylanguage = $caixabanklanguage;
+	}
+	else {
+		$gatewaylanguage = '001';
+	}
+	if ( $caixabankurlko ){
+		if ( $caixabankurlko == 'returncancel' ) {
+			if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $returnfromcaixabank = CAIXABANK_SITE_CANCEL_ORDER_URL;
+		} else {
+			if( defined( 'CAIXABANK_SITE_CHECKOUT_URL' ) ) $returnfromcaixabank = CAIXABANK_SITE_CHECKOUT_URL;
+		}
+	} else {
+		if( defined( 'CAIXABANK_SITE_CHECKOUT_URL' ) ) $returnfromcaixabank = CAIXABANK_SITE_CHECKOUT_URL;
+	}
+	if ( '1' ==  $caixabankuseterminal2 ) {
+		$caixabanktoamount = number_format( $caixabanktoamount , 2 , '' , '' );
+		$terminal = $caixabankterminal;
+		$terminal2 = $caixabankterminal2;
+		if ( $caixabankorder_total_sign <= $toamount ){$DSMerchantTerminal = $terminal2;}else{$DSMerchantTerminal = $terminal;}
+	} else {
+		$DSMerchantTerminal = $caixabankterminal;
+	}
+	// redsys Args
+	$miObj = new RedsysAPI;
+	$miObj->setParameter( "DS_MERCHANT_AMOUNT",					$caixabankorder_total_sign										);
+	$miObj->setParameter( "DS_MERCHANT_ORDER",					$caixabanktransaction_id2										);
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTCODE",			$caixabankcustomer												);
+	$miObj->setParameter( "DS_MERCHANT_CURRENCY",				$caixabankcurrencycode											);
+	$miObj->setParameter( "DS_MERCHANT_TRANSACTIONTYPE",		$caixabanktransaction_type										);
+	$miObj->setParameter( "DS_MERCHANT_TERMINAL",				$DSMerchantTerminal												);
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTURL",			$caixabanknotify_url											);
+	$miObj->setParameter( "DS_MERCHANT_URLOK",					$caixabankok													);
+	$miObj->setParameter( "DS_MERCHANT_URLKO",					$caixabankurlko													);
+	$miObj->setParameter( "DS_MERCHANT_CONSUMERLANGUAGE",		$gatewaylanguage												);
+	$miObj->setParameter( "DS_MERCHANT_PRODUCTDESCRIPTION",		__( 'Order' , 'caixabank-tools-official' ) . ' ' .  $order_id	);
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTNAME",			$caixabankcommercename											);
+
+
+	$version="HMAC_SHA256_V1";
+	// Se generan los parámetros de la petición
+	$request = "";
+	$params = $miObj->createMerchantParameters();
+	$signature = $miObj->createMerchantSignature( $caixabanksecretsha256 );
+	$caixabank_args = array(
+		'Ds_SignatureVersion' => $version,
+		'Ds_MerchantParameters' => $params,
+		'Ds_Signature'   => $signature
+	);
+	/*if ( 'yes' == $this->debug ){
+		$this->log->add( 'redsys', 'Generating payment form for order ' . $order_id . '. Sent data: ' . print_r($redsys_args, true) );
+		$this->log->add( 'redsys', 'Helping to understand the encrypted code: '                   );
+		$this->log->add( 'redsys', 'DS_MERCHANT_AMOUNT: '    .  $order_total_sign               );
+		$this->log->add( 'redsys', 'DS_MERCHANT_ORDER: '    . $transaction_id2                );
+		$this->log->add( 'redsys', 'DS_MERCHANT_MERCHANTCODE: '   . $this->customer                );
+		$this->log->add( 'redsys', 'DS_MERCHANT_CURRENCY'    . $currency_codes[ get_woocommerce_currency() ]         );
+		$this->log->add( 'redsys', 'DS_MERCHANT_TRANSACTIONTYPE: '  . $transaction_type                );
+		$this->log->add( 'redsys', 'DS_MERCHANT_TERMINAL: '    . $DSMerchantTerminal               );
+		$this->log->add( 'redsys', 'DS_MERCHANT_MERCHANTURL: '   . $this->notify_url                );
+		$this->log->add( 'redsys', 'DS_MERCHANT_URLOK: '    . add_query_arg( 'utm_nooverride', '1', $this->get_return_url( $order ) )  );
+		$this->log->add( 'redsys', 'DS_MERCHANT_URLKO: '    . $returnfromredsys                );
+		$this->log->add( 'redsys', 'DS_MERCHANT_CONSUMERLANGUAGE: '  . $gatewaylanguage                );
+		$this->log->add( 'redsys', 'DS_MERCHANT_PRODUCTDESCRIPTION: ' . __( 'Order' , 'woocommerce-redsys' ) . ' ' .  $order->get_order_number()  );
+	}
+	$redsys_args = apply_filters( 'woocommerce_redsys_args', $redsys_args ); */
+
+	$caixabankform = '
+		<form name="frm" action="' . $caixabanktesturl . '" method="POST" target="_blank">
+			<input type="hidden" name="Ds_SignatureVersion" value="' . $version . '"/>
+			<input type="hidden" name="Ds_MerchantParameters" value="' . $params . '"/>
+			<input type="hidden" name="Ds_Signature" value="' . $signature . '"/>
+			<input type="submit" value="Enviar" >
+		</form>';
+
+	return $caixabankform;
 }
 
 ?>
