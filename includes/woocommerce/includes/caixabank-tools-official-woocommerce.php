@@ -1,5 +1,5 @@
 <?php
-	if ( class_exists( 'WC_Payment_Gateway' ) ) add_action('plugins_loaded', 'woocommerce_gateway_caixabank_init', 0);
+	add_action('plugins_loaded', 'woocommerce_gateway_caixabank_init' );
 
 function woocommerce_gateway_caixabank_init(){
 	/**
