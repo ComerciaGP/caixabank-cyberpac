@@ -1,6 +1,4 @@
 <?php
-
-
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 function caixabank_irpf_invoices_is_active_option(){ ?>
@@ -222,7 +220,6 @@ function display_caixabank_irpf_panel_fields(){
 	add_settings_field('caixabank_irpf_zamora_option', 'IRPF Zamora <a href="#" data-tool="IVA Irlanda" class="tooltip animate">?</a>', 'caixabank_irpf_zamora_option', 'caixabank-irpf-options', 'caixabank-irpf-section');
 	add_settings_field('caixabank_irpf_zaragoza_option', 'IRPF Zaragoza <a href="#" data-tool="IVA Irlanda" class="tooltip animate">?</a>', 'caixabank_irpf_zaragoza_option', 'caixabank-irpf-options', 'caixabank-irpf-section');
 
-
 	register_setting('caixabank-irpf-section', 'caixabank_irpf_invoices_is_active_option'	);
 	register_setting('caixabank-irpf-section', 'caixabank_irpf_alava_option'				);
 	register_setting('caixabank-irpf-section', 'caixabank_irpf_albacete_option'				);
@@ -276,7 +273,5 @@ function display_caixabank_irpf_panel_fields(){
 	register_setting('caixabank-irpf-section', 'caixabank_irpf_vizcaya_option'				);
 	register_setting('caixabank-irpf-section', 'caixabank_irpf_zamora_option'				);
 	register_setting('caixabank-irpf-section', 'caixabank_irpf_zaragoza_option'				);
-
 }
-
 add_action('admin_init', 'display_caixabank_irpf_panel_fields');

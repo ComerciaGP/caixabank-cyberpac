@@ -149,6 +149,4 @@ function caixabank_activation_hook() {
 	update_option( 'caixabank_irpf_zamora_option',			15 );
 	update_option( 'caixabank_irpf_zaragoza_option',		15 );
 }
-
-
 ?>
