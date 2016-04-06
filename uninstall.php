@@ -27,6 +27,33 @@ if( !defined('WP_UNINSTALL_PLUGIN') ) exit();
 	delete_option(	'caixabank_gateway_language_gateway'			);
 	delete_option(	'caixabank_gateway_test_mode'					);
 	delete_option(	'caixabank_gateway_debug'						);
+	delete_option(	'caixabank_alemania_iva_estandar'				);
+	delete_option(	'caixabank_austria_iva_estandar'				);
+	delete_option(	'caixabank_belgica_iva_estandar'				);
+	delete_option(	'caixabank_bulgaria_iva_estandar'				);
+	delete_option(	'caixabank_croacia_iva_estandar'				);
+	delete_option(	'caixabank_chipre_iva_estandar'					);
+	delete_option(	'caixabank_dinamarca_iva_estandar'				);
+	delete_option(	'caixabank_eslovaquia_iva_estandar'				);
+	delete_option(	'caixabank_eslovenia_iva_estandar'				);
+	delete_option(	'caixabank_espana_iva_estandar'					);
+	delete_option(	'caixabank_estonia_iva_estandar'				);
+	delete_option(	'caixabank_finlandia_iva_estandar'				);
+	delete_option(	'caixabank_francia_iva_estandar'				);
+	delete_option(	'caixabank_grecia_iva_estandar'					);
+	delete_option(	'caixabank_holanda_iva_estandar'				);
+	delete_option(	'caixabank_irlanda_iva_estandar'				);
+	delete_option(	'caixabank_italia_iva_estandar'					);
+	delete_option(	'caixabank_letonia_iva_estandar'				);
+	delete_option(	'caixabank_lituania_iva_estandar'				);
+	delete_option(	'caixabank_luxemburgo_iva_estandar'				);
+	delete_option(	'caixabank_malta_iva_estandar'					);
+	delete_option(	'caixabank_polonia_iva_estandar'				);
+	delete_option(	'caixabank_portugal_iva_estandar'				);
+	delete_option(	'caixabank_uk_iva_estandar'						);
+	delete_option(	'caixabank_republica_checa_iva_estandar'		);
+	delete_option(	'caixabank_rumania_iva_estandar'				);
+	delete_option(	'caixabank_suecia_iva_estandar'					);
 
 	//drop a custom db table CaixaBank Tools Official
 /*
