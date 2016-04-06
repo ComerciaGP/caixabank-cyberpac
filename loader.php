@@ -55,12 +55,40 @@ function caixabank_welcome_splash(){
 }
 add_action( 'admin_init', 'caixabank_welcome_splash', 1 );
 register_deactivation_hook( __FILE__, 'flush_rewrite_rules' );
-register_activation_hook( __FILE__, 'caixabank_flush_rewrites' );
-function caixabank_flush_rewrites() {
+register_activation_hook( __FILE__, 'caixabank_activation_hook' );
+function caixabank_activation_hook() {
 	// call your CPT registration function here (it should also be hooked into 'init')
 	caixabank_add_endpoint();
 	caixabank_add_endpoint_tpv();
 	flush_rewrite_rules();
+	update_option( 'caixabank_alemania_iva_estandar',		19 );
+	update_option( 'caixabank_austria_iva_estandar',		20 );
+	update_option( 'caixabank_belgica_iva_estandar',		21 );
+	update_option( 'caixabank_bulgaria_iva_estandar',		20 );
+	update_option( 'caixabank_croacia_iva_estandar',		25 );
+	update_option( 'caixabank_chipre_iva_estandar',			19 );
+	update_option( 'caixabank_dinamarca_iva_estandar',		25 );
+	update_option( 'caixabank_eslovaquia_iva_estandar',		20 );
+	update_option( 'caixabank_eslovenia_iva_estandar',		22 );
+	update_option( 'caixabank_espana_iva_estandar',			21 );
+	update_option( 'caixabank_estonia_iva_estandar',		20 );
+	update_option( 'caixabank_finlandia_iva_estandar',		24 );
+	update_option( 'caixabank_francia_iva_estandar',		20 );
+	update_option( 'caixabank_grecia_iva_estandar',			23 );
+	update_option( 'caixabank_holanda_iva_estandar',		27 );
+	update_option( 'caixabank_irlanda_iva_estandar',		23 );
+	update_option( 'caixabank_italia_iva_estandar',			22 );
+	update_option( 'caixabank_letonia_iva_estandar',		21 );
+	update_option( 'caixabank_lituania_iva_estandar',		21 );
+	update_option( 'caixabank_luxemburgo_iva_estandar',		15 );
+	update_option( 'caixabank_malta_iva_estandar',			18 );
+	update_option( 'caixabank_polonia_iva_estandar',		23 );
+	update_option( 'caixabank_portugal_iva_estandar',		23.25 );
+	update_option( 'caixabank_uk_iva_estandar',				20 );
+	update_option( 'caixabank_republica_checa_iva_estandar',21 );
+	update_option( 'caixabank_rumania_iva_estandar',		24 );
+	update_option( 'caixabank_suecia_iva_estandar',			25 );
+
 }
 
 
