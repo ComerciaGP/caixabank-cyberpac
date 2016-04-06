@@ -57,10 +57,15 @@ add_action( 'admin_init', 'caixabank_welcome_splash', 1 );
 register_deactivation_hook( __FILE__, 'flush_rewrite_rules' );
 register_activation_hook( __FILE__, 'caixabank_activation_hook' );
 function caixabank_activation_hook() {
-	// call your CPT registration function here (it should also be hooked into 'init')
+
+	// Custom Slugs
+
 	caixabank_add_endpoint();
 	caixabank_add_endpoint_tpv();
 	flush_rewrite_rules();
+
+	// IVA
+
 	update_option( 'caixabank_alemania_iva_estandar',		19 );
 	update_option( 'caixabank_austria_iva_estandar',		20 );
 	update_option( 'caixabank_belgica_iva_estandar',		21 );
@@ -89,6 +94,60 @@ function caixabank_activation_hook() {
 	update_option( 'caixabank_rumania_iva_estandar',		24 );
 	update_option( 'caixabank_suecia_iva_estandar',			25 );
 
+	// IRPF
+
+	update_option( 'caixabank_irpf_alava_option',			15 );
+	update_option( 'caixabank_irpf_albacete_option',		15 );
+	update_option( 'caixabank_irpf_alicante_option',		15 );
+	update_option( 'caixabank_irpf_almeria_option',			15 );
+	update_option( 'caixabank_irpf_asturias_option',		15 );
+	update_option( 'caixabank_irpf_avila_option',			15 );
+	update_option( 'caixabank_irpf_badajoz_option',			15 );
+	update_option( 'caixabank_irpf_barcelona_option',		15 );
+	update_option( 'caixabank_irpf_burgos_option',			15 );
+	update_option( 'caixabank_irpf_caceres_option',			15 );
+	update_option( 'caixabank_irpf_cadiz_option',			15 );
+	update_option( 'caixabank_irpf_cantabria_option',		15 );
+	update_option( 'caixabank_irpf_castellon_option',		15 );
+	update_option( 'caixabank_irpf_ceuta_option',			15 );
+	update_option( 'caixabank_irpf_ciudadreal_option',		15 );
+	update_option( 'caixabank_irpf_cordoba_option',			15 );
+	update_option( 'caixabank_irpf_cuenca_option',			15 );
+	update_option( 'caixabank_irpf_girona_option',			15 );
+	update_option( 'caixabank_irpf_laspalmas_option',		15 );
+	update_option( 'caixabank_irpf_granada_option',			15 );
+	update_option( 'caixabank_irpf_guadalajara_option',		15 );
+	update_option( 'caixabank_irpf_guipuzcoa_option',		15 );
+	update_option( 'caixabank_irpf_huelva_option',			15 );
+	update_option( 'caixabank_irpf_huesca_option',			15 );
+	update_option( 'caixabank_irpf_illesbalears_option',	15 );
+	update_option( 'caixabank_irpf_jaen_option',			15 );
+	update_option( 'caixabank_irpf_acoruna_option',			15 );
+	update_option( 'caixabank_irpf_larioja_option',			15 );
+	update_option( 'caixabank_irpf_leon_option',			15 );
+	update_option( 'caixabank_irpf_lleida_option',			15 );
+	update_option( 'caixabank_irpf_lugo_option',			15 );
+	update_option( 'caixabank_irpf_malaga_option',			15 );
+	update_option( 'caixabank_irpf_madrid_option',			15 );
+	update_option( 'caixabank_irpf_melilla_option',			15 );
+	update_option( 'caixabank_irpf_murcia_option',			15 );
+	update_option( 'caixabank_irpf_navarra_option',			15 );
+	update_option( 'caixabank_irpf_ourense_option',			15 );
+	update_option( 'caixabank_irpf_palencia_option',		15 );
+	update_option( 'caixabank_irpf_pontevedra_option',		15 );
+	update_option( 'caixabank_irpf_salamanca_option',		15 );
+	update_option( 'caixabank_irpf_segovia_option',			15 );
+	update_option( 'caixabank_irpf_sevilla_option',			15 );
+	update_option( 'caixabank_irpf_soria_option',			15 );
+	update_option( 'caixabank_irpf_tarragona_option',		15 );
+	update_option( 'caixabank_irpf_teruel_option',			15 );
+	update_option( 'caixabank_irpf_santacruztenerife_option', 15 );
+	update_option( 'caixabank_irpf_toledo_option',			15 );
+	update_option( 'caixabank_irpf_valencia_option',		15 );
+	update_option( 'caixabank_irpf_valladolid_option',		15 );
+	update_option( 'caixabank_irpf_vizcaya_option',			15 );
+	update_option( 'caixabank_irpf_zamora_option',			15 );
+	update_option( 'caixabank_irpf_zaragoza_option',		15 );
 }
 
 
