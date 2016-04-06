@@ -18,6 +18,8 @@ function caixabank_settings(){ ?>
 			<a href="?page=caixabank&tab=general_options" class="nav-tab <?php echo $active_tab == 'general_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'General Settings', 'caixabank-tolls-official' ); ?></a>
             <a href="?page=caixabank&tab=gateway_options" class="nav-tab <?php echo $active_tab == 'gateway_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'CaixaBank Gateway Settings', 'caixabank-tolls-official' ); ?></a>
             <a href="?page=caixabank&tab=sequential_invoice_options" class="nav-tab <?php echo $active_tab == 'sequential_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Sequential Invoice Numbers', 'caixabank-tolls-official' ); ?></a>
+            <a href="?page=caixabank&tab=iva_invoice_options" class="nav-tab <?php echo $active_tab == 'iva_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'IVA Settings', 'caixabank-tolls-official' ); ?></a>
+
 
 		</h2>
 
@@ -34,6 +36,10 @@ function caixabank_settings(){ ?>
     elseif ( $active_tab == 'sequential_invoice_options' ) {
         settings_fields( "caixabank-sequential-section" );
         do_settings_sections( "caixabank-sequential-options" );
+    }
+    elseif ( $active_tab == 'iva_invoice_options' ) {
+        settings_fields( "caixabank-iva-section" );
+        do_settings_sections( "caixabank-iva-options" );
     }
 
 
@@ -110,6 +116,10 @@ function caixabank_settings(){ ?>
       if ( resetinvoice ) {
           var switchery = new Switchery(resetinvoice, { size: 'small' });
       }
+      var activateiva = document.querySelector('.js-switch-activateiva');
+      if ( activateiva ) {
+          var switchery = new Switchery(activateiva, { size: 'small' });
+      }
     </script>
 <?php }
 
@@ -122,10 +132,10 @@ function caixabank_settings_load_css($hook){
     if( $caixabankconfig != $hook ) {
         return;
     } else {
-        wp_register_style( 'caixabank_switchery_css', CAIXABANK_DIR_URL . '/assets/css/switchery.css', array(),CAIXABANK_TOOLS_OFFICIAL_VERSION  );
-        wp_register_style( 'caixabank_ownstylesettings_css', CAIXABANK_DIR_URL . '/assets/css/rowstylesettings.css', array(),CAIXABANK_TOOLS_OFFICIAL_VERSION  );
-        wp_enqueue_style( 'caixabank_switchery_css');
-        wp_enqueue_style( 'caixabank_ownstylesettings_css');
+        wp_register_style(  'caixabank_switchery_css', CAIXABANK_DIR_URL . '/assets/css/switchery.css', array(),CAIXABANK_TOOLS_OFFICIAL_VERSION  );
+        wp_register_style(  'caixabank_ownstylesettings_css', CAIXABANK_DIR_URL . '/assets/css/rowstylesettings.css', array(),CAIXABANK_TOOLS_OFFICIAL_VERSION  );
+        wp_enqueue_style(   'caixabank_switchery_css');
+        wp_enqueue_style(   'caixabank_ownstylesettings_css');
     }
 }
 add_action( 'admin_enqueue_scripts', 'caixabank_settings_load_css' );
@@ -137,4 +147,5 @@ add_action( 'admin_enqueue_scripts', 'caixabank_settings_load_css' );
 include_once('setting-options/general-settings.php');
 include_once('setting-options/gateway-settings.php');
 include_once('setting-options/sort-invoices.php');
+include_once('setting-options/iva-settings.php');
 ?>
