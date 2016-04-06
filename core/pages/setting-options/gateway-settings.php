@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 function caixabank_gateway_title(){ ?>
-        <input type="text" name="caixabank_gateway_title" value="<?php echo get_option('caixabank_gateway_title'); ?>" />
+        <input type="text" name="caixabank_gateway_title" value="<?php echo get_option('caixabank_gateway_title'); ?>" size="40" />
 <?php }
 
 function caixabank_gateway_description(){ ?>
@@ -11,15 +11,15 @@ function caixabank_gateway_description(){ ?>
 <?php }
 
 function caixabank_gateway_fuc(){ ?>
-        <input type="text" name="caixabank_gateway_fuc" value="<?php echo get_option('caixabank_gateway_fuc'); ?>" />
+        <input type="text" name="caixabank_gateway_fuc" value="<?php echo get_option('caixabank_gateway_fuc'); ?>" size="40" />
 <?php }
 
 function caixabank_gateway_commerce_name(){ ?>
-        <input type="text" name="caixabank_gateway_commerce_name" value="<?php echo get_option('caixabank_gateway_commerce_name'); ?>" />
+        <input type="text" name="caixabank_gateway_commerce_name" value="<?php echo get_option('caixabank_gateway_commerce_name'); ?>" size="40" />
 <?php }
 
 function caixabank_gateway_terminal_number(){ ?>
-        <input type="text" name="caixabank_gateway_terminal_number" value="<?php echo get_option('caixabank_gateway_terminal_number'); ?>" />
+        <input type="text" name="caixabank_gateway_terminal_number" value="<?php echo get_option('caixabank_gateway_terminal_number'); ?>"  size="40" />
 <?php }
 
 function caixabank_gateway_activate_second_terminal(){ ?>
@@ -27,17 +27,17 @@ function caixabank_gateway_activate_second_terminal(){ ?>
 <?php }
 
 function caixabank_gateway_second_terminal_number(){ ?>
-        <input type="text" name="caixabank_gateway_second_terminal_number" value="<?php echo get_option('caixabank_gateway_second_terminal_number'); ?>" />
+        <input type="text" name="caixabank_gateway_second_terminal_number" value="<?php echo get_option('caixabank_gateway_second_terminal_number'); ?>"  size="40" />
 <?php }
 
 function caixabank_gateway_when_use_second_terminal(){ ?>
-        <input type="text" name="caixabank_gateway_when_use_second_terminal" value="<?php echo get_option('caixabank_gateway_when_use_second_terminal'); ?>" />
+        <input type="text" name="caixabank_gateway_when_use_second_terminal" value="<?php echo get_option('caixabank_gateway_when_use_second_terminal'); ?>"  size="40" />
 <?php }
 function caixabank_gateway_passsha256(){ ?>
-        <input type="text" name="caixabank_gateway_passsha256" value="<?php echo get_option('caixabank_gateway_passsha256'); ?>" />
+        <input type="text" name="caixabank_gateway_passsha256" value="<?php echo get_option('caixabank_gateway_passsha256'); ?>"  size="40" />
 <?php }
 function caixabank_gateway_language_gateway(){ ?>
-        <input type="text" name="caixabank_gateway_language_gateway" value="<?php echo get_option('caixabank_gateway_language_gateway'); ?>" />
+        <input type="text" name="caixabank_gateway_language_gateway" value="<?php echo get_option('caixabank_gateway_language_gateway'); ?>"  size="40" />
 <?php }
 
 function caixabank_gateway_test_mode(){ ?>
