@@ -244,10 +244,10 @@ function caixabank_order_use_irpf( $order_id ){
 }
 
 function caixabank_get_total( $order_id ){
-	$caixabank_get_price	= get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_price', true );
-	$caixabank_price_int	= (int)$caixabank_get_price;
-	$caixabank_use_tax		= true; //DESACTIVADO PARA DEBUG caixabank_order_use_iva( $order_id );
-	$caixabank_use_irpf		= caixabank_order_use_irpf( $order_id );
+	$caixabank_get_price = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_price', true );
+	$caixabank_price_int = (int)$caixabank_get_price;
+	$caixabank_use_tax  = true; //DESACTIVADO PARA DEBUG caixabank_order_use_iva( $order_id );
+	$caixabank_use_irpf  = caixabank_order_use_irpf( $order_id );
 	if ( $caixabank_use_tax ) {
 		$caixabank_tax_int = (int)get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_tax', true ); //$caixabank_tax;
 	} else {
@@ -264,42 +264,42 @@ function caixabank_get_total( $order_id ){
 }
 
 function caixabank_get_arg( $order_id ){
-	$caixabanktransaction_id	= str_pad( $order_id , 12 , '0' , STR_PAD_LEFT );
-	$caixabanktransaction_id1	= mt_rand( 1, 999 ); // lets to create a random number
-	$caixabanktransaction_id2	= substr_replace( $caixabanktransaction_id, $caixabanktransaction_id1, 0,-9 ); // new order number
-	$caixabankorder_total		= number_format( caixabank_get_total( $order_id ) , 2 , ',' , '' );
-	$caixabankorder_total_sign	= number_format( caixabank_get_total( $order_id ) , 2 , '' , '' );
-	$caixabanktransaction_type	= '0';
-	$caixabanklanguage			= get_option('caixabank_language');
+	$caixabanktransaction_id = str_pad( $order_id , 12 , '0' , STR_PAD_LEFT );
+	$caixabanktransaction_id1 = mt_rand( 1, 999 ); // lets to create a random number
+	$caixabanktransaction_id2 = substr_replace( $caixabanktransaction_id, $caixabanktransaction_id1, 0,-9 ); // new order number
+	$caixabankorder_total  = number_format( caixabank_get_total( $order_id ) , 2 , ',' , '' );
+	$caixabankorder_total_sign = number_format( caixabank_get_total( $order_id ) , 2 , '' , '' );
+	$caixabanktransaction_type = '0';
+	$caixabanklanguage   = get_option('caixabank_language');
 
-	if( defined( 'CAIXABANK_TOOLS_LIVE_URL' ) ) $caixabankliveurl		= CAIXABANK_TOOLS_LIVE_URL;
-	if( defined( 'CAIXABANK_TOOLS_TEST_URL' ) ) $caixabanktesturl		= CAIXABANK_TOOLS_TEST_URL;
-	if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $caixabankurlko	= CAIXABANK_SITE_CANCEL_ORDER_URL;
-	if( defined( 'CAIXABANK_RETURN_OK' ) ) $caixabankok					= CAIXABANK_RETURN_OK;
-	$caixabanktestmode			= get_option( 'caixabank_gateway_test_mode' );
-	$caixabankmethod_title		= __( 'Servired/RedSys', 'woocommerce' );
-	if( defined( 'CAIXABANK_NOTIFY_URL' ) ) $caixabanknotify_url		= CAIXABANK_NOTIFY_URL;
+	if( defined( 'CAIXABANK_TOOLS_LIVE_URL' ) ) $caixabankliveurl  = CAIXABANK_TOOLS_LIVE_URL;
+	if( defined( 'CAIXABANK_TOOLS_TEST_URL' ) ) $caixabanktesturl  = CAIXABANK_TOOLS_TEST_URL;
+	if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $caixabankurlko = CAIXABANK_SITE_CANCEL_ORDER_URL;
+	if( defined( 'CAIXABANK_RETURN_OK' ) ) $caixabankok     = CAIXABANK_RETURN_OK;
+	$caixabanktestmode   = get_option( 'caixabank_gateway_test_mode' );
+	$caixabankmethod_title  = __( 'Servired/RedSys', 'woocommerce' );
+	if( defined( 'CAIXABANK_NOTIFY_URL' ) ) $caixabanknotify_url  = CAIXABANK_NOTIFY_URL;
 
 	// Define user set variables
-	$caixabanktitle				= get_option( 'caixabank_gateway_title' );
-	$caixabankdescription		= get_option( 'caixabank_gateway_description' );
-	$caixabankcustomer			= get_option( 'caixabank_gateway_fuc' );
-	$caixabankcommercename		= get_option( 'caixabank_gateway_commerce_name' );
-	$caixabankterminal			= get_option( 'caixabank_gateway_terminal_number' );
-	$caixabanksecretsha256		= utf8_decode(  get_option('caixabank_gateway_passsha256') );
-	$caixabankdebug				= get_option( 'caixabank_gateway_debug' );
-	$caixabanklanguage			= get_option( 'caixabank_gateway_language_gateway');
-	$caixabankurlko				= get_option( 'caixabankurlko' );
-	$caixabankterminal2			= get_option( 'caixabank_gateway_second_terminal_number' );
-	$caixabankuseterminal2		= get_option( 'caixabank_gateway_activate_second_terminal' );
-	$caixabanktoamount			= get_option( 'caixabank_gateway_when_use_second_terminal' );
-	$caixabankcurrencycode		= get_option( 'caixabankcurrencycide' );
+	$caixabanktitle    = get_option( 'caixabank_gateway_title' );
+	$caixabankdescription  = get_option( 'caixabank_gateway_description' );
+	$caixabankcustomer   = get_option( 'caixabank_gateway_fuc' );
+	$caixabankcommercename  = get_option( 'caixabank_gateway_commerce_name' );
+	$caixabankterminal   = get_option( 'caixabank_gateway_terminal_number' );
+	$caixabanksecretsha256  = utf8_decode(  get_option('caixabank_gateway_passsha256') );
+	$caixabankdebug    = get_option( 'caixabank_gateway_debug' );
+	$caixabanklanguage   = get_option( 'caixabank_gateway_language_gateway');
+	$caixabankurlko    = get_option( 'caixabankurlko' );
+	$caixabankterminal2   = get_option( 'caixabank_gateway_second_terminal_number' );
+	$caixabankuseterminal2  = get_option( 'caixabank_gateway_activate_second_terminal' );
+	$caixabanktoamount   = get_option( 'caixabank_gateway_when_use_second_terminal' );
+	$caixabankcurrencycode  = get_option( 'caixabankcurrencycide' );
 
 	//para debug
-	$caixabankdebug				= false;
+	$caixabankdebug    = false;
 
-	$caixabankcurrencycode		= '978';
-	//$caixabankorder_total_sign	= '1000';
+	$caixabankcurrencycode  = '978';
+	//$caixabankorder_total_sign = '1000';
 
 
 
@@ -345,18 +345,18 @@ function caixabank_get_arg( $order_id ){
 	}
 	// redsys Args
 	$miObj = new RedsysAPI;
-	$miObj->setParameter( "DS_MERCHANT_AMOUNT",					$caixabankorder_total_sign										);
-	$miObj->setParameter( "DS_MERCHANT_ORDER",					$caixabanktransaction_id2										);
-	$miObj->setParameter( "DS_MERCHANT_MERCHANTCODE",			$caixabankcustomer												);
-	$miObj->setParameter( "DS_MERCHANT_CURRENCY",				$caixabankcurrencycode											);
-	$miObj->setParameter( "DS_MERCHANT_TRANSACTIONTYPE",		$caixabanktransaction_type										);
-	$miObj->setParameter( "DS_MERCHANT_TERMINAL",				$DSMerchantTerminal												);
-	$miObj->setParameter( "DS_MERCHANT_MERCHANTURL",			$caixabanknotify_url											);
-	$miObj->setParameter( "DS_MERCHANT_URLOK",					$caixabankok													);
-	$miObj->setParameter( "DS_MERCHANT_URLKO",					$caixabankurlko													);
-	$miObj->setParameter( "DS_MERCHANT_CONSUMERLANGUAGE",		$gatewaylanguage												);
-	$miObj->setParameter( "DS_MERCHANT_PRODUCTDESCRIPTION",		__( 'Order' , 'caixabank-tools-official' ) . ' ' .  $order_id	);
-	$miObj->setParameter( "DS_MERCHANT_MERCHANTNAME",			$caixabankcommercename											);
+	$miObj->setParameter( "DS_MERCHANT_AMOUNT",     $caixabankorder_total_sign          );
+	$miObj->setParameter( "DS_MERCHANT_ORDER",     $caixabanktransaction_id2          );
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTCODE",   $caixabankcustomer            );
+	$miObj->setParameter( "DS_MERCHANT_CURRENCY",    $caixabankcurrencycode           );
+	$miObj->setParameter( "DS_MERCHANT_TRANSACTIONTYPE",  $caixabanktransaction_type          );
+	$miObj->setParameter( "DS_MERCHANT_TERMINAL",    $DSMerchantTerminal            );
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTURL",   $caixabanknotify_url           );
+	$miObj->setParameter( "DS_MERCHANT_URLOK",     $caixabankok             );
+	$miObj->setParameter( "DS_MERCHANT_URLKO",     $caixabankurlko             );
+	$miObj->setParameter( "DS_MERCHANT_CONSUMERLANGUAGE",  $gatewaylanguage            );
+	$miObj->setParameter( "DS_MERCHANT_PRODUCTDESCRIPTION",  __( 'Order' , 'caixabank-tools-official' ) . ' ' .  $order_id );
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTNAME",   $caixabankcommercename           );
 
 
 	$version="HMAC_SHA256_V1";
@@ -395,6 +395,238 @@ function caixabank_get_arg( $order_id ){
 		</form>';
 
 	return $caixabankform;
+}
+
+// Squential invoice number
+
+if ( get_option( 'caixabank_sort_invoices_is_active_option') == 'yes' ){
+	add_filter( 'manage_edit-shop_order_columns',   'caixabank_add_invoice_number'        );
+	add_action( 'manage_shop_order_posts_custom_column', 'caixabank_add_invoice_number_value',    2  );
+	add_filter( 'manage_edit-shop_order_sortable_columns', 'caixabank_add_invoice_number_sortable_colum'    );
+	//add_action( 'woocommerce_email_before_order_table',  'caixabank_add_invoice_number_to_customer_email'   );
+	add_action( 'woocommerce_payment_complete',    'caixabank_sort_invoice_orders'       );
+	add_action( 'woocommerce_order_status_processing',  'caixabank_sort_invoice_orders_admin'      );
+	add_action( 'woocommerce_order_status_completed',  'caixabank_sort_invoice_orders_admin'      );
+	if ( !is_admin() )  {
+		add_filter( 'woocommerce_order_number', 'caixabank_show_invoice_number', 10, 2 );
+	}
+}
+
+function caixabank_add_invoice_number( $columns ){
+
+	$new_column = (is_array($columns)) ? $columns : array();
+	unset( $new_column['order_actions'] );
+
+	//edit this for you column(s)
+	//all of your columns will be added before the actions colums
+	$new_column['invoice_number'] = __('Invoice Number','caixabank-tools-official');
+
+	//stop editing
+	$new_column['order_actions'] = $columns['order_actions'];
+	return $new_column;
+}
+
+// render the values
+function caixabank_add_invoice_number_value( $column ){
+	global $post;
+	$invoice_number = get_post_meta( $post->ID, '_invoice_order_caixabank', true );
+	if ( $column == 'invoice_number' ) {
+		echo (  ! empty( $invoice_number ) ? $invoice_number : __('No invoice n&#176;', 'caixabank-tools-official' ) );
+	}
+}
+
+// sort invoice order colum
+function caixabank_add_invoice_number_sortable_colum( $columns ) {
+	$custom = array(
+		'invoice_number' => '_invoice_order_caixabank',
+	);
+	return wp_parse_args( $custom, $columns );
+}
+
+function caixabank_sort_invoice_orders( $order_id ){
+
+	$reset_invoice_number = get_option( 'caixabank_sort_invoices_reset_invoice_number_option' );
+	if( $reset_invoice_number == 'yes' ){ caixabank_check_current_year(); }
+
+	$last_invoice_number   =  get_option( 'caixabank_sort_invoices_last_invoice_number_option'  );
+	$before_prefix_invoice_number = get_option( 'caixabank_sort_invoices_prefix_invoice_number_option' );
+	$before_postfix_invoice_number = get_option( 'caixabank_sort_invoices_postfix_invoice_number_option' );
+	$length_invoice_number   = get_option( 'caixabank_sort_invoices_length_invoice_number_option' );
+	$prefix_invoice_number   =  caixabank_use_patterns( $before_prefix_invoice_number       );
+	$postfix_invoice_number   = caixabank_use_patterns( $before_postfix_invoice_number       );
+	$get_invoice_if_exist   = get_post_meta( $order_id, '_invoice_order_caixabank', true     );
+
+	if ( empty( $get_invoice_if_exist ) ){
+		if ( !empty( $last_invoice_number ) ) settype( $last_invoice_number, 'integer' );
+		if ( empty( $last_invoice_number ) ){
+			// Check if there is a option with the first invoice number
+			$first_invoice_number = get_option( 'caixabank_sort_invoices_first_invoice_number_option' );
+			if ( empty( $first_invoice_number ) ) {
+				$invoice_number = 1;
+				update_option( 'caixabank_sort_invoices_last_invoice_number_option', $invoice_number );
+			} else {
+				settype( $first_invoice_number, 'integer' );
+				$invoice_number = $first_invoice_number;
+				update_option( 'caixabank_sort_invoices_last_invoice_number_option', $invoice_number );
+			}
+		} else {
+			$invoice_number = ++$last_invoice_number;
+			update_option( 'caixabank_sort_invoices_last_invoice_number_option', $invoice_number );
+		}
+		if( !empty( $length_invoice_number ) && ( strlen( $invoice_number ) < $length_invoice_number ) ){
+			$invoice_number_long = str_pad($invoice_number, $length_invoice_number, '0', STR_PAD_LEFT);
+		} else {
+			$invoice_number_long = $invoice_number;
+		}
+		$final_invoice_number = $prefix_invoice_number . $invoice_number_long . $postfix_invoice_number;
+		update_post_meta( $order_id, '_invoice_order_caixabank', $final_invoice_number );
+	}
+}
+function caixabank_sort_invoice_orders_admin( $order_id ){
+
+	$reset_invoice_number = get_option( 'caixabank_sort_invoices_reset_invoice_number_option' );
+	if( $reset_invoice_number == 'yes' ){ caixabank_check_current_year(); }
+
+	$last_invoice_number   =  get_option( 'caixabank_sort_invoices_last_invoice_number_option'  );
+	$before_prefix_invoice_number = get_option( 'caixabank_sort_invoices_prefix_invoice_number_option' );
+	$before_postfix_invoice_number = get_option( 'caixabank_sort_invoices_postfix_invoice_number_option' );
+	$length_invoice_number   = get_option( 'caixabank_sort_invoices_length_invoice_number_option' );
+	$prefix_invoice_number   =  caixabank_use_patterns( $before_prefix_invoice_number       );
+	$postfix_invoice_number   = caixabank_use_patterns( $before_postfix_invoice_number       );
+	$get_invoice_if_exist   = get_post_meta( $order_id, '_invoice_order_caixabank', true      );
+
+	if ( empty( $get_invoice_if_exist ) ){
+		if ( !empty( $last_invoice_number ) ) settype( $last_invoice_number, 'integer' );
+		if ( empty( $last_invoice_number ) ){
+			// Check if there is a option with the first invoice number
+			$first_invoice_number = get_option( 'caixabank_sort_invoices_first_invoice_number_option' );
+			if ( empty( $first_invoice_number ) ) {
+				$invoice_number = 1;
+				update_option( 'caixabank_sort_invoices_last_invoice_number_option', $invoice_number );
+			} else {
+				settype( $first_invoice_number, 'integer' );
+				$invoice_number = $first_invoice_number;
+				update_option( 'caixabank_sort_invoices_last_invoice_number_option', $invoice_number );
+			}
+		} else {
+			$invoice_number = ++$last_invoice_number;
+			update_option( 'caixabank_sort_invoices_last_invoice_number_option', $invoice_number );
+		}
+		if( !empty( $length_invoice_number ) && ( strlen( $invoice_number ) < $length_invoice_number ) ){
+			$invoice_number_long = str_pad($invoice_number, $length_invoice_number, '0', STR_PAD_LEFT);
+		} else {
+			$invoice_number_long = $invoice_number;
+		}
+		$final_invoice_number = $prefix_invoice_number . $invoice_number_long . $postfix_invoice_number;
+		update_post_meta( $order_id, '_invoice_order_caixabank', $final_invoice_number );
+	}
+}
+// We hook to WooCommerce payment function
+
+function caixabank_add_invoice_number_to_customer_email ( $order ){
+
+	$invoice_number = caixabank_check_add_invoice_number( $order );
+	if ( empty( $invoice_number ) ){
+		printf( __( 'Order Number: %s', 'caixabank-tools-official' ), $order ); }
+	else {
+		echo '<h2>';
+		printf( __( 'Invoice Number: %s', 'caixabank-tools-official' ), $invoice_number );
+		echo '</h2>';
+	}
+}
+
+function caixabank_check_add_invoice_number( $order ){
+	global $woocommerce, $post;
+
+	$reset_invoice_number			= get_option( 'caixabank_sort_invoices_reset_invoice_number_option'		);
+	if( $reset_invoice_number == 'yes' ){ caixabank_check_current_year(); }
+	$get_invoice_if_exist			= get_post_meta( $order, '_invoice_order_caixabank', true      );
+	$last_invoice_number			= get_option( 'caixabank_sort_invoices_last_invoice_number_option'		);
+
+	$last_invoice_number			= get_option( 'caixabank_sort_invoices_last_invoice_number_option'		);
+	$before_prefix_invoice_number	= get_option( 'caixabank_sort_invoices_prefix_invoice_number_option'	);
+	$before_postfix_invoice_number	= get_option( 'caixabank_sort_invoices_postfix_invoice_number_option'	);
+	$length_invoice_number			= get_option( 'caixabank_sort_invoices_length_invoice_number_option'	);
+	$prefix_invoice_number			= caixabank_use_patterns( $before_prefix_invoice_number );
+	$postfix_invoice_number			= caixabank_use_patterns( $before_postfix_invoice_number );
+
+	if ( !empty( $last_invoice_number ) ) settype( $last_invoice_number, 'integer' );
+
+
+	if ( empty( $last_invoice_number ) ){
+		// Check if there is a option with the first invoice number
+		$first_invoice_number = get_option( 'caixabank_sort_invoices_first_invoice_number_option' );
+		if ( empty( $first_invoice_number ) ) {
+			$invoice_number = 1;
+		} else {
+			settype( $first_invoice_number, 'integer' );
+			$invoice_number = $first_invoice_number;
+		}
+	} else {
+		$invoice_number = $last_invoice_number;
+	}
+	if( !empty( $length_invoice_number ) && ( strlen( $invoice_number ) < $length_invoice_number ) ){
+		$invoice_number_long = str_pad($invoice_number, $length_invoice_number, '0', STR_PAD_LEFT);
+	} else {
+		$invoice_number_long = $invoice_number;
+	}
+	$final_invoice_number = $prefix_invoice_number . $invoice_number_long . $postfix_invoice_number;
+
+	return $final_invoice_number;
+}
+
+function caixabank_show_invoice_number( $oldnumber, $order ){
+	$preorderprefix = get_option( 'caixabank_sort_invoices_prefix_order_number_option' );
+	$preordersufix = get_option( 'caixabank_sort_invoices_postfix_order_number_option' );
+	$orderprefix = caixabank_use_patterns( $preorderprefix );
+	$ordersufix  = caixabank_use_patterns( $preordersufix );
+
+	if( empty( $ordersufix ) && empty( $orderprefix ) ){
+		$ordersufix = __( '-ORDER', 'caixabank-tools-official' );
+	}
+	$order = get_post_meta( $oldnumber, '_invoice_order_caixabank', true );
+	if ( empty( $order ) ){ $order = $orderprefix . $oldnumber . $ordersufix; }
+	if ( is_checkout() ) { $order = $oldnumber; }
+	return $order;
+}
+function caixabank_use_patterns( $string ){
+	$Numericzero					= preg_replace('/(\{d\})/', date_i18n('d'), $string);
+	$Numeric						= preg_replace('/(\{j\})/', date_i18n('j'), $Numericzero);
+	$English_suffix					= preg_replace('/(\{S\})/', date_i18n('S'), $Numeric);
+	$Full_name						= preg_replace('/(\{l\})/', date_i18n('l'), $English_suffix);
+	$Three_letter					= preg_replace('/(\{D\})/', date_i18n('D'), $Full_name);
+	$Month_Numericzero				= preg_replace('/(\{m\})/', date_i18n('m'), $Three_letter);
+	$Month_Numeric					= preg_replace('/(\{n\})/', date_i18n('n'), $Month_Numericzero);
+	$Textual_full					= preg_replace('/(\{F\})/', date_i18n('F'), $Month_Numeric);
+	$Textual_three					= preg_replace('/(\{M\})/', date_i18n('M'), $Textual_full);
+	$Year_Numeric_four				= preg_replace('/(\{Y\})/', date_i18n('Y'), $Textual_three);
+	$Year_Numeric_two				= preg_replace('/(\{y\})/', date_i18n('y'), $Year_Numeric_four);
+	$Time_Lowercase					= preg_replace('/(\{a\})/', date_i18n('a'), $Year_Numeric_two);
+	$Time_Uppercase					= preg_replace('/(\{A\})/', date_i18n('A'), $Time_Lowercase);
+	$Hour_twelve_without_zero		= preg_replace('/(\{g\})/', date_i18n('g'), $Time_Uppercase);
+	$Hour_twelve_zero				= preg_replace('/(\{h\})/', date_i18n('h'), $Hour_twelve_without_zero);
+	$Hour_twenty_four_without_zero	= preg_replace('/(\{G\})/', date_i18n('G'), $Hour_twelve_zero);
+	$Hour_twenty_four_zero			= preg_replace('/(\{H\})/', date_i18n('H'), $Hour_twenty_four_without_zero);
+	$Minutes						= preg_replace('/(\{i\})/', date_i18n('i'), $Hour_twenty_four_zero);
+	$final							= preg_replace('/(\{s\})/', date_i18n('s'), $Minutes);
+
+	return $final;
+
+}
+function caixabank_check_current_year(){
+	$current_year = date_i18n( 'Y' );
+	$saved_year  = get_option( 'caixabank_saved_year' );
+	settype( $saved_year, 'integer' );
+
+	if( empty( $saved_year ) ){
+		add_option( 'caixabank_saved_year', $current_year );
+	} else {
+		if( $current_year > $saved_year ){
+			update_option( 'caixabank_saved_year', $current_year );
+			update_option( 'caixabank_sort_invoices_first_invoice_number_option', '0' );
+			update_option( 'caixabank_sort_invoices_last_invoice_number_option', '0' );
+		}
+	}
 }
 
 ?>
