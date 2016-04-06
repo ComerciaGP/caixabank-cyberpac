@@ -9,6 +9,7 @@
 	}
 
 	public function template_loader( $template ) {
+		$file = '';
 		$url = $_SERVER["REQUEST_URI"];
 		$isIttpv = strpos($url, 'caixabank-tpv');
 		if ( $isIttpv !==false ) {
