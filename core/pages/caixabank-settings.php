@@ -15,10 +15,12 @@ function caixabank_settings(){ ?>
 ?>
 
         <h2 class="nav-tab-wrapper">
-			<a href="?page=caixabank&tab=general_options" class="nav-tab <?php echo $active_tab == 'general_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'General Settings', 'caixabank-tolls-official' ); ?></a>
-            <a href="?page=caixabank&tab=gateway_options" class="nav-tab <?php echo $active_tab == 'gateway_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'CaixaBank Gateway Settings', 'caixabank-tolls-official' ); ?></a>
-            <a href="?page=caixabank&tab=sequential_invoice_options" class="nav-tab <?php echo $active_tab == 'sequential_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Sequential Invoice Numbers', 'caixabank-tolls-official' ); ?></a>
-            <a href="?page=caixabank&tab=iva_invoice_options" class="nav-tab <?php echo $active_tab == 'iva_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'IVA Settings', 'caixabank-tolls-official' ); ?></a>
+			<a href="?page=caixabank&tab=general_options" class="nav-tab <?php echo $active_tab == 'general_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'General Settings', 'caixabank-tools-official' ); ?></a>
+            <a href="?page=caixabank&tab=gateway_options" class="nav-tab <?php echo $active_tab == 'gateway_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'CaixaBank Gateway Settings', 'caixabank-tools-official' ); ?></a>
+            <a href="?page=caixabank&tab=sequential_invoice_options" class="nav-tab <?php echo $active_tab == 'sequential_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Sequential Invoice Numbers', 'caixabank-tools-official' ); ?></a>
+            <a href="?page=caixabank&tab=iva_invoice_options" class="nav-tab <?php echo $active_tab == 'iva_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'IVA Settings', 'caixabank-tools-official' ); ?></a>
+            <a href="?page=caixabank&tab=irpf_invoice_options" class="nav-tab <?php echo $active_tab == 'irpf_invoice_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'IRPF Settings', 'caixabank-tools-official' ); ?></a>
+
 
 
 		</h2>
@@ -40,6 +42,10 @@ function caixabank_settings(){ ?>
     elseif ( $active_tab == 'iva_invoice_options' ) {
         settings_fields( "caixabank-iva-section" );
         do_settings_sections( "caixabank-iva-options" );
+    }
+    elseif ( $active_tab == 'irpf_invoice_options' ) {
+        settings_fields( "caixabank-irpf-section" );
+        do_settings_sections( "caixabank-irpf-options" );
     }
 
 
@@ -120,6 +126,10 @@ function caixabank_settings(){ ?>
       if ( activateiva ) {
           var switchery = new Switchery(activateiva, { size: 'small' });
       }
+      var activateirpf = document.querySelector('.js-switch-activateirpf');
+      if ( activateirpf ) {
+          var switchery = new Switchery(activateirpf, { size: 'small' });
+      }
     </script>
 <?php }
 
@@ -148,4 +158,5 @@ include_once('setting-options/general-settings.php');
 include_once('setting-options/gateway-settings.php');
 include_once('setting-options/sort-invoices.php');
 include_once('setting-options/iva-settings.php');
+include_once('setting-options/irpf-settings.php');
 ?>
