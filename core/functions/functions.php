@@ -93,6 +93,8 @@ function caixabank_handle_rest_api_requests_error() {
 	return wp_die( "CaixaBank Notification Request Failure" );
 }
 
+// API sent to TPV
+
 add_filter( 'query_vars', 'caixabank_add_query_vars_tpv' );
 
 // register API endpoints
@@ -106,10 +108,7 @@ function caixabank_add_query_vars_tpv( $vars ) {
 }
 
 function caixabank_add_endpoint_tpv() {
-	// REST API
 	add_rewrite_rule( '^caixabank-tpv/v1/?$', 'index.php?caixabank-tpv=$matches[1]', 'top' );
-
-	// WC API for payment gateway IPNs, etc
 	add_rewrite_endpoint( 'caixabank-tpv', EP_ALL );
 }
 
@@ -140,6 +139,82 @@ function caixabank_handle_prepara_tpv_api(){
 
 function caixabank_handle_prepara_tpv_api_requests_error() {
 	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'my_textdomain' ) );
+}
+
+
+// API create invoice
+
+add_filter( 'query_vars', 'caixabank_add_query_vars_create_invoice' );
+add_action( 'init', 'caixabank_add_endpoint_create_invoice' );
+add_action( 'parse_request', 'caixabank_handle_prepara_create_invoice_api' );
+
+function caixabank_add_query_vars_create_invoice( $vars ) {
+	$vars[] = 'caixabank-invoice';
+	return $vars;
+}
+
+function caixabank_add_endpoint_create_invoice() {
+	add_rewrite_rule( '^caixabank-invoice/v1/?$', 'index.php?caixabank-invoice=$matches[1]', 'top' );
+	add_rewrite_endpoint( 'caixabank-tpv', EP_ALL );
+}
+
+function caixabank_handle_prepara_create_invoice_api(){
+	global $wp;
+
+	if ( ! empty( $_GET['caixabank-invoice'] ) ) {
+		$wp->query_vars['caixabank-invoice'] = $_GET['caixabank-invoice'];
+	}
+	if ( isset($_GET['caixabank-invoice']) && $_GET['caixabank-invoice'] == '' ) {
+		$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_create_invoice_api_requests_error();
+		echo $caixabank_handle_rest_api_requests_error->get_error_message();
+		exit;
+	}
+	if ( ! empty( $_POST['caixabank-invoice'] ) ) {
+		if ( $wp->query_vars['caixabank-invoice'] != '' ) {
+			$prueba = isset($_GET['default']) ? $_GET['default']  : '';
+			echo isset($wp->query_vars['caixabank-invoice']) ?  $wp->query_vars['caixabank-invoice'] . '<br />'   : '';
+
+			$type = '';
+			$email = '';
+			$amount = '';
+			$dni = '';
+			$name = '';
+			$type = $_POST['caixabank-invoice'];
+			$email = sanitize_email ($_POST['caixabank-email']);
+			$amount_untrasted = $_POST['caixabank-amount'];
+			$amaunt_trusted = (int)$amount_untrasted;
+			$dni = $_POST['caixabank-dni'];
+			$name = $_POST['caixabank-name'];
+
+			if( $type == 'donacion'){
+				$postarr = array(
+					'post_title'	=> 'donation',
+					'post_content'  => '',
+					'post_status'	=> 'publish',
+					'post_type'		=> 'caixabank_orders'
+				);
+				$post_id = wp_insert_post( $postarr, $wp_error );
+			}
+				echo 'El tipo de pago es ' . $type . '<br />'; // Esto es para debug.
+				echo 'EL email del la persona que quiere hacer la donación es ' . $email . '<br />';
+				echo 'La cantidad que quiere donar es ' . $amaunt_trusted . '<br />';
+				echo 'Su nombre es ' . $name . '<br />';
+				echo 'El ID de la factura creada es ' . $post_id . '<br />';
+				echo '¿Llega todo bien?';
+
+
+			echo $prueba;
+			exit;
+		} else {
+			$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_create_invoice_api_requests_error();
+			echo $caixabank_handle_rest_api_requests_error->get_error_message();
+			exit;
+		}
+	}
+}
+
+function caixabank_handle_prepara_create_invoice_api_requests_error() {
+	return wp_die( "CaixaBank Notification Request Failure" );
 }
 
 function caixabank_register_css_front_end() {
@@ -231,9 +306,9 @@ function caixabank_redirect_to_tpv( $order_id ){
 }
 
 function caixabank_order_use_iva( $order_id ){
-	$siteusetax = get_option('caixabank_use_tax');
+	$siteusetax = get_option('caixabank_iva_invoices_is_active_option');
 	$orderusetax = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_use_tax', true );
-	// DESACTIVADO POR DEBUG if( ( $siteusetax == '1' ) && ( $orderusetax == '1' ) ) { return true; } else { return false; }
+	if( ( $siteusetax == '1' ) && ( $orderusetax == '1' ) ) { return true; } else { return false; }
 	return true;
 }
 
@@ -246,7 +321,7 @@ function caixabank_order_use_irpf( $order_id ){
 function caixabank_get_total( $order_id ){
 	$caixabank_get_price = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_price', true );
 	$caixabank_price_int = (int)$caixabank_get_price;
-	$caixabank_use_tax  = true; //DESACTIVADO PARA DEBUG caixabank_order_use_iva( $order_id );
+	$caixabank_use_tax  = caixabank_order_use_iva( $order_id );
 	$caixabank_use_irpf  = caixabank_order_use_irpf( $order_id );
 	if ( $caixabank_use_tax ) {
 		$caixabank_tax_int = (int)get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_tax', true ); //$caixabank_tax;
@@ -281,26 +356,24 @@ function caixabank_get_arg( $order_id ){
 	if( defined( 'CAIXABANK_NOTIFY_URL' ) ) $caixabanknotify_url  = CAIXABANK_NOTIFY_URL;
 
 	// Define user set variables
-	$caixabanktitle    = get_option( 'caixabank_gateway_title' );
-	$caixabankdescription  = get_option( 'caixabank_gateway_description' );
-	$caixabankcustomer   = get_option( 'caixabank_gateway_fuc' );
-	$caixabankcommercename  = get_option( 'caixabank_gateway_commerce_name' );
-	$caixabankterminal   = get_option( 'caixabank_gateway_terminal_number' );
-	$caixabanksecretsha256  = utf8_decode(  get_option('caixabank_gateway_passsha256') );
-	$caixabankdebug    = get_option( 'caixabank_gateway_debug' );
-	$caixabanklanguage   = get_option( 'caixabank_gateway_language_gateway');
-	$caixabankurlko    = get_option( 'caixabankurlko' );
-	$caixabankterminal2   = get_option( 'caixabank_gateway_second_terminal_number' );
-	$caixabankuseterminal2  = get_option( 'caixabank_gateway_activate_second_terminal' );
-	$caixabanktoamount   = get_option( 'caixabank_gateway_when_use_second_terminal' );
-	$caixabankcurrencycode  = get_option( 'caixabankcurrencycide' );
+	$caixabanktitle			= get_option( 'caixabank_gateway_title' );
+	$caixabankdescription	= get_option( 'caixabank_gateway_description' );
+	$caixabankcustomer		= get_option( 'caixabank_gateway_fuc' );
+	$caixabankcommercename	= get_option( 'caixabank_gateway_commerce_name' );
+	$caixabankterminal		= get_option( 'caixabank_gateway_terminal_number' );
+	$caixabanksecretsha256	= utf8_decode(  get_option('caixabank_gateway_passsha256') );
+	$caixabankdebug			= get_option( 'caixabank_gateway_debug' );
+	$caixabanklanguage		= get_option( 'caixabank_gateway_language_gateway');
+	$caixabankurlko			= get_option( 'caixabankurlko' );
+	$caixabankterminal2		= get_option( 'caixabank_gateway_second_terminal_number' );
+	$caixabankuseterminal2	= get_option( 'caixabank_gateway_activate_second_terminal' );
+	$caixabanktoamount		= get_option( 'caixabank_gateway_when_use_second_terminal' );
+	$caixabankcurrencycode	= get_option( 'caixabankcurrencycide' );
 
 	//para debug
 	$caixabankdebug    = false;
 
 	$caixabankcurrencycode  = '978';
-	//$caixabankorder_total_sign = '1000';
-
 
 
 	if( class_exists( 'SitePress' )){
@@ -343,20 +416,74 @@ function caixabank_get_arg( $order_id ){
 	} else {
 		$DSMerchantTerminal = $caixabankterminal;
 	}
+
+	/**
+		Todos los campos posibles de CaixaBank:
+
+		Ds_Merchant_MerchantCode		> Obligatorio. Código FUC asignado al comercio.
+		Ds_Merchant_Terminal			> Obligatorio. Número de terminal que le asignará su banco. Tres se considera su longitud máxima
+		Ds_Merchant_TransactionType 	> Obligatorio. para el comercio para indicar qué tipo de transacción es. Los posibles valores son:
+											> 0 – Autorización
+											> 1 – Preautorización
+											> 2 – Confirmación de preautorización
+											> 3 – Devolución Automática
+											> 5 – Transacción Recurrente
+											> 6 – Transacción Sucesiva
+											> 7 – Pre-autenticación
+											> 8 – Confirmación de pre-autenticación
+											> 9 – Anulación de Preautorización
+											> O – Autorización en diferido
+											> P– Confirmación de autorización en diferido
+											> Q - Anulación de autorización en diferido
+											> R – Cuota inicial diferido
+											> S – Cuota sucesiva diferido
+
+		Ds_Merchant_Amount				> Obligatorio. Para Euros las dos últimas posiciones se consideran decimales.
+		Ds_Merchant_Currency			> Obligatorio. Se debe enviar el código numérico de la moneda según el ISO-4217, por ejemplo:
+		Ds_Merchant_Order				> Obligatorio. Los 4 primeros dígitos deben ser numéricos, para los dígitos restantes solo utilizar los siguientes caracteres ASCII
+		Ds_Merchant_MerchantURL			> Obligatorio si el comercio tiene notificación “on-line”. URL del comercio que recibirá un post con los datos de la transacción.
+		Ds_Merchant_ProductDescription	> Opcional. 125 se considera su longitud máxima. Este campo se mostrará al titular en la pantalla de confirmación de la compra.
+		Ds_Merchant_Titular				> Opcional. Su longitud máxima es de 60 caracteres. Este campo se mostrará al titular en la pantalla de confirmación de la compra.
+		Ds_Merchant_UrlOK				> Opcional: si se envía será utilizado como URLOK ignorando el configurado en el módulo de administración en caso de tenerlo.
+		Ds_Merchant_UrlKO				> Opcional: si se envía será utilizado como URLKO ignorando el configurado en el módulo de administración en caso de tenerlo
+		Ds_Merchant_MerchantName		> Opcional: será el nombre del comercio que aparecerá en el ticket del cliente (opcional).
+		Ds_Merchant_ConsumerLanguage	> Opcional: el Valor 0, indicará que no se ha determinado el idioma del cliente (opcional). Otros valores posibles son:
+											> Castellano-001
+											> Inglés-002
+											> Catalán-003
+											> Francés-004
+											> Alemán-005
+											> Holandés-006
+											> Italiano-007
+											> Sueco-008
+											> Portugués-009
+											> Valenciano-010
+											> Polaco-011
+											> Gallego-012
+											> Euskera-013.
+
+		Ds_Merchant_SumTotal			> Obligatorio. Representa la suma total de los importes de las cuotas. Las dos últimas posiciones se consideran decimales.
+		Ds_Merchant_MerchantData		> Opcional para el comercio para ser incluidos en los datos enviados por la respuesta “on-line” al comercio si se ha elegido esta opción.
+		Ds_Merchant_DateFrecuency		> Frecuencia en días para las transacciones recurrentes y recurrentes diferidas (obligatorio para recurrentes)
+		Ds_Merchant_ChargeExpiryDate	> Formato yyyy-MM-dd fecha límite para las transacciones Recurrentes (Obligatorio para recurrentes y recurrentes diferidas )
+		Ds_Merchant_AuthorisationCode	> Opcional. Representa el código de autorización necesario para identificar una transacción recurrente sucesiva en las devoluciones de operaciones recurrentes sucesivas. Obligatorio en devoluciones de operaciones recurrentes.
+		Ds_Merchant_TransactionDate		> Opcional. Formato yyyy-mm-dd. Representa la fecha de la cuota sucesiva, necesaria para identificar la transacción en las devoluciones. Obligatorio en las devoluciones de cuotas sucesivas y de cuotas sucesivas diferidas.
+
+**/
 	// redsys Args
 	$miObj = new RedsysAPI;
-	$miObj->setParameter( "DS_MERCHANT_AMOUNT",     $caixabankorder_total_sign          );
-	$miObj->setParameter( "DS_MERCHANT_ORDER",     $caixabanktransaction_id2          );
-	$miObj->setParameter( "DS_MERCHANT_MERCHANTCODE",   $caixabankcustomer            );
-	$miObj->setParameter( "DS_MERCHANT_CURRENCY",    $caixabankcurrencycode           );
-	$miObj->setParameter( "DS_MERCHANT_TRANSACTIONTYPE",  $caixabanktransaction_type          );
-	$miObj->setParameter( "DS_MERCHANT_TERMINAL",    $DSMerchantTerminal            );
-	$miObj->setParameter( "DS_MERCHANT_MERCHANTURL",   $caixabanknotify_url           );
-	$miObj->setParameter( "DS_MERCHANT_URLOK",     $caixabankok             );
-	$miObj->setParameter( "DS_MERCHANT_URLKO",     $caixabankurlko             );
-	$miObj->setParameter( "DS_MERCHANT_CONSUMERLANGUAGE",  $gatewaylanguage            );
-	$miObj->setParameter( "DS_MERCHANT_PRODUCTDESCRIPTION",  __( 'Order' , 'caixabank-tools-official' ) . ' ' .  $order_id );
-	$miObj->setParameter( "DS_MERCHANT_MERCHANTNAME",   $caixabankcommercename           );
+	$miObj->setParameter( "DS_MERCHANT_AMOUNT",				$caixabankorder_total_sign          );
+	$miObj->setParameter( "DS_MERCHANT_ORDER",				$caixabanktransaction_id2          );
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTCODE",		$caixabankcustomer            );
+	$miObj->setParameter( "DS_MERCHANT_CURRENCY",			$caixabankcurrencycode           );
+	$miObj->setParameter( "DS_MERCHANT_TRANSACTIONTYPE",	$caixabanktransaction_type          );
+	$miObj->setParameter( "DS_MERCHANT_TERMINAL",			$DSMerchantTerminal            );
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTURL",		$caixabanknotify_url           );
+	$miObj->setParameter( "DS_MERCHANT_URLOK",				$caixabankok             );
+	$miObj->setParameter( "DS_MERCHANT_URLKO",				$caixabankurlko             );
+	$miObj->setParameter( "DS_MERCHANT_CONSUMERLANGUAGE",	$gatewaylanguage            );
+	$miObj->setParameter( "DS_MERCHANT_PRODUCTDESCRIPTION",	__( 'Order' , 'caixabank-tools-official' ) . ' ' .  $order_id );
+	$miObj->setParameter( "DS_MERCHANT_MERCHANTNAME",		$caixabankcommercename           );
 
 
 	$version="HMAC_SHA256_V1";
