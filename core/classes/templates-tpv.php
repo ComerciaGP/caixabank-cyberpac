@@ -12,13 +12,18 @@
 		$file = '';
 		$url = $_SERVER["REQUEST_URI"];
 		$isIttpv = strpos($url, 'caixabank-tpv');
+		$isIsInvoice = strpos($url, 'caixabank-invoice');
 		if ( $isIttpv !==false ) {
-
 			$file 	= 'caixabank-tpv.php';
 			$find[] = $file;
 			$find[] = CAIXABANK_DIR_TEMPLATE . $file;
-
 		}
+		if ( $isIsInvoice !==false ) {
+			$file 	= 'caixabank-prepare-invoice.php';
+			$find[] = $file;
+			$find[] = CAIXABANK_DIR_TEMPLATE . $file;
+		}
+
 		if ( $file ) {
 			$template       = locate_template( $find );
 			if ( ! $template || current_user_can( 'manage_options' ) )
