@@ -101,7 +101,7 @@ span.term a{
 span.term a:hover{
 	color:#fff;
 }
-.lable input[type="text"], input[type="number"] {
+.lable input[type="text"], input[type="number"], textarea {
 	padding: 15px;
 	font-size: 1.1em;
 	margin: 18px 0px;
@@ -122,11 +122,11 @@ span.term a:hover{
 	border-right: none;
 	border-top: none;
 }
-.lable input[type="text"]:hover, input[type="number"]:hover, .lable-2 input[type="text"]:hover,input[type="Password"]:hover,#active {
+.lable input[type="text"]:hover, input[type="number"]:hover, .lable-2 input[type="text"]:hover,input[type="Password"]:hover,#active, textarea.large-text:hover {
 	color:#DCDCDC;
 	border-left:6px solid#40A46F;
 }
-.lable-2 input[type="text"],input[type="Password"]{
+.lable-2 input[type="text"],input[type="Password"], textarea.large-text{
 	padding: 14px;
 	width: 94%;
 	font-size: 1em;

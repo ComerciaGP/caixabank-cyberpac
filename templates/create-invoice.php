@@ -137,6 +137,7 @@
 							</div>
 							<div class="clear"> </div>
 						   <div class="lable-2">
+						   		<textarea class="large-text" name="description" value="" placeholder="Description" rows="5"></textarea>
 						        <input type="number" class="numberamount" name="amount" value="" placeholder="Amount" autocomplete="off">
 						        <input type="text" class="text" name="username" value="<?php echo $username ?>" placeholder="username" autocomplete="off">
 						        <input type="text" class="text" name="email" value="<?php echo $email ?>" placeholder="customer@email.com" autocomplete="off">
@@ -345,8 +346,8 @@
 									add_user_meta( $new_user_id, 'caixabank_shipping_custom_iva',		$custom_iva						);
 									add_user_meta( $new_user_id, 'caixabank_shipping_custom_irpf',		$custom_irpf					);
 
-
-									wp_new_user_notification($new_user_id);
+									$notify = 'both';
+									wp_new_user_notification( $new_user_id, null, $notify );
 
 									// log the new user in
 
@@ -363,12 +364,10 @@
 	  		<form name="loginform" id="loginform" action="<?php echo home_url('wp-login.php'); ?>" method="post">
 
 				<p class="lable-2">
-					<label for="user_login"><?php _e('Username','caixabank-tools-official'); ?></label>
-					<input name="log" id="user_login" class="input" value="" size="20" type="text">
+					<input name="log" id="user_login" class="input" value="" size="20" type="text" placeholder="<?php _e('Username','caixabank-tools-official'); ?>">
 				</p>
 				<p class="lable-2">
-					<label for="user_pass"><?php _e('Password','caixabank-tools-official'); ?></label>
-					<input name="pwd" id="user_pass" class="input" value="" size="20" type="password">
+					<input name="pwd" id="user_pass" class="input" value="" size="20" type="password" placeholder="<?php _e('Password','caixabank-tools-official'); ?>">
 				</p>
 
 				<p class="login-remember"><label><input name="rememberme" id="rememberme" value="forever" type="checkbox"> Recuérdame</label></p>
@@ -383,12 +382,14 @@
 	  		<?php } ?>
 
 	</div>
-
-<footer id="main-footer" class="clearfix">
+<div class="clear"> </div>
+<div id="footer">
+	<footer id="main-footer" class="clearfix">
 
 	<?php _e('Powered by CaixaBank','caixabank-tools-official'); ?>
 
-</footer>
+	</footer>
+</div>
 
 </body>
 
