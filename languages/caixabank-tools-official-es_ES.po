@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Woocommerce BBVA\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-31 13:26+0200\n"
-"PO-Revision-Date: 2016-03-31 13:27+0200\n"
+"POT-Creation-Date: 2016-04-11 05:38+0200\n"
+"PO-Revision-Date: 2016-04-11 05:39+0200\n"
 "Last-Translator: José Conti <admin@wangguard.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -104,10 +104,10 @@ msgstr ""
 msgid "Filter items list"
 msgstr ""
 
-#: ../core/cpt/caixabank-ordes-cpt.php:35
+#: ../core/cpt/caixabank-ordes-cpt.php:35 ../core/functions/functions.php:485
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:291
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:296
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:323
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:298
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:325
 msgid "Order"
 msgstr "Orden"
 
@@ -123,9 +123,37 @@ msgstr ""
 msgid "DNI/NIF/NIE"
 msgstr ""
 
-#: ../core/functions/functions.php:93
+#: ../core/functions/functions.php:141
 msgid "CaixaBank incorrect data sent"
 msgstr ""
+
+#: ../core/functions/functions.php:355
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:26
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:131
+msgid "Servired/RedSys"
+msgstr "Servired/RedSys"
+
+#: ../core/functions/functions.php:549
+msgid "Invoice Number"
+msgstr "Número factura"
+
+#: ../core/functions/functions.php:561
+msgid "No invoice n&#176;"
+msgstr "Sin n&#176; factura"
+
+#: ../core/functions/functions.php:657
+#, php-format
+msgid "Order Number: %s"
+msgstr "Pedido número: %s"
+
+#: ../core/functions/functions.php:660
+#, php-format
+msgid "Invoice Number: %s"
+msgstr "Número factura: %s"
+
+#: ../core/functions/functions.php:712
+msgid "-ORDER"
+msgstr "-PEDIDO"
 
 #: ../core/menu/menu.php:19
 msgid "CaixaBank"
@@ -139,18 +167,770 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ../core/metaboxes/caixabank-orders-metaboxes.php:25
-msgid "caixabank Order Data"
+#: ../core/metaboxes/caixabank-orders-metaboxes.php:78
+msgid "caixabank_order_metabox"
 msgstr ""
-
-#: ../core/metaboxes/caixabank-orders-metaboxes.php:40
-#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:122
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:133
-msgid "Description"
-msgstr "Descripción"
 
 #: ../core/pages/caixabank-settings.php:7
 msgid "CaixaBank Tools Official Settings"
+msgstr ""
+
+#: ../core/pages/caixabank-settings.php:18
+msgid "General Settings"
+msgstr ""
+
+#: ../core/pages/caixabank-settings.php:19
+msgid "CaixaBank Gateway Settings"
+msgstr ""
+
+#: ../core/pages/caixabank-settings.php:20
+msgid "Sequential Invoice Numbers"
+msgstr "Número secuencial factura"
+
+#: ../core/pages/caixabank-settings.php:21
+msgid "IVA Settings"
+msgstr ""
+
+#: ../core/pages/caixabank-settings.php:22
+msgid "IRPF Settings"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:45
+msgid "LEK"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:46
+msgid "ALGERIAN DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:47
+msgid "ANGOLA KWANZA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:48
+msgid "ARGENTINE PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:49
+msgid "AUSTRALIAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:50
+msgid "BAHAMIAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:51
+msgid "BAHRAINI DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:52
+msgid "TAKA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:53
+msgid "DRAM"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:54
+msgid "BARBADOS DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:55
+msgid "BERMUDAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:56
+msgid "NGULTRUM"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:57
+msgid "BOLIVIAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:58
+msgid "DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:59
+msgid "PULA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:60
+msgid "CRUZEIRO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:61
+msgid "BELIZE DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:62
+msgid "SOLOMON ISLANDS DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:63
+msgid "BRUNEI DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:64
+msgid "KYAT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:65
+msgid "BURUNDI FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:66
+msgid "BELARRUSIAN RUBLE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:67
+msgid "RIEL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:68
+msgid "CANADIAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:69
+msgid "CAPE VERDE ESCUDO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:70
+msgid "CAYMAN ISLANDS DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:71
+msgid "SRI LANKA RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:72
+msgid "CHILEAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:73
+msgid "YUAN RENMINBI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:74
+msgid "CHINESE RENMIMBI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:75
+msgid "CHINESE RENMINBI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:76
+msgid "COLOMBIAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:77
+msgid "COMORO FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:78
+msgid "COSTA RICAN COLON"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:79
+msgid "CROATIAN KUNA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:80
+msgid "CUBAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:81
+msgid "CYPRUS POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:82
+msgid "KORUNA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:83
+msgid "CZECH KORUNA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:84
+msgid "DANISH KRONE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:85
+msgid "DOMINICAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:86
+msgid "EL SALVADOR COLON"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:87
+msgid "ETHIOPIAN BIRR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:88
+msgid "ERITREAN NAKTAN"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:89
+msgid "ESTONIAN KROON"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:90
+msgid "FALKLAND ISLANDS"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:91
+msgid "FIJI DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:92
+msgid "DJIBOUTI FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:93
+msgid "DALASI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:94
+msgid "CHANA CEDI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:95
+msgid "GIBRALTAR POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:96
+msgid "QUETZAL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:97
+msgid "SYLI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:98
+msgid "GUYANA DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:99
+msgid "GOURDE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:100
+msgid "SEMPIRA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:101
+msgid "HONG KONG DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:102
+msgid "FORINT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:103
+msgid "ICELAND KRONA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:104
+msgid "INDIAN RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:105
+msgid "RUPIAH"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:106
+msgid "IRANIAN RIAL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:107
+msgid "IRANIAN AIRLINE RATE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:108
+msgid "IRAQI DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:109
+msgid "ISRAEL SHEKEL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:110
+msgid "JAMAICAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:111
+msgid "YEN"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:112
+msgid "TENGE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:113
+msgid "JORDANIAN DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:114
+msgid "KENYAN SHILLING"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:115
+msgid "NORTH KOREAN WON"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:116
+msgid "KOREAN WON"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:117
+msgid "KUWAITI DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:118
+msgid "SOM"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:119
+msgid "KIP"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:120
+msgid "LEBANESE POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:121
+msgid "LESOTHO LOTI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:122
+msgid "LATVIAN LAT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:123
+msgid "LIBERIAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:124
+msgid "LIBYAN DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:125
+msgid "LITHUANIAN LITAS"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:126
+msgid "MACAU PATACAS"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:127
+msgid "MALAGASY FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:128
+msgid "MALAWI KWACHA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:129
+msgid "MALAYSIAN RINGGIT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:130
+msgid "MALDIVE RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:131
+msgid "MALI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:132
+msgid "MALTESE LIRA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:133
+msgid "OUGUIYA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:134
+msgid "MAURITIUS RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:135
+msgid "MEXICAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:136
+msgid "TUGRIK"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:137
+msgid "MOLDOVAN LEU"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:138
+msgid "MARROCCAN DIRHAM"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:139
+msgid "RIAL OMANI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:140
+msgid "NAMIBIAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:141
+msgid "NEPALESE RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:142
+msgid "NETHERLANDS ANTILLIA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:143
+msgid "ARUBAN GUILDER"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:144
+msgid "YUGOSLAVIAN NEW DIAN"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:145
+msgid "VATU"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:146
+msgid "NEW ZEALAND DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:147
+#: ../core/pages/setting-options/gateway-settings.php:149
+msgid "NAIRA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:148
+msgid "CORDOBA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:150
+msgid "NORWEGIAN KRONE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:151
+msgid "PACIFIC ISLAND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:152
+msgid "PAKISTAN RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:153
+msgid "BALBOA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:154
+msgid "KINA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:155
+msgid "GUARANI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:156
+msgid "PERU INTI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:157
+msgid "PHILIPPINE PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:158
+msgid "GUINEA-BISSAU PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:159
+msgid "TIMOR ESCUDO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:160
+msgid "QATARI RIAL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:161
+msgid "RUSSIAN ROUBLE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:162
+msgid "RWANDA FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:163
+msgid "ST. HELENA POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:164
+msgid "DOBRA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:165
+msgid "SAUDI RIYAL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:166
+msgid "SEYCHELLES RUPEE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:167
+msgid "LEONE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:168
+msgid "SINGAPORE DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:169
+msgid "DONG"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:170
+msgid "SLOVENIAN TOLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:171
+msgid "SOMALI SHILLING"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:172
+msgid "RAND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:173
+msgid "ZIMBABWE DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:174
+msgid "YEMENI DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:175
+msgid "SUDANESE POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:176
+msgid "SUDAN AIRLINES"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:177
+msgid "LILANGENI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:178
+msgid "SWEDISH KRONA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:179
+msgid "SWISS FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:180
+msgid "SYRIAN POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:181
+msgid "TAJIK RUBLE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:182
+msgid "BAHT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:183
+msgid "PA&#39;ANGA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:184
+msgid "TRINIDAD AND TOBAGO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:185
+msgid "UAE DIRHAM"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:186
+msgid "TUNISIAN DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:187
+#: ../core/pages/setting-options/gateway-settings.php:210
+msgid "TURKISH LIRA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:188
+msgid "MANAT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:189
+msgid "UGANDA SHILLING"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:190
+msgid "KARBOVANET"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:191
+msgid "MACEDONIAN DENAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:192
+msgid "EGYPTIAN POUND"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:193
+msgid "POUND STERLING"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:194
+msgid "TANZANIAN SHILLING"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:195
+msgid "US DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:196
+msgid "URUGUAYAN PESO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:197
+msgid "UZBEKISTAN SUM"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:198
+msgid "TALA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:199
+msgid "YEMINI RIAL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:200
+msgid "SERBIAN DINAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:201
+msgid "KWACHA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:202
+msgid "NEW TAIWAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:203
+msgid "NEW MANAT"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:204
+msgid "GHANA CEDI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:205
+msgid "BOLIVAR FUERTE"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:206
+msgid "DINAR SERBIO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:207
+msgid "MOZAMBIQUE METICAL (NEW)"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:208
+msgid "AZERBAIJANIAN MANAT_(NEW)"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:209
+msgid "NEW LEU"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:211
+msgid "CFA FRANC BEAC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:212
+msgid "EAST CARIBBEAN DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:213
+msgid "CFA FRANC BCEAO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:214
+msgid "CFP FRANC"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:215
+msgid "EUROPEAN CURRENCY UNITED"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:216
+msgid "SURINAME DOLLAR"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:217
+msgid "ARIARY"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:218
+msgid "AFGHANISTAN AFGHANI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:219
+msgid "TAJIKISTAN SOMONI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:220
+msgid "KWANZA ANGOLA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:221
+msgid "BELARUSSIAN RUBLE REVALORIZADO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:222
+msgid "NEW LEV"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:223
+msgid "FRANCO DEL CONGO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:224
+msgid "BOSNIAN MARKA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:225
+msgid "EURO"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:226
+msgid "UKRAINIAN HRYVNIA"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:227
+msgid "LARI"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:228
+msgid "NEW POLISH SLOTY"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:229
+msgid "BRAZILIAN REAL"
+msgstr ""
+
+#: ../core/pages/setting-options/gateway-settings.php:230
+msgid "PESETA ESPA#OLA CONVERTIBLE"
 msgstr ""
 
 #: ../core/user-fields/caixabank-user-fields.php:17
@@ -159,6 +939,8 @@ msgstr ""
 
 #: ../core/user-fields/caixabank-user-fields.php:22
 #: ../core/user-fields/caixabank-user-fields.php:517
+#: ../templates/create-invoice.php:58 ../templates/create-invoice.php:128
+#: ../templates/create-invoice.php:258
 msgid "First name"
 msgstr ""
 
@@ -1882,6 +2664,247 @@ msgstr ""
 msgid "CaixaBank Shipping Address"
 msgstr ""
 
+#: ../includes/tgm/class-tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:335
+#: ../includes/tgm/tgm-loader.php:95
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:336
+#: ../includes/tgm/tgm-loader.php:96
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:397
+#: ../includes/tgm/tgm-loader.php:157
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:399
+#: ../includes/tgm/class-tgm-plugin-activation.php:3029
+#: ../includes/tgm/tgm-loader.php:158
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:400
+#: ../includes/tgm/tgm-loader.php:159
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:401
+#: ../includes/tgm/tgm-loader.php:160
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:402
+#: ../includes/tgm/tgm-loader.php:161
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:403
+#: ../includes/tgm/tgm-loader.php:162
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:405
+#: ../includes/tgm/tgm-loader.php:163
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2443
+msgid "Status"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3369
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3370
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3372
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3375
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../includes/tgm/class-tgm-plugin-activation.php:3378
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/tgm/tgm-loader.php:93
+msgid "Install Recommended Plugins"
+msgstr ""
+
+#: ../includes/tgm/tgm-loader.php:94
+msgid "Recommended Plugins"
+msgstr ""
+
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:25
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:81
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:118
@@ -1897,12 +2920,12 @@ msgstr ""
 "unos pocos datos aumentando el ratio de ventas."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:84
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:95
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:97
 msgid "Attention! WPML detected."
 msgstr "¡Atención! detectado WPML."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:85
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:96
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:98
 msgid ""
 "The Gateway will be shown in the customer language. The option \"Language "
 "Gateway\" is not taken into consideration"
@@ -1911,18 +2934,18 @@ msgstr ""
 "de la pasarela\" no se tomará en cuenta."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:96
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:107
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:109
 msgid "Gateway Disabled"
 msgstr "Pasarela desactivada"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:96
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:107
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:109
 msgid "Servired/RedSys only support EUROS &euro; and BRL currency."
 msgstr ""
 "Servired/RedSys en estos momentos solo soporta la moneda EURO &euro; y BRL"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:109
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:120
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:122
 msgid "Enable/Disable"
 msgstr "Activar/Desactivar"
 
@@ -1931,17 +2954,22 @@ msgid "Enable Iupay"
 msgstr "Activar Iupay"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:115
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:126
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:128
 msgid "Title"
 msgstr "Título"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:117
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:128
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:130
 msgid "This controls the title which the user sees during checkout."
 msgstr "Título que sus clientes verán al finalizar la compra."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:124
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:122
 #: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:135
+msgid "Description"
+msgstr "Descripción"
+
+#: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:124
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:137
 msgid "This controls the description which the user sees during checkout."
 msgstr "Descripción que sus clientes verán al finalizar la compra."
 
@@ -1950,32 +2978,32 @@ msgid "Pay via Iupay; you can pay with your credit card."
 msgstr "Paga mediante Iupay, puedes pagar fácilmente con tu cuenta Iupay."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:128
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:139
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:141
 msgid "Commerce number (FUC)"
 msgstr "Número de comercio (FUC)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:130
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:141
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:143
 msgid "Commerce number (FUC) provided by your bank."
 msgstr "Número de comercio (FUC) provisto por su entidad bancaria."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:134
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:152
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:154
 msgid "Terminal number"
 msgstr "Número de terminal"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:136
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:154
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:156
 msgid "Terminal number provided by your bank."
 msgstr "Número de terminal provisto por su entidad bancaria."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:140
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:158
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:160
 msgid "Second Terminal"
 msgstr "Segundo terminal (Si tienes)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:142
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:160
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:162
 msgid ""
 "If you use a second Terminal number, you need to add here the second "
 "terminal provided by your bank"
@@ -1984,17 +3012,17 @@ msgstr ""
 "terminal provisto por tu entidad bancaria."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:146
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:164
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:166
 msgid "Activate Second Terminal"
 msgstr "Activar segundo terminal"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:148
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:166
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:168
 msgid "Activate Second Terminal."
 msgstr "Activar segundo Terminal"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:150
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:168
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:170
 msgid ""
 "If you use a second terminal, you need to add it in the field above and "
 "activate it here. You will need to set when use the Second Terminal in the "
@@ -2005,13 +3033,13 @@ msgstr ""
 "campo siguiente."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:153
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:171
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:173
 msgid "Use the Second Terminal from 0 to (Don't use Currency Symbol)"
 msgstr ""
 "Utilizar el segundo terminal desde 0 a... (No añadir el símbolo de moneda)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:155
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:173
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:175
 msgid ""
 "When will the Second Terminal used? from 0 to...? Add the amount. Ex. Add "
 "100 and the Second Terminal will be used when the amount be from 0 to 100"
@@ -2022,105 +3050,105 @@ msgstr ""
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:159
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:165
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:177
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:179
 msgid "Encryption secret passphrase SHA-256"
 msgstr "Frase de encriptación SHA-256"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:161
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:167
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:179
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:181
 msgid "Encryption secret passphrase SHA-256 provided by your bank."
 msgstr "Frase de encriptación facilitada por tu banco"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:171
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:183
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:185
 msgid "Language Gateway"
 msgstr "Idioma de la pasarela"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:173
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:185
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:187
 msgid "Choose the language for the Gateway. Not all Banks accept all languages"
 msgstr ""
 "Selecciona el idioma para la pasarela de pago. No todos los bancos aceptan "
 "todos los idiomas."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:176
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:188
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:190
 msgid "Spanish"
 msgstr "Español"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:177
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:189
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:191
 msgid "English"
 msgstr "Inglés"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:178
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:190
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:192
 msgid "Catalan"
 msgstr "Catalán"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:179
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:191
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:193
 msgid "French"
 msgstr "Frances"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:180
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:192
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:194
 msgid "German"
 msgstr "Alemán"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:181
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:193
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:195
 msgid "Dutch"
 msgstr "Holandes"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:182
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:194
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:196
 msgid "Italian"
 msgstr "Italiano"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:183
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:195
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:197
 msgid "Swedish"
 msgstr "Sueco"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:184
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:196
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:198
 msgid "Portuguese"
 msgstr "Portugués"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:185
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:197
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:199
 msgid "Valencian"
 msgstr "Valenciano"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:186
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:198
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:200
 msgid "Polish"
 msgstr "Polaco"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:187
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:199
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:201
 msgid "Galician"
 msgstr "Galllego"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:188
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:200
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:202
 msgid "Basque"
 msgstr "Euskera"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:189
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:201
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:203
 msgid "Danish"
 msgstr "Danés"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:193
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:205
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:207
 msgid "Return URL (Redsys Error button)"
 msgstr "URL de retorno (Botón de error en Redsys)"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:195
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:207
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:209
 msgid ""
 "When the user press the return button at Redsys Gateway (Ex: The user type "
 "an incorrect creadit cart), you can redirect the user to My Cart page "
@@ -2133,24 +3161,24 @@ msgstr ""
 "redirigirlo a la página de pago de tu tienda sin cancelar el pedido."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:198
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:210
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:212
 msgid "Cancel the order and return to My Cart page"
 msgstr "Cancelar el pedido y enviar al cliente al carro de compra"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:199
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:211
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:213
 msgid "Don't cancel the order and return to Checkout page"
 msgstr "No cancelar el pedido y enviar al cliente a la página de pago"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:203
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:205
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:215
 #: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:217
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:219
 msgid "Running in test mode"
 msgstr "Ejecutando en entorno de pruebas"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:207
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:219
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:221
 msgid ""
 "Select this option for the initial testing required by your bank, deselect "
 "this option once you pass the required test phase and your production "
@@ -2160,12 +3188,12 @@ msgstr ""
 "deseleccione esta opción una vez que haya activado su entorno de producción."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:210
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:222
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:224
 msgid "Debug Log"
 msgstr "Registro"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:212
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:224
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:226
 msgid "Enable logging"
 msgstr "Habilitar registro"
 
@@ -2193,7 +3221,7 @@ msgstr "Paga con tu cuenta de Iupay"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:356
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:392
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:371
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:373
 msgid "Cancel order &amp; restore cart"
 msgstr "Cancelar orden &amp; volver al carro"
 
@@ -2205,7 +3233,7 @@ msgstr ""
 "pagar con Iupay."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:528
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:491
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:493
 #, php-format
 msgid ""
 "Validation error: Order vs. Notification amounts do not match (order: %s - "
@@ -2215,12 +3243,12 @@ msgstr ""
 "%s - recibido: %s)."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:545
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:508
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:510
 msgid "HTTP Notification received - payment completed"
 msgstr "Notificación HTTP recibida - pago completado"
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:546
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:509
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:511
 msgid "Authorisation code: "
 msgstr "Código autorización: "
 
@@ -2241,7 +3269,7 @@ msgstr ""
 "configuración de Iupay."
 
 #: ../includes/woocommerce/includes/caixabank-tools-official-iupay.php:658
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:625
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:627
 msgid "Payment Details"
 msgstr "Detalles del pago"
 
@@ -2257,160 +3285,7 @@ msgstr "Hora Iupay"
 msgid "Iupay Authorisation Code"
 msgstr "Iupay Código de autorización"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:25
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:61
-msgid "Sequential Invoice Numbers"
-msgstr "Número secuencial factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:67
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:71
-msgid "Activate Sequential Invoice numbers"
-msgstr "Activar número secuenciales en facturas"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:69
-msgid "Activate Sequential Invoice numbers."
-msgstr "Activar número secuenciales en facturas"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:75
-msgid "First Invoice Number"
-msgstr "Primer número de factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:77
-msgid ""
-"Add here the first invoice number. By Default is number 1. Save this number "
-"before activate it. Example 345 "
-msgstr ""
-"Añade aquí el primer número para tus facturas. Por defecto se usará el "
-"número 1. Guarda este número antes activar esta funcionalidad. Ejemplo 345"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:81
-msgid "Invoice Number Length"
-msgstr "Longitud de la numeración"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:83
-msgid ""
-"The Invoice number length, this is not required. Example 10, the result will "
-"be 0000000345"
-msgstr ""
-"La longitud de la numeración de tus facturas, no es necesario. Si el número "
-"resultante en inferior al que se ponga aquí, se añadirán 0s. Ejemplo 10, el "
-"resultado sería 0000000345"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:87
-msgid "Prefix Invoice Number"
-msgstr "Prefijo número factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:89
-#, php-format
-msgid ""
-"Add here a prefix invoice number, this is not required. Example WC-, the "
-"result will be WC-0000000345. Pattern are allowed ex. {Y} this will add the "
-"current year. You will find all patterns %shere%s."
-msgstr ""
-"Añade aquí un prefijo para la numeración de tus facturas, esto no es "
-"requerido. Ejemplo: WC-, el resultado sería WC-0000000345. La utilización de "
-"plantillas está permitida, por ejemplo, si pusieras <code>{Y]/</code> el "
-"resultado en la numeración de la facturas sería 2015/0000000345. Encontrarás "
-"todas las plantillas posibles %saquí%s"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:93
-msgid "Postfix Invoice Number"
-msgstr "Sufijo número factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:95
-#, php-format
-msgid ""
-"Add here a postfix invoice number, this is not required. Example -2015 the "
-"result will be WC-0000000345-2015. Pattern are allowed ex. {Y} this will add "
-"the current year. You will find all patterns %shere%s."
-msgstr ""
-"Añade aquí un sufijo para la numeración de tus facturas, esto no es "
-"requerido. Ejemplo: -2015, el resultado sería WC-0000000345-2015. La "
-"utilización de plantillas está permitida, por ejemplo, si pusieras /{Y] el "
-"resultado en la numeración de la facturas sería 0000000345/2015. Encontrarás "
-"todas las plantillas posibles %saquí%s"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:99
-msgid "Pretfix Invoice Number"
-msgstr "Prefijo número de pedido"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:101
-#, php-format
-msgid ""
-"Add here a prefix order number, this is not required. Example 2015/ the "
-"result will be 2105/34345. Pattern are allowed ex. {Y} this will add the "
-"current year. You will find all patterns %shere%s."
-msgstr ""
-"Añade aquí un prefijo para el número de pedido, esto no es requerido. "
-"Ejemplo 2015/, el resultado será 2105/34345. Las plantillas están permitidas "
-"ejemplo {Y} que añadirá el año actual. Encontrarás todas las plantillas "
-"%saquí%s"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:105
-msgid "Postfix Order Number"
-msgstr "Sufijo de número de pedido."
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:107
-#, php-format
-msgid ""
-"Add here a postfix order number, this is not required. If you don't add a "
-"postfix, a postfix will be automatically added for security reason. "
-"Example /2015 the result will be 34345/2015. Pattern are allowed ex. {Y} "
-"this will add the current year. You will find all patterns %shere%s."
-msgstr ""
-"Añade aquí un sufijo para el número de pedido. No es requerido. Si no añades "
-"un sufijo, nosotros añadiremos uno de forma automática por cuestiones de "
-"seguridad. Ejemplo /2015, el resultado sería 34345/2015. Las plantillas "
-"están permitidas Ejemplo /{Y} que añadiría el año actual al final de la "
-"factura de forma automática. Encontrarás todas las plantillas %saquí%s."
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:111
-msgid "Reset Invoice Number"
-msgstr "Restablecer número factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:113
-msgid "Reset Invoice Number."
-msgstr "Restablecer número factura."
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:115
-msgid ""
-"If you enable Reset Invoice Number, every January 1st the invoice number "
-"will be reset and will start again with number 1. Is very important that if "
-"you enable this option, you use a prefix or postfix year pattern {Y}."
-msgstr ""
-"Si activas el reseteo o reinicializacición del número de factura, cada 1 de "
-"enero se reinicializará la numeración comenzando de nuevo con 1. ATENCIÓN: "
-"Es muy importante que si activas esta funcionalidad, añadas un prefijo o un "
-"sufijo al número de pedido que incluya el año {Y}."
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:151
-msgid "Invoice Number"
-msgstr "Número factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:163
-msgid "No invoice n&#176;"
-msgstr "Sin n&#176; factura"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:259
-#, php-format
-msgid "Order Number: %s"
-msgstr "Pedido número: %s"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:262
-#, php-format
-msgid "Invoice Number: %s"
-msgstr "Número factura: %s"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-sort-invoice.php:315
-msgid "-ORDER"
-msgstr "-PEDIDO"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:24
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:129
-msgid "Servired/RedSys"
-msgstr "Servired/RedSys"
-
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:60
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:62
 msgid ""
 "WARNING: The PHP mcrypt_encrypt module is not installed on your server. The "
 "new API caixabank SHA-256 needs this module in order to work.  Please "
@@ -2418,11 +3293,11 @@ msgid ""
 "shop will stop working."
 msgstr ""
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:92
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:94
 msgid "Servired/caixabank Spain"
 msgstr ""
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:93
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:95
 msgid ""
 "Servired/RedSys works by sending the user to your bank TPV to enter their "
 "payment information."
@@ -2430,26 +3305,26 @@ msgstr ""
 "La pasarela Servired/RedSys envía a su cliente al TPV de su entidad bancaria "
 "para ingresar su información para el pago."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:122
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:124
 msgid "Enable Servired/RedSys"
 msgstr "Activar Servired/RedSys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:136
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:138
 msgid "Pay via Servired/RedSys; you can pay with your credit card."
 msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:146
 #: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:148
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:150
 msgid "Commerce Name"
 msgstr "Nombre de Comercio"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:226
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:228
 msgid ""
 "Log Servired/RedSys events, such as notifications requests, inside "
 "<code>woocommerce/logs/caixabank.txt</code>"
 msgstr ""
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:351
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:353
 msgid ""
 "Thank you for your order. We are now redirecting you to Servired/RedSys to "
 "make the payment."
@@ -2457,11 +3332,11 @@ msgstr ""
 "Gracias por su compra, ahora está siendo redirigido a Servired/RedSys para "
 "realizar el pago."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:371
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:373
 msgid "Pay with Credit Card via Servired/RedSys"
 msgstr "Pagar con tarjeta de crédito a traves de Servired/RedSys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:395
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:397
 msgid ""
 "Thank you for your order, please click the button below to pay with Credit "
 "Card via Servired/RedSys."
@@ -2469,15 +3344,15 @@ msgstr ""
 "Gracias por su compra, haga click en el botón debajo para pagar con su "
 "tarjeta de crédito vía Servired/RedSys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:518
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:520
 msgid "Cancelled by Redsys"
 msgstr "Cancelado por Redys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:519
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:521
 msgid "Pedido cancelado por Redsys: Tarjeta caducada"
 msgstr "Pedido cancelado por Redys: Tarjeta caducada."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:608
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:610
 msgid ""
 "WARNING: You need to add Encryption secret passphrase SHA-256 to Redsys "
 "Gateway Settings."
@@ -2485,17 +3360,231 @@ msgstr ""
 "ATENCIÓN: Necesitas añadir la clave de encriptación SHA-256 a la "
 "configuración de Redsys."
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:626
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:628
 msgid "Redsys Date"
 msgstr "Fecha Redsys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:627
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:629
 msgid "Redsys Hour"
 msgstr "Hora Redsys"
 
-#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:628
+#: ../includes/woocommerce/includes/caixabank-tools-official-woocommerce.php:630
 msgid "Redsys Authorisation Code"
 msgstr "Código autorización Redsys"
+
+#: ../templates/caixabank-prepare-invoice.php:26
+#: ../templates/caixabank-tpv.php:22
+msgid "Nothing to see here"
+msgstr ""
+
+#: ../templates/caixabank-prepare-invoice.php:27
+#: ../templates/caixabank-tpv.php:23
+msgid "Do not access directly to this page"
+msgstr ""
+
+#: ../templates/caixabank-tpv.php:15
+msgid "Redirecting"
+msgstr ""
+
+#: ../templates/caixabank-tpv.php:16
+msgid "We are preparing all data for redirect you to CaixaBank"
+msgstr ""
+
+#: ../templates/caixabank-tpv.php:17
+msgid "Wait for a moment please"
+msgstr ""
+
+#: ../templates/create-invoice.php:12
+msgid "CaixaBank &raquo; Create Invoice"
+msgstr ""
+
+#: ../templates/create-invoice.php:27
+msgid "What do you want to do?"
+msgstr ""
+
+#: ../templates/create-invoice.php:35
+msgid "Create new account"
+msgstr ""
+
+#: ../templates/create-invoice.php:44
+msgid "Create new invoice"
+msgstr ""
+
+#: ../templates/create-invoice.php:54 ../templates/create-invoice.php:190
+msgid "Create New Account"
+msgstr ""
+
+#: ../templates/create-invoice.php:96 ../templates/create-invoice.php:162
+msgid "Create Invoice"
+msgstr ""
+
+#: ../templates/create-invoice.php:197
+msgid "Please enter a name"
+msgstr ""
+
+#: ../templates/create-invoice.php:201
+msgid "Please enter a lastname"
+msgstr ""
+
+#: ../templates/create-invoice.php:205
+msgid "Username already taken"
+msgstr ""
+
+#: ../templates/create-invoice.php:209
+msgid "Invalid username"
+msgstr ""
+
+#: ../templates/create-invoice.php:213
+msgid "Please enter a username"
+msgstr ""
+
+#: ../templates/create-invoice.php:217
+msgid "Invalid email"
+msgstr ""
+
+#: ../templates/create-invoice.php:221
+msgid "Email already registered"
+msgstr ""
+
+#: ../templates/create-invoice.php:225
+msgid "Please enter an Email"
+msgstr ""
+
+#: ../templates/create-invoice.php:229
+msgid "Please enter an Address 1"
+msgstr ""
+
+#: ../templates/create-invoice.php:233
+msgid "Please enter NIF / NIE / CIF"
+msgstr ""
+
+#: ../templates/create-invoice.php:237
+msgid "Please enter a City"
+msgstr ""
+
+#: ../templates/create-invoice.php:241
+msgid "Please enter a Postcode"
+msgstr ""
+
+#: ../templates/create-invoice.php:250
+msgid "Error: "
+msgstr ""
+
+#: ../templates/create-invoice.php:367
+msgid "Username"
+msgstr ""
+
+#: ../templates/create-invoice.php:370
+msgid "Password"
+msgstr ""
+
+#: ../templates/create-invoice.php:375
+msgid "Login"
+msgstr ""
+
+#: ../templates/create-invoice.php:389
+msgid "Powered by CaixaBank"
+msgstr ""
+
+#~ msgid "Activate Sequential Invoice numbers"
+#~ msgstr "Activar número secuenciales en facturas"
+
+#~ msgid "Activate Sequential Invoice numbers."
+#~ msgstr "Activar número secuenciales en facturas"
+
+#~ msgid "First Invoice Number"
+#~ msgstr "Primer número de factura"
+
+#~ msgid ""
+#~ "Add here the first invoice number. By Default is number 1. Save this "
+#~ "number before activate it. Example 345 "
+#~ msgstr ""
+#~ "Añade aquí el primer número para tus facturas. Por defecto se usará el "
+#~ "número 1. Guarda este número antes activar esta funcionalidad. Ejemplo 345"
+
+#~ msgid "Invoice Number Length"
+#~ msgstr "Longitud de la numeración"
+
+#~ msgid ""
+#~ "The Invoice number length, this is not required. Example 10, the result "
+#~ "will be 0000000345"
+#~ msgstr ""
+#~ "La longitud de la numeración de tus facturas, no es necesario. Si el "
+#~ "número resultante en inferior al que se ponga aquí, se añadirán 0s. "
+#~ "Ejemplo 10, el resultado sería 0000000345"
+
+#~ msgid "Prefix Invoice Number"
+#~ msgstr "Prefijo número factura"
+
+#~ msgid ""
+#~ "Add here a prefix invoice number, this is not required. Example WC-, the "
+#~ "result will be WC-0000000345. Pattern are allowed ex. {Y} this will add "
+#~ "the current year. You will find all patterns %shere%s."
+#~ msgstr ""
+#~ "Añade aquí un prefijo para la numeración de tus facturas, esto no es "
+#~ "requerido. Ejemplo: WC-, el resultado sería WC-0000000345. La utilización "
+#~ "de plantillas está permitida, por ejemplo, si pusieras <code>{Y]/</code> "
+#~ "el resultado en la numeración de la facturas sería 2015/0000000345. "
+#~ "Encontrarás todas las plantillas posibles %saquí%s"
+
+#~ msgid "Postfix Invoice Number"
+#~ msgstr "Sufijo número factura"
+
+#~ msgid ""
+#~ "Add here a postfix invoice number, this is not required. Example -2015 "
+#~ "the result will be WC-0000000345-2015. Pattern are allowed ex. {Y} this "
+#~ "will add the current year. You will find all patterns %shere%s."
+#~ msgstr ""
+#~ "Añade aquí un sufijo para la numeración de tus facturas, esto no es "
+#~ "requerido. Ejemplo: -2015, el resultado sería WC-0000000345-2015. La "
+#~ "utilización de plantillas está permitida, por ejemplo, si pusieras /{Y] "
+#~ "el resultado en la numeración de la facturas sería 0000000345/2015. "
+#~ "Encontrarás todas las plantillas posibles %saquí%s"
+
+#~ msgid "Pretfix Invoice Number"
+#~ msgstr "Prefijo número de pedido"
+
+#~ msgid ""
+#~ "Add here a prefix order number, this is not required. Example 2015/ the "
+#~ "result will be 2105/34345. Pattern are allowed ex. {Y} this will add the "
+#~ "current year. You will find all patterns %shere%s."
+#~ msgstr ""
+#~ "Añade aquí un prefijo para el número de pedido, esto no es requerido. "
+#~ "Ejemplo 2015/, el resultado será 2105/34345. Las plantillas están "
+#~ "permitidas ejemplo {Y} que añadirá el año actual. Encontrarás todas las "
+#~ "plantillas %saquí%s"
+
+#~ msgid "Postfix Order Number"
+#~ msgstr "Sufijo de número de pedido."
+
+#~ msgid ""
+#~ "Add here a postfix order number, this is not required. If you don't add a "
+#~ "postfix, a postfix will be automatically added for security reason. "
+#~ "Example /2015 the result will be 34345/2015. Pattern are allowed ex. {Y} "
+#~ "this will add the current year. You will find all patterns %shere%s."
+#~ msgstr ""
+#~ "Añade aquí un sufijo para el número de pedido. No es requerido. Si no "
+#~ "añades un sufijo, nosotros añadiremos uno de forma automática por "
+#~ "cuestiones de seguridad. Ejemplo /2015, el resultado sería 34345/2015. "
+#~ "Las plantillas están permitidas Ejemplo /{Y} que añadiría el año actual "
+#~ "al final de la factura de forma automática. Encontrarás todas las "
+#~ "plantillas %saquí%s."
+
+#~ msgid "Reset Invoice Number"
+#~ msgstr "Restablecer número factura"
+
+#~ msgid "Reset Invoice Number."
+#~ msgstr "Restablecer número factura."
+
+#~ msgid ""
+#~ "If you enable Reset Invoice Number, every January 1st the invoice number "
+#~ "will be reset and will start again with number 1. Is very important that "
+#~ "if you enable this option, you use a prefix or postfix year pattern {Y}."
+#~ msgstr ""
+#~ "Si activas el reseteo o reinicializacición del número de factura, cada 1 "
+#~ "de enero se reinicializará la numeración comenzando de nuevo con 1. "
+#~ "ATENCIÓN: Es muy importante que si activas esta funcionalidad, añadas un "
+#~ "prefijo o un sufijo al número de pedido que incluya el año {Y}."
 
 #~ msgid "Language CaixaBank Gateway"
 #~ msgstr "Idioma de la pasarela de pago CaixaBank"
