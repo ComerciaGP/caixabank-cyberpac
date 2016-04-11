@@ -755,5 +755,4 @@ function caixabank_check_current_year(){
 		}
 	}
 }
-
 ?>
