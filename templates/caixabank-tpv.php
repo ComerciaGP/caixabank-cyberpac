@@ -5,7 +5,13 @@ get_header(); ?>
 	<div id="content" class="caixabank resent">
 		<?php
 
-			if ( isset( $_GET['caixabank'] ) && !empty( $_GET['caixabank'] )){
+			if ( isset( $_GET['caixabank'] ) && !empty( $_GET['caixabank'] )){ ?>
+				<script type="text/javascript">
+					window.onload=function(){
+					window.setTimeout("document.caixabank_submit_data_to_tpv.submit()", 2500)
+        	}
+    		</script>
+			<?php
 
 				$precio = '';
 				$order_id = '';
@@ -16,7 +22,7 @@ get_header(); ?>
 				echo '<h3>' . __('We are preparing all data for redirect you to CaixaBank','caixabank-tools-official') . '</h3>';
 				echo '<h3>' . __('Wait for a moment please','caixabank-tools-official') . '</h3>';
 				echo caixabank_redirect_to_tpv( $order_id );
-				$precio = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_price', true );
+				$precio = get_post_meta( $order_id, '_caixabank_price', true );
 				echo 'Precio: ' . $precio;
 				} else {
 					echo '<h2>' . __('Nothing to see here','caixabank-tools-official') . '</h2>';

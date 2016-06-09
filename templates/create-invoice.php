@@ -60,7 +60,7 @@
 			                <div class="clear"> </div>
 					   </div>
 					   <div class="lable-2">
-					         <input type="text" class="text" name="username" value="" placeholder="username" autocomplete="off">
+					        <input type="text" class="text" name="username" value="" placeholder="username" autocomplete="off">
 					        <input type="text" class="text" name="email" value="" placeholder="customer@email.com" autocomplete="off">
 					        <input type="text" class="text" name="company" value="" placeholder="Company" autocomplete="off">
 					        <input type="text" class="text" name="address_1" value="" placeholder="Address 1" autocomplete="off">
@@ -123,9 +123,9 @@
 
 					?>
 
-						<form name="registeruser" id="registeruser" action="<?php echo home_url('/caixabank-createinvoice/?step=usersentforregister'); ?>" method="post" autocomplete="off">
+						<form name="createinvoice" id="createinvoice" action="<?php echo home_url('caixabank-invoice/v1/'); ?>" method="post" autocomplete="off">
 						   <div class="lable">
-						        <div class="col_1_of_2 span_1_of_2">	<input type="text" class="text" name="name" value="<?php echo $name ?>" placeholder="<?php _e('First name','caixabank-tools-official'); ?>" autocomplete="off"></div>
+						        <div class="col_1_of_2 span_1_of_2">	<input type="text" class="text" name="caixabank-name" value="<?php echo $name ?>" placeholder="<?php _e('First name','caixabank-tools-official'); ?>" autocomplete="off"></div>
 				                <div class="col_1_of_2 span_1_of_2"><input type="text" class="text" name="last_name" value="<?php echo $last_name ?>" placeholder="Last Name" autocomplete="off"></div>
 				                <div class="clear"> </div>
 						   </div>
@@ -138,14 +138,14 @@
 							<div class="clear"> </div>
 						   <div class="lable-2">
 						   		<textarea class="large-text" name="description" value="" placeholder="Description" rows="5"></textarea>
-						        <input type="number" class="numberamount" name="amount" value="" placeholder="Amount" autocomplete="off">
+						        <input type="number" class="numberamount" name="caixabank-amount" value="" placeholder="Amount" autocomplete="off">
 						        <input type="text" class="text" name="username" value="<?php echo $username ?>" placeholder="username" autocomplete="off">
-						        <input type="text" class="text" name="email" value="<?php echo $email ?>" placeholder="customer@email.com" autocomplete="off">
+						        <input type="text" class="text" name="caixabank-email" value="<?php echo $email ?>" placeholder="customer@email.com" autocomplete="off">
 						        <input type="text" class="text" name="company" value="<?php echo $company ?>" placeholder="Company" autocomplete="off">
 						        <input type="text" class="text" name="address_1" value="<?php echo $address_1 ?>" placeholder="Address 1" autocomplete="off">
 						        <input type="text" class="text" name="address_2" value="<?php echo $address_2 ?>" placeholder="Address 2" autocomplete="off">
 						        <input type="text" class="text" name="tax_status" value="<?php echo $tax_status ?>" placeholder="Tax Status" autocomplete="off">
-						        <input type="text" class="text" name="nif" value="<?php echo $nif ?>" placeholder="NIF / CIF / NIE (IC)" autocomplete="off">
+						        <input type="text" class="text" name="caixabank-dni" value="<?php echo $nif ?>" placeholder="NIF / CIF / NIE (IC)" autocomplete="off">
 						        <input type="text" class="text" name="city" value="<?php echo $city ?>" placeholder="City" autocomplete="off">
 						        <input type="text" class="text" name="postcode" value="<?php echo $postcode ?>" placeholder="Postcode" autocomplete="off">
 						        <input type="text" class="text" name="country" value="<?php echo $country ?>" placeholder="Country" autocomplete="off">
@@ -153,6 +153,15 @@
 						        <input type="text" class="text" name="state_county_outsite_spain" value="<?php echo $state_county_outsite_spain ?>" placeholder="State/County Outsite Spain" autocomplete="off">
 						        <input type="text" class="text" name="telephone" value="<?php echo $telephone ?>" placeholder="Telephone" autocomplete="off">
 						        <input type="text" class="text" name="mobile" value="<?php echo $mobile ?>" placeholder="Mobile" autocomplete="off">
+						        <div class="col_1_of_2 span_1_of_2">
+								        	<input type="number" class="number" name="custom_iva" value="<?php echo $custom_iva ?>" placeholder="Custom IVA" autocomplete="off">
+								        </div>
+										<div class="col_1_of_2 span_1_of_2">
+											<input type="number" class="number" name="custom_irpf" value="<?php echo $custom_irpf ?>" placeholder="Custom IRPF" autocomplete="off">
+										</div>
+						        <input type="hidden" name="caixabank-invoice" value="invoice">
+						        <input type="hidden" name="user-id" value="<?php echo $caixabankgetuser ?>">
+
 						        <div class="clear"> </div>
 						        <div class="lable-2">
 						        <div class="clear"> </div>

@@ -6,10 +6,6 @@ function caixabank_get_parent_page(){
 	return $caixabank_parent;
 }
 
-// WooCommerce functions
-
-
-
 // CaixaBank Add DNI
 
 $caixabank_add_dni = get_option( 'caixabank_dni_field' );
@@ -138,7 +134,7 @@ function caixabank_handle_prepara_tpv_api(){
 }
 
 function caixabank_handle_prepara_tpv_api_requests_error() {
-	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'my_textdomain' ) );
+	return new WP_Error( 'broke', __( 'CaixaBank incorrect data sent', 'caixabank-tools-official' ) );
 }
 
 
@@ -155,7 +151,18 @@ function caixabank_add_query_vars_create_invoice( $vars ) {
 
 function caixabank_add_endpoint_create_invoice() {
 	add_rewrite_rule( '^caixabank-invoice/v1/?$', 'index.php?caixabank-invoice=$matches[1]', 'top' );
-	add_rewrite_endpoint( 'caixabank-tpv', EP_ALL );
+	add_rewrite_endpoint( 'caixabank-invoice', EP_ALL );
+}
+
+function caixabank_redirect_form_tpv( $post_id ){
+			return '<form name="submit_caixabank_payinvoice" id="submit_caixabank_payinvoice" action="' . home_url("/caixabank-tpv/v1/?caixabank=") . $post_id . '" method="post" autocomplete="off">
+			<input type="submit" value="btnSubmit" class="inputButton" />
+		</form>
+		<script type="text/javascript">
+       window.onload=function(){
+            window.setTimeout("document.submit_caixabank_payinvoice.submit()", 0)
+        }
+    </script>';
 }
 
 function caixabank_handle_prepara_create_invoice_api(){
@@ -174,17 +181,50 @@ function caixabank_handle_prepara_create_invoice_api(){
 			$prueba = isset($_GET['default']) ? $_GET['default']  : '';
 			echo isset($wp->query_vars['caixabank-invoice']) ?  $wp->query_vars['caixabank-invoice'] . '<br />'   : '';
 
-			$type = '';
-			$email = '';
-			$amount = '';
-			$dni = '';
-			$name = '';
-			$type = $_POST['caixabank-invoice'];
-			$email = sanitize_email ($_POST['caixabank-email']);
-			$amount_untrasted = $_POST['caixabank-amount'];
-			$amaunt_trusted = (int)$amount_untrasted;
-			$dni = $_POST['caixabank-dni'];
-			$name = $_POST['caixabank-name'];
+			$type						= '';
+			$email						= '';
+			$amount						= '';
+			$dni						= '';
+			$name						= '';
+			$last_name					= '';
+			$username					= '';
+			$company					= '';
+			$adress_1					= '';
+			$adress_2					= '';
+			$tax						= '';
+			$city						= '';
+			$post_code					= '';
+			$country					= '';
+			$state_county				= '';
+			$state_county_outsite_spain	= '';
+			$telephone					= '';
+			$mobile						= '';
+			$user_id					= '';
+			$custom_iva					= '';
+			$custom_irpf				= '';
+
+			$type						= $_POST['caixabank-invoice'];
+			$amount_untrasted			= $_POST['caixabank-amount'];
+			$amaunt_trusted				= (int)$amount_untrasted;
+			$name						= $_POST['caixabank-name'];
+			$last_name					= $_POST['last_name'];
+			$username					= $_POST['username'];
+			$email						= sanitize_email ($_POST['caixabank-email']);
+			$dni						= $_POST['caixabank-dni'];
+			$company					= $_POST['company'];
+			$adress_1					= $_POST['address_1'];
+			$adress_2					= $_POST['address_2'];
+			$tax						= $_POST['tax_status'];
+			$city						= $_POST['city'];
+			$post_code					= $_POST['postcode'];
+			$country					= $_POST['country'];
+			$state_county				= $_POST['state_county'];
+			$state_county_outsite_spain	= $_POST['state_county_outsite_spain'];
+			$telephone					= $_POST['telephone'];
+			$mobile						= $_POST['mobile'];
+			$user_id					= $_POST['user-id'];
+			$custom_iva					= $_POST['custom_iva'];
+			$custom_irpf				= $_POST['custom_irpf'];
 
 			if( $type == 'donacion'){
 				$postarr = array(
@@ -194,25 +234,45 @@ function caixabank_handle_prepara_create_invoice_api(){
 					'post_type'		=> 'caixabank_orders'
 				);
 				$post_id = wp_insert_post( $postarr, $wp_error );
-			}
-				echo 'El tipo de pago es ' . $type . '<br />'; // Esto es para debug.
-				echo 'EL email del la persona que quiere hacer la donación es ' . $email . '<br />';
-				echo 'La cantidad que quiere donar es ' . $amaunt_trusted . '<br />';
-				echo 'Su nombre es ' . $name . '<br />';
-				echo 'El ID de la factura creada es ' . $post_id . '<br />';
-				echo '¿Llega todo bien?';
-
-
-			echo $prueba;
-			exit;
-		} else {
-			$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_create_invoice_api_requests_error();
-			echo $caixabank_handle_rest_api_requests_error->get_error_message();
-			exit;
+				add_post_meta( $post_id, '_caixabank_tipo_pago', $type, true );
+				add_post_meta( $post_id, '_caixabank_price', $amaunt_trusted, true );
+				add_post_meta( $post_id, '_caixabank_nombre_realiza_pago', $name, true );
+				add_post_meta( $post_id, '_caixabank_email_realiza_pago', $email, true );
+				echo caixabank_redirect_form_tpv( $post_id );
+				} elseif ( ( $type == 'invoice' ) && ( wp_verify_nonce( $_POST['caixabank_register_nonce'], 'caixabank_register_nonce' ) ) ){
+					$postarr = array(
+					'post_title'	=> 'Invoice',
+					'post_content'  => '',
+					'post_status'	=> 'publish',
+					'post_type'		=> 'caixabank_orders'
+					);
+					$post_id = wp_insert_post( $postarr, $wp_error );
+					add_post_meta( $post_id, '_caixabank_tipo_pago', $type, true );
+					add_post_meta( $post_id, '_caixabank_price', $amaunt_trusted, true );
+					add_post_meta( $post_id, '_caixabank_nombre_realiza_pago', $name, true );
+					add_post_meta( $post_id, '_caixabank_apellido_realiza_pago', $last_name, true );
+					add_post_meta( $post_id, '_caixabank_username_realiza_pago', $username, true );
+					add_post_meta( $post_id, '_caixabank_email_realiza_pago', $email, true );
+					add_post_meta( $post_id, '_caixabank_dni_realiza_pago', $dni, true );
+					add_post_meta( $post_id, '_caixabank_company_realiza_pago', $company, true );
+					add_post_meta( $post_id, '_caixabank_adress_1_realiza_pago', $adress_1, true );
+					add_post_meta( $post_id, '_caixabank_adress_2_realiza_pago', $adress_2, true );
+					add_post_meta( $post_id, '_caixabank_tax_status_realiza_pago', $tax, true );
+					add_post_meta( $post_id, '_caixabank_city_realiza_pago', $city, true );
+					add_post_meta( $post_id, '_caixabank_post_code_realiza_pago', $post_code, true );
+					add_post_meta( $post_id, '_caixabank_country_realiza_pago', $country, true );
+					add_post_meta( $post_id, '_caixabank_state_county_realiza_pago', $state_county, true );
+					add_post_meta( $post_id, '_caixabank_state_county_outsite_spain_realiza_pago', $state_county_outsite_spain, true );
+					add_post_meta( $post_id, '_caixabank_telephone_realiza_pago', $telephone, true );
+					add_post_meta( $post_id, '_caixabank_mobile_realiza_pago', $mobile, true );
+					add_post_meta( $post_id, '_caixabank_user_id_realiza_pago', $user_id, true );
+					add_post_meta( $post_id, '_caixabank_custom_iva_realiza_pago', $custom_iva, true );
+					add_post_meta( $post_id, '_caixabank_custom_irpf_realiza_pago', $custom_irpf, true );
+					echo caixabank_redirect_form_tpv( $post_id );
+				}
 		}
 	}
 }
-
 function caixabank_handle_prepara_create_invoice_api_requests_error() {
 	return wp_die( "CaixaBank Notification Request Failure" );
 }
@@ -307,29 +367,29 @@ function caixabank_redirect_to_tpv( $order_id ){
 
 function caixabank_order_use_iva( $order_id ){
 	$siteusetax = get_option('caixabank_iva_invoices_is_active_option');
-	$orderusetax = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_use_tax', true );
+	$orderusetax = get_post_meta( $order_id, '_caixabank_use_tax', true );
 	if( ( $siteusetax == '1' ) && ( $orderusetax == '1' ) ) { return true; } else { return false; }
 	return true;
 }
 
 function caixabank_order_use_irpf( $order_id ){
 	$siteuseirpf = get_option('caixabank_irfp_activated');
-	$orderuseirpf = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_use_irpf', true );
+	$orderuseirpf = get_post_meta( $order_id, '_caixabank_use_irpf', true );
 	if( ( $siteuseirpf == '1' ) && ( $orderuseirpf == '1' ) ) { return true; } else { return false; }
 }
 
 function caixabank_get_total( $order_id ){
-	$caixabank_get_price = get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_price', true );
+	$caixabank_get_price = get_post_meta( $order_id, '_caixabank_price', true );
 	$caixabank_price_int = (int)$caixabank_get_price;
 	$caixabank_use_tax  = caixabank_order_use_iva( $order_id );
 	$caixabank_use_irpf  = caixabank_order_use_irpf( $order_id );
 	if ( $caixabank_use_tax ) {
-		$caixabank_tax_int = (int)get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_tax', true ); //$caixabank_tax;
+		$caixabank_tax_int = (int)get_post_meta( $order_id, '_caixabank_tax', true ); //$caixabank_tax;
 	} else {
 		$caixabank_tax_int = 0;
 	}
 	if ( caixabank_order_use_irpf( $order_id ) ) {
-		$caixabank_irpf_int = (int)get_post_meta( $order_id, 'caixabank_order_metabox__caixabank_irpf', true ); //$caixabank_irpf;
+		$caixabank_irpf_int = (int)get_post_meta( $order_id, '_caixabank_irpf', true ); //$caixabank_irpf;
 	} else {
 		$caixabank_irpf_int = 0;
 	}
@@ -349,9 +409,9 @@ function caixabank_get_arg( $order_id ){
 
 	if( defined( 'CAIXABANK_TOOLS_LIVE_URL' ) ) $caixabankliveurl  = CAIXABANK_TOOLS_LIVE_URL;
 	if( defined( 'CAIXABANK_TOOLS_TEST_URL' ) ) $caixabanktesturl  = CAIXABANK_TOOLS_TEST_URL;
-	if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $caixabankurlko = CAIXABANK_SITE_CANCEL_ORDER_URL;
-	if( defined( 'CAIXABANK_RETURN_OK' ) ) $caixabankok     = CAIXABANK_RETURN_OK;
+	if( defined( 'CAIXABANK_RETURN_OK' ) ) $caixabankok     = CAIXABANK_RETURN_OK . '?order_id=' . $order_id;
 	$caixabanktestmode   = get_option( 'caixabank_gateway_test_mode' );
+	if ($caixabanktestmode == 1){ $caixabank_IPN_url = $caixabanktesturl; } else { $caixabank_IPN_url = $caixabankliveurl; }
 	$caixabankmethod_title  = __( 'Servired/RedSys', 'woocommerce' );
 	if( defined( 'CAIXABANK_NOTIFY_URL' ) ) $caixabanknotify_url  = CAIXABANK_NOTIFY_URL;
 
@@ -401,7 +461,7 @@ function caixabank_get_arg( $order_id ){
 	}
 	if ( $caixabankurlko ){
 		if ( $caixabankurlko == 'returncancel' ) {
-			if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $returnfromcaixabank = CAIXABANK_SITE_CANCEL_ORDER_URL;
+			if( defined( 'CAIXABANK_SITE_CANCEL_ORDER_URL' ) ) $returnfromcaixabank = CAIXABANK_SITE_CANCEL_ORDER_URL . '?order_id=' . $order_id;;
 		} else {
 			if( defined( 'CAIXABANK_SITE_CHECKOUT_URL' ) ) $returnfromcaixabank = CAIXABANK_SITE_CHECKOUT_URL;
 		}
@@ -496,37 +556,94 @@ function caixabank_get_arg( $order_id ){
 		'Ds_MerchantParameters' => $params,
 		'Ds_Signature'   => $signature
 	);
-	/*if ( 'yes' == $this->debug ){
-		$this->log->add( 'redsys', 'Generating payment form for order ' . $order_id . '. Sent data: ' . print_r($redsys_args, true) );
-		$this->log->add( 'redsys', 'Helping to understand the encrypted code: '                   );
-		$this->log->add( 'redsys', 'DS_MERCHANT_AMOUNT: '    .  $order_total_sign               );
-		$this->log->add( 'redsys', 'DS_MERCHANT_ORDER: '    . $transaction_id2                );
-		$this->log->add( 'redsys', 'DS_MERCHANT_MERCHANTCODE: '   . $this->customer                );
-		$this->log->add( 'redsys', 'DS_MERCHANT_CURRENCY'    . $currency_codes[ get_woocommerce_currency() ]         );
-		$this->log->add( 'redsys', 'DS_MERCHANT_TRANSACTIONTYPE: '  . $transaction_type                );
-		$this->log->add( 'redsys', 'DS_MERCHANT_TERMINAL: '    . $DSMerchantTerminal               );
-		$this->log->add( 'redsys', 'DS_MERCHANT_MERCHANTURL: '   . $this->notify_url                );
-		$this->log->add( 'redsys', 'DS_MERCHANT_URLOK: '    . add_query_arg( 'utm_nooverride', '1', $this->get_return_url( $order ) )  );
-		$this->log->add( 'redsys', 'DS_MERCHANT_URLKO: '    . $returnfromredsys                );
-		$this->log->add( 'redsys', 'DS_MERCHANT_CONSUMERLANGUAGE: '  . $gatewaylanguage                );
-		$this->log->add( 'redsys', 'DS_MERCHANT_PRODUCTDESCRIPTION: ' . __( 'Order' , 'woocommerce-redsys' ) . ' ' .  $order->get_order_number()  );
-	}
-	$redsys_args = apply_filters( 'woocommerce_redsys_args', $redsys_args ); */
-
-	$caixabankform = '
-		<form name="frm" action="' . $caixabanktesturl . '" method="POST" target="_blank">
+	return '
+		<form name="caixabank_submit_data_to_tpv" id="caixabank_submit_data_to_tpv" action="' . $caixabank_IPN_url . '" method="POST"  >
 			<input type="hidden" name="Ds_SignatureVersion" value="' . $version . '"/>
 			<input type="hidden" name="Ds_MerchantParameters" value="' . $params . '"/>
 			<input type="hidden" name="Ds_Signature" value="' . $signature . '"/>
-			<input type="submit" value="Enviar" >
+			<input type="submit" value="Ir a CaixaBank" class="inputButton" />
 		</form>';
-
-	return $caixabankform;
 }
+
+// API end-point result IPN
+
+
+add_filter( 'query_vars', 'caixabank_add_query_vars_post_from_tpv' );
+add_action( 'init', 'caixabank_add_endpoint_post_from_tpv' );
+add_action( 'parse_request', 'caixabank_handle_post_from_tpv' );
+
+function caixabank_add_query_vars_post_from_tpv( $vars ) {
+	$vars[] = 'caixabank-tpvresponse';
+	return $vars;
+}
+
+function caixabank_add_endpoint_post_from_tpv() {
+	add_rewrite_rule( '^caixabank-tpvresponse/v1/?$', 'index.php?caixabank-tpvresponse=$matches[1]', 'top' );
+	add_rewrite_endpoint( 'caixabank-tpvresponse', EP_ALL );
+}
+
+function caixabank_handle_post_from_tpv(){
+	global $wp;
+
+	if ( ! empty( $_GET['caixabank-invoice'] ) ) {
+		$wp->query_vars['caixabank-invoice'] = $_GET['caixabank-invoice'];
+	}
+	if ( isset($_GET['caixabank-invoice']) && $_GET['caixabank-invoice'] == '' ) {
+		$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_create_invoice_api_requests_error();
+		echo $caixabank_handle_rest_api_requests_error->get_error_message();
+		exit;
+	}
+	if ( ! empty( $_POST['caixabank-invoice'] ) ) {
+		if ( $wp->query_vars['caixabank-invoice'] != '' ) {
+			$prueba = isset($_GET['default']) ? $_GET['default']  : '';
+			echo isset($wp->query_vars['caixabank-invoice']) ?  $wp->query_vars['caixabank-invoice'] . '<br />'   : '';
+
+			$type = '';
+			$email = '';
+			$amount = '';
+			$dni = '';
+			$name = '';
+			$type = $_POST['caixabank-invoice'];
+			$email = sanitize_email ($_POST['caixabank-email']);
+			$amount_untrasted = $_POST['caixabank-amount'];
+			$amaunt_trusted = (int)$amount_untrasted;
+			$dni = $_POST['caixabank-dni'];
+			$name = $_POST['caixabank-name'];
+
+			if( $type == 'donacion'){
+				$postarr = array(
+					'post_title'	=> 'donation',
+					'post_content'  => '',
+					'post_status'	=> 'publish',
+					'post_type'		=> 'caixabank_orders'
+				);
+				$post_id = wp_insert_post( $postarr, $wp_error );
+			}
+				echo 'El tipo de pago es ' . $type . '<br />'; // Esto es para debug.
+				echo 'EL email del la persona que quiere hacer la donación es ' . $email . '<br />';
+				echo 'La cantidad que quiere donar es ' . $amaunt_trusted . '<br />';
+				echo 'Su nombre es ' . $name . '<br />';
+				echo 'El ID de la factura creada es ' . $post_id . '<br />';
+				echo '¿Llega todo bien?';
+
+
+			echo $prueba;
+			exit;
+		} else {
+			$caixabank_handle_rest_api_requests_error = caixabank_handle_prepara_create_invoice_api_requests_error();
+			echo $caixabank_handle_rest_api_requests_error->get_error_message();
+			exit;
+		}
+	}
+}
+
+/***********************************/
+/** end API end-point result IPN ***/
+/***********************************/
 
 // Squential invoice number
 
-if ( get_option( 'caixabank_sort_invoices_is_active_option') == 'yes' ){
+/*if ( get_option( 'caixabank_sort_invoices_is_active_option') == 'yes' ){
 	add_filter( 'manage_edit-shop_order_columns',   'caixabank_add_invoice_number'        );
 	add_action( 'manage_shop_order_posts_custom_column', 'caixabank_add_invoice_number_value',    2  );
 	add_filter( 'manage_edit-shop_order_sortable_columns', 'caixabank_add_invoice_number_sortable_colum'    );
@@ -537,7 +654,7 @@ if ( get_option( 'caixabank_sort_invoices_is_active_option') == 'yes' ){
 	if ( !is_admin() )  {
 		add_filter( 'woocommerce_order_number', 'caixabank_show_invoice_number', 10, 2 );
 	}
-}
+}*/
 
 function caixabank_add_invoice_number( $columns ){
 
@@ -755,4 +872,168 @@ function caixabank_check_current_year(){
 		}
 	}
 }
+function caixabank_check_ipn_request_is_valid() {
+
+	$usesecretsha256 = utf8_decode(  get_option('caixabank_gateway_passsha256') );;
+	$version  = $_POST["Ds_SignatureVersion"];
+	$data   = $_POST["Ds_MerchantParameters"];
+	$remote_sign = $_POST["Ds_Signature"];
+
+	$miObj   = new RedsysAPI;
+
+	$localsecret = $miObj->createMerchantSignatureNotif($usesecretsha256,$data);
+	if ( $localsecret == $remote_sign) {
+		return true;
+	} else {
+		return false;
+		}
+}
+add_action( 'caixabank-valid-caixabank-standard-ipn-request', 'caixabank_successful_request'  );
+/*function caixabank_check_ipn_response() {
+	@ob_clean();
+	$_POST = stripslashes_deep( $_POST );
+	if ( caixabank_check_ipn_request_is_valid() ) {
+			header( 'HTTP/1.1 200 OK' );
+			do_action( "caixabank-valid-caixabank-standard-ipn-request", $_POST );
+		} else {
+			return wp_die( "CaixaBank Notification Request Failure" );
+		}
+}*/
+function caixabank_successful_request( $posted ) {
+				$version			= $_POST["Ds_SignatureVersion"];
+				$data				= $_POST["Ds_MerchantParameters"];
+				$remote_sign		= $_POST["Ds_Signature"];
+				$post_id			= $_GET['order_id'];
+
+				$miObj				= new RedsysAPI;
+
+				$decodedata			= $miObj->decodeMerchantParameters($data);
+
+				$localsecret		= $miObj->createMerchantSignatureNotif($usesecretsha256,$data);
+
+				$total				= $miObj->getParameter('Ds_Amount');
+				$ordermi			= $miObj->getParameter('Ds_Order');
+				$dscode				= $miObj->getParameter('Ds_MerchantCode');
+				$currency_code		= $miObj->getParameter('Ds_Currency');
+				$response			= $miObj->getParameter('Ds_Response');
+				$id_trans			= $miObj->getParameter('Ds_AuthorisationCode');
+
+				$dsdate				= $miObj->getParameter('Ds_Date');
+				$dshour				= $miObj->getParameter('Ds_Hour');
+				$dstermnal			= $miObj->getParameter('Ds_Terminal');
+				$dsmerchandata		= $miObj->getParameter('Ds_MerchantData');
+				$dssucurepayment	= $miObj->getParameter('Ds_SecurePayment');
+				$dscardcountry		= $miObj->getParameter('Ds_Card_Country');
+				$dsconsumercountry	= $miObj->getParameter('Ds_ConsumerLanguage');
+				$dscargtype			= $miObj->getParameter('Ds_Card_Type');
+
+				$response = intval($response);
+				if ( $response  <= 99 ) {
+					//authorized
+					$order_total_compare = number_format( $order->get_total() , 2 , '' , '' );
+					if ( $order_total_compare != $total ) {
+						//amount does not match
+						if ( 'yes' == $this->debug )
+							$this->log->add( 'caixabank', 'Payment error: Amounts do not match (order: '.$order_total_compare.' - received: ' . $total . ')' );
+						// Put this order on-hold for manual checking
+						$order->update_status( 'on-hold', sprintf( __( 'Validation error: Order vs. Notification amounts do not match (order: %s - received: %s).', 'caixabank-tools-official' ), $order_total_compare , $total ) );
+						exit;
+					}
+					$authorisation_code = $id_trans;
+					if ( ! empty( $order1 ) )
+						update_post_meta( $order->id, '_payment_order_number_caixabank', $order1 );
+					if ( ! empty( $dsdate ) )
+						update_post_meta( $order->id, '_payment_date_caixabank',   $dsdate );
+					if ( ! empty( $dshour ) )
+						update_post_meta( $order->id, '_payment_hour_caixabank',   $dshour );
+					if ( ! empty( $id_trans ) )
+						update_post_meta( $order->id, '_authorisation_code_caixabank', $authorisation_code );
+					if ( ! empty( $dscardcountry ) )
+						update_post_meta( $order->id, '_card_country_caixabank',   $dscardcountry );
+					if ( ! empty( $dscargtype ) )
+						update_post_meta( $order->id, '_card_type_caixabank',   $dscargtype == 'C' ? 'Credit' : 'Debit' );
+					// Payment completed
+					$order->add_order_note( __( 'HTTP Notification received - payment completed', 'caixabank-tools-official' ) );
+					$order->add_order_note( __( 'Authorisation code: ',  'caixabank-tools-official' ) . $authorisation_code );
+					$order->payment_complete();
+					if ($this->debug == 'yes')
+						$this->log->add( 'caixabank', 'Payment complete.' );
+				} elseif ( $response  == 101 ) {
+					//Tarjeta caducada
+					if ( 'yes' == $this->debug )
+						$this->log->add( 'caixabank', 'Pedido cancelado por Redsys: Tarjeta caducada' );
+					//Order cancelled
+					$order->update_status( 'cancelled', __( 'Cancelled by Redsys', 'caixabank-tools-official' ) );
+					$order->add_order_note( __('Pedido cancelado por Redsys: Tarjeta caducada', 'caixabank-tools-official') );
+					WC()->cart->empty_cart();
+				} elseif ( $response  == 102 ) {
+					//Tarjeta en excepción transitoria o bajo sospecha de fraude
+				} elseif ( $response  == 106 ) {
+					//Intentos de PIN excedidos
+				} elseif ( $response  == 125 ) {
+					//Tarjeta no efectiva
+				} elseif ( $response  == 129 ) {
+					//Código de seguridad (CVV2/CVC2) incorrecto
+				} elseif ( $response  == 180 ) {
+					//Tarjeta ajena al servicio
+				} elseif ( $response  == 184 ) {
+					//Error en la autenticación del titular
+				} elseif ( $response  == 190 ) {
+					//Denegación del emisor sin especificar motivo
+				} elseif ( $response  == 191 ) {
+					//Fecha de caducidad errónea
+				} elseif ( $response  == 202 ) {
+					//Tarjeta en excepción transitoria o bajo sospecha de fraude con retirada de tarjeta
+				} elseif ( $response  == 904 ) {
+					//Comercio no registrado en FUC
+				} elseif ( $response  == 909 ) {
+					//Error de sistema
+				} elseif ( $response  == 913 ) {
+					//Pedido repetido
+				} elseif ( $response  == 944 ) {
+					//Sesión Incorrecta
+				} elseif ( $response  == 950 ) {
+					//Operación de devolución no permitida
+				} elseif ( $response  == 9912 || $response  == 912 ) {
+					//Emisor no disponible
+				} elseif ( $response  == 9064 ) {
+					//Número de posiciones de la tarjeta incorrecto
+				} elseif ( $response  == 9078 ) {
+					//Tipo de operación no permitida para esa tarjeta
+				} elseif ( $response  == 9093 ) {
+					//Tarjeta no existente
+				} elseif ( $response  == 9094 ) {
+					//Rechazo servidores internacionales
+				} elseif ( $response  == 9104 ) {
+					//Comercio con “titular seguro” y titular sin clave de compra segura
+				} elseif ( $response  == 9218 ) {
+					//El comercio no permite op. seguras por entrada /operaciones
+				} elseif ( $response  == 9253 ) {
+					//Tarjeta no cumple el check-digit
+				} elseif ( $response  == 9256 ) {
+					//El comercio no puede realizar preautorizaciones
+				} elseif ( $response  == 9257 ) {
+					//Esta tarjeta no permite operativa de preautorizaciones
+				} elseif ( $response  == 9261 ) {
+					//Operación detenida por superar el control de restricciones en la entrada al SIS
+				} elseif ( $response  == 9913 ) {
+					//Error en la confirmación que el comercio envía al TPV Virtual (solo aplicable en la opción de sincronización SOAP)
+				} elseif ( $response  == 9914 ) {
+					//Confirmación “KO” del comercio (solo aplicable en la opción de sincronización SOAP)
+				} elseif ( $response  == 9915 ) {
+					//A petición del usuario se ha cancelado el pago
+				} elseif ( $response  == 9928 ) {
+					//Anulación de autorización en diferido realizada por el SIS (proceso batch)
+				} elseif ( $response  == 9929 ) {
+					//Anulación de autorización en diferido realizada por el comercio
+				} elseif ( $response  == 9997 ) {
+					//Se está procesando otra transacción en SIS con la misma tarjeta
+				} elseif ( $response  == 9998 ) {
+					//Operación en proceso de solicitud de datos de tarjeta
+				} elseif ( $response  == 9999 ) {
+					//Operación que ha sido redirigida al emisor a autenticar
+				} else {
+					//error indeterminado
+				}
+		}
 ?>

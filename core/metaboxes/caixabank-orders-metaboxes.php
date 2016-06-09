@@ -13,47 +13,132 @@ class Caixabank_Meta_Box {
 	);
 	private $fields = array(
 		array(
-			'id' => '_caixabank_description',
+			'id' => 'caixabank_description',
 			'label' => 'Description',
 			'type' => 'textarea',
 		),
 		array(
-			'id' => '_caixabank_user',
-			'label' => 'User',
+			'id' => 'caixabank_tipo_pago',
+			'label' => 'Tipo pago',
 			'type' => 'text',
 		),
 		array(
-			'id' => '_caixabank_price',
+			'id' => 'caixabank_price',
 			'label' => 'Price',
 			'type' => 'number',
 		),
 		array(
-			'id' => '_caixabank_use_tax',
+			'id' => 'caixabank_estado_pago',
+			'label' => 'Estado pago',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_username_realiza_pago',
+			'label' => 'Username',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_user_id_realiza_pago',
+			'label' => 'User ID',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_nombre_apellidos_realiza_pago',
+			'label' => 'Apellidos',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_email_realiza_pago',
+			'label' => 'email',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_dni_realiza_pago',
+			'label' => 'DNI',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_company_realiza_pago',
+			'label' => 'Company Name',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_adress_1_realiza_pago',
+			'label' => 'Adress 1',
+			'type' => 'textarea',
+		),
+		array(
+			'id' => 'caixabank_adress_2_realiza_pago',
+			'label' => 'Adress 2',
+			'type' => 'textarea',
+		),
+		array(
+			'id' => 'caixabank_tax_status_realiza_pago',
+			'label' => 'Tipo usuario',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_city_realiza_pago',
+			'label' => 'City',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_post_code_realiza_pago',
+			'label' => 'Postal Code',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_country_realiza_pago',
+			'label' => 'Country',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_state_county_realiza_pago',
+			'label' => 'State',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_state_county_outsite_spain_realiza_pago',
+			'label' => 'State outsite Spain',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_telephone_realiza_pago',
+			'label' => 'Telephone',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_mobile_realiza_pago',
+			'label' => 'Mobile',
+			'type' => 'text',
+		),
+		array(
+			'id' => 'caixabank_use_tax',
 			'label' => 'Use TAX',
 			'type' => 'checkbox',
 		),
 		array(
-			'id' => '_caixabank_use_irpf',
+			'id' => 'caixabank_use_irpf',
 			'label' => 'Use IRPF',
 			'type' => 'checkbox',
 		),
 		array(
-			'id' => '_caixabank_tax',
+			'id' => 'caixabank_custom_iva_realiza_pago',
 			'label' => 'TAX',
 			'type' => 'number',
 		),
 		array(
-			'id' => '_caixabank_irpf',
+			'id' => 'caixabank_custom_irpf_realiza_pago',
 			'label' => 'IRPF',
 			'type' => 'number',
 		),
 		array(
-			'id' => '_caixabank_date',
+			'id' => 'caixabank_date',
 			'label' => 'Date',
 			'type' => 'date',
 		),
 		array(
-			'id' => '_caixabank_time',
+			'id' => 'caixabank_time',
 			'label' => 'Time',
 			'type' => 'time',
 		),
@@ -75,7 +160,7 @@ class Caixabank_Meta_Box {
 		foreach ( $this->screens as $screen ) {
 			add_meta_box(
 				'caixabank-order-metabox',
-				__( 'caixabank_order_metabox', 'caixabank-tools-official' ),
+				__( 'Order', 'caixabank-tools-official' ),
 				array( $this, 'add_meta_box_callback' ),
 				$screen,
 				'advanced',
@@ -101,7 +186,7 @@ class Caixabank_Meta_Box {
 		$output = '';
 		foreach ( $this->fields as $field ) {
 			$label = '<label for="' . $field['id'] . '">' . $field['label'] . '</label>';
-			$db_value = get_post_meta( $post->ID, 'caixabank_order_metabox_' . $field['id'], true );
+			$db_value = get_post_meta( $post->ID, '_' . $field['id'], true );
 			switch ( $field['type'] ) {
 				case 'checkbox':
 					$input = sprintf(
@@ -168,9 +253,9 @@ class Caixabank_Meta_Box {
 						$_POST[ $field['id'] ] = sanitize_text_field( $_POST[ $field['id'] ] );
 						break;
 				}
-				update_post_meta( $post_id, 'caixabank_order_metabox_' . $field['id'], $_POST[ $field['id'] ] );
+				update_post_meta( $post_id, '_' . $field['id'], $_POST[ $field['id'] ] );
 			} else if ( $field['type'] === 'checkbox' ) {
-				update_post_meta( $post_id, 'caixabank_order_metabox_' . $field['id'], '0' );
+				update_post_meta( $post_id, '_' . $field['id'], '0' );
 			}
 		}
 	}

@@ -63,6 +63,7 @@ function caixabank_activation_hook() {
 	caixabank_add_endpoint();
 	caixabank_add_endpoint_tpv();
 	caixabank_add_endpoint_create_invoice();
+	caixabank_add_endpoint_post_from_tpv();
 	flush_rewrite_rules();
 
 	// IVA
